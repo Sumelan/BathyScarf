@@ -9,7 +9,7 @@
     style = ''
       * {
       font-family: "ShureTechMono Nerd Font";
-      font-size: 15pt;
+      font-size: 13pt;
       font-weight: bold;
       border-radius: 0px;
       transition-property: background-color;
@@ -207,7 +207,7 @@
             "󰃠"
           ];
         };
-	"mpris" = {
+      	"mpris" = {
           "format" = "♪【{artist} - {title}】";
           "format-paused" = "・【{artist} - {title}】";
         };
@@ -255,26 +255,26 @@
           "tooltip" = true;
           "tooltip-format"= "<tt><small>{calendar}</small></tt>";
           "calendar" = {
-		"mode" = "month";
-	       #"mode-mon-col" = 3;   # if you want to set "mode" = "year".
-		"weeks-pos" = ""; # display week number. right/left
-		"on-scroll" = 1;
-		"format" = {
-			"months" = "<span color='#ffead3'><b>{}</b></span>";
-			"days" = "<span color='#ecc6d9'><b>{}</b></span>";
-			"weeks" = "<span color='#99ffdd'><b>W{}</b></span>";
-			"weekdays" = "<span color='#ffcc66'><b>{}</b></span>";
-			"today" = "<span color='#ff6699'><b><u>{}</u></b></span>";
-		};
-           };
+		        "mode" = "month";
+	          #"mode-mon-col" = 3;   # if you want to set "mode" = "year".
+		        "weeks-pos" = ""; # display week number. right/left
+		        "on-scroll" = 1;
+		        "format" = {
+			        "months" = "<span color='#ffead3'><b>{}</b></span>";
+		        	"days" = "<span color='#ecc6d9'><b>{}</b></span>";
+		        	"weeks" = "<span color='#99ffdd'><b>W{}</b></span>";
+		        	"weekdays" = "<span color='#ffcc66'><b>{}</b></span>";
+		        	"today" = "<span color='#ff6699'><b><u>{}</u></b></span>";
+		        };
+          };
         };
 
        "idle_inhibitor" = {
-	  "format" = "{icon}";
-	  "format-icons" = {
-		"activated" = " ";
-		"deactivated" = " ";
-	  };
+          "format" = "{icon}";
+	        "format-icons" = {
+		        "activated" = " ";
+		        "deactivated" = " ";
+	        };
         };
 
         "memory" = {
