@@ -1,19 +1,25 @@
 {pkgs, ... }:
 {
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelParams = [ "mem_sleep_default=deep" ];
+  boot.kernelParams = [  ];
   boot.loader = {
-   #systemd-boot.enable = true;
-    efi.canTouchEfiVariables = true;
+   # systemd-boot.enable = true;
+    timeout = 5;
+    efi.efiSysMountPoint = "/boot";
     grub = {
       enable = true;
-      devices = [ "nodev" ];
       efiSupport = true;
-      gfxmodeBios = "auto";
-        memtest86.enable = true;
-        extraGrubInstallArgs = [ "--bootloader-id=NixOS" ];
-        configurationName = "NixOS";
+      efiInstallAsRemovable = true; #Otherwise /boot/EFI/BOOT/BOOTX64.EFI isn't generate.
+      devices = [ "nodev" ];
+      extraEntriesBeforeNixOS = true;
+      extraEntries = ''
+        menuentry "Reboot" {
+          reboot
+        }
+        menuentry "Poweroff" {
+          halt
+        }
+        '';
     };
-    timeout = 1;
   };
 }
