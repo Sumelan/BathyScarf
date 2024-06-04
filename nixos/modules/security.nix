@@ -1,10 +1,9 @@
 {
  security = {
-    pam.services.swaylock.text = "auth include login";
     rtkit.enable = true;
     polkit.enable = true;
     polkit.extraConfig = ''
-    polkit.addRule(function(action, subject) {
+     polkit.addRule(function(action, subject) {
       if (
         subject.isInGroup("users")
           && (
