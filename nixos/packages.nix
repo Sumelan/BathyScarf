@@ -11,11 +11,11 @@
     in
 with pkgs; [
   # Desktop apps
-    alacritty
     baobab
     cpufrequtils
     firefox
     gparted
+    kitty
     (mpv.override {scripts = [mpvScripts.mpris];})  #with tray
     spotify
     thunderbird
@@ -23,7 +23,14 @@ with pkgs; [
     vlc
 
   # Coding stuff
+    libsFortQt5.qt5.qtwayland
+    meson
+    ninja
+    nixfmt-rfc-style
+    nodejs
+    pkg-config
     python3
+    v4l-utils
 
   # CLI utils
     brightnessctl
@@ -96,28 +103,5 @@ with pkgs; [
     sugar.sddm-sugar-dark # Name: sugar-dark
     tokyo-night # Name: tokyo-night-sddm
     pkgs.libsForQt5.qt5.qtgraphicaleffects
- ];
-
-  fonts = {
-    packages = with pkgs; [
-    noto-fonts
-    noto-fonts-cjk
-    noto-fonts-emoji
-    fira-code
-    jetbrains-mono
-    font-awesome
-    terminus_font
-    twemoji-color-font
-    nerdfonts
-    ];
-    fontDir.enable = true;
-    fontconfig = {
-      defaultFonts = {
-         serif = ["Noto Serif CJK JP" "Noto Color Emoji"];
-         sansSerif = ["Noto Sans CJK JP" "Noto Color Emoji"];
-         monospace = ["JetBrainsMono Nerd Font" "Noto Color Emoji"];
-         emoji = ["Noto Color Emoji"];
-      };
-    };
-  };
+  ];
 }
