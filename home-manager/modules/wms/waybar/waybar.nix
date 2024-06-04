@@ -2,10 +2,14 @@
 {
   programs.waybar = {
     enable = true;
+    systemd = {
+      enable = false; # disable it,autostart it in hyprland conf
+      target = "graphical-session.target";
+    };
     style = ''
       * {
       font-family: "ShureTechMono Nerd Font";
-      font-size: 12pt;
+      font-size: 15pt;
       font-weight: bold;
       border-radius: 0px;
       transition-property: background-color;
@@ -129,9 +133,27 @@
       {
         "layer" = "top";
         "position" = "top";
-        modules-left = [ "custom/launcher" "hyprland/workspaces" "custom/wall" "tray" ];
-        modules-center = [ "clock" "idle_inhibitor" ];
-        modules-right = [ "wireplumber" "backlight" "memory" "cpu" "network" "temperature" "battery" "custom/powermenu" ];
+        modules-left = [ 
+		"custom/launcher"
+		"hyprland/workspaces"
+		"custom/wall"
+		"tray" 
+	];
+        modules-center = [
+		"clock"
+		"idle_inhibitor"
+	];
+        modules-right = [ 
+		"mpris" 
+		"wireplumber" 
+		"backlight" 
+		"memory" 
+		"cpu" 
+		"network" 
+		"temperature" 
+		"battery" 
+		"custom/powermenu"
+	];
        
         "custom/launcher" = {
           "format" = " ";
@@ -141,13 +163,12 @@
      /*
         "hyprland/window" = {
           "format" = "{}";
-        	"rewrite" = {
+          "rewrite" = {
            	"(.*) — Mozilla Firefox" = "󰈹 $1";
           	"(.*) — Mozilla Thunderbird" = "󰇮 $1";
-          	"Alacritty" = "󰞷 Alacritty";
-	         };
+          	"(.*) — kitty" = "󰞷 $1";
+	  };
         };
-      */
         /*
           "custom/wall" = {
             "on-click" = ${sharedScripts.wallpaper_random}/bin/wallpaper_random";
@@ -185,6 +206,10 @@
             "󰃟"
             "󰃠"
           ];
+        };
+	"mpris" = {
+          "format" = "♪【{artist} - {title}】";
+          "format-paused" = "・【{artist} - {title}】";
         };
         "wireplumber" = {
           "scroll-step" = 1;
@@ -305,6 +330,5 @@
         };
       }
     ];
-  
   };
 }
