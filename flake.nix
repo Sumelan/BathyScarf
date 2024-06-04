@@ -21,8 +21,8 @@
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
-    spicetify-nix.url = "github:the-argus/spicetify-nix";
     };
+    spicetify-nix.url = "github:the-argus/spicetify-nix";
   };
   outputs = { nixpkgs, home-manager, ... }@inputs:
 
