@@ -2,7 +2,6 @@
   description = "My system configuration";
 
   inputs = {
-
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
     nix-colors.url = "github:misterio77/nix-colors";
@@ -22,9 +21,9 @@
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
+    spicetify-nix.url = "github:the-argus/spicetify-nix";
     };
   };
-
   outputs = { nixpkgs, home-manager, ... }@inputs:
 
     let
@@ -68,6 +67,7 @@
                 inherit gitUsername;
                 inherit theme;
                 inherit (inputs.nix-colors.lib-contrib { inherit pkgs; }) gtkThemeFromScheme;
+                inherit spicetify-nix;
               };
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
