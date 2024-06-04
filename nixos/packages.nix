@@ -23,7 +23,7 @@ with pkgs; [
     vlc
 
   # Coding stuff
-    libsFortQt5.qt5.qtwayland
+    libsForQt5.qt5.qtwayland
     meson
     ninja
     nixfmt-rfc-style
