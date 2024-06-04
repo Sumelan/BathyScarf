@@ -42,13 +42,9 @@
 
 # Place Files Inside Home Directory
   home.file.".config/wlogout/icons" = {
-    source = ./modules/wms/wlogout;
+    source = ./modules/wms/wlogout/icons;
     recursive = true;
   };
- home.file.".config/rofi/wallpapers" = {
-   source = ./modules/wms/rofi;
-   recursive = true;
- };
 
   home.stateVersion = "23.11";
 }
