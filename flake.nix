@@ -24,7 +24,7 @@
     };
     spicetify-nix.url = "github:the-argus/spicetify-nix";
   };
-  outputs = { nixpkgs, home-manager, ... }@inputs:
+  outputs = { nixpkgs, home-manager, spicetify-nix, ... }@inputs:
 
     let
       system = "x86_64-linux";
