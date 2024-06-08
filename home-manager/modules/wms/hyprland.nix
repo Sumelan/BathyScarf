@@ -40,7 +40,7 @@ in
       exec-once = fcitx5
 
       #opacity window rules
-      windowrule = opacity 1 0.84, Discord
+      windowrule = opacity 1 0.84, vesktop
       windowrule = opacity 0.8, Spotify
       windowrule = opacity 0.9, neovide
       windowrule = opacity 0.8, bottles
@@ -49,7 +49,7 @@ in
       #float window rules
       windowrulev2 = float, class:^([Rr]ofi)$
       #workspaces window rules
-      windowrule = workspace 10, Discord
+      windowrule = workspace 10, vesktop
       windowrule = workspace 1, firefox
       windowrule = workspace special:magic, Spotify
       #workspace rules
