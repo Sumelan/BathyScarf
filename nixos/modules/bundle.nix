@@ -4,7 +4,6 @@
     ./bootloader.nix
     ./env.nix
     ./network.nix
-    ./nextcloud.nix
     ./nixvim/nixvim.nix
     ./opentabletdriver.nix
     ./security.nix
