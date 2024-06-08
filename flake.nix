@@ -7,7 +7,6 @@
     nix-colors.url = "github:misterio77/nix-colors";
     disko.url = "github:nix-community/disko";
     disko.inputs.nixpkgs.follows = "nixpkgs";
-    wallust.url = "git+https://codeberg.org/explosion-mental/wallust?ref=dev";
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1"; # unstable hyprland
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
@@ -30,7 +29,7 @@
       system = "x86_64-linux";
 
       # User Variables
-      hostname = "BathyScarf";
+      hostname = "Rin";
       username = "bathys";
       gitUsername = "bathys";
       gitEmail = "68154148+bathys@users.noreply.github.com";
