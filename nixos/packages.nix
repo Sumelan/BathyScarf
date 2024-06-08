@@ -1,107 +1,122 @@
-{pkgs, inputs, config, ... }:
+{pkgs, ... }:
 {
   nixpkgs.config = {
     allowUnfree = true;
   };
 
-  environment.systemPackages = 
+  environment.systemPackages =
     let
       sugar = pkgs.callPackage ./sddm-sugar-dark.nix { };
       tokyo-night = pkgs.libsForQt5.callPackage ./sddm-tokyo-night.nix { };
     in
-with pkgs; [
-  # Desktop apps
-    baobab
-    cpufrequtils
-    firefox
-    gparted
-    kitty
-    (mpv.override {scripts = [mpvScripts.mpris];})  #with tray
-    spotify
-    thunderbird
-    (discord.override { withVencord = true; })
-    vlc
-
-  # Coding stuff
-    libsForQt5.qt5.qtwayland
-    meson
-    ninja
-    nixfmt-rfc-style
-    nodejs
-    pkg-config
-    python3
-    v4l-utils
-
-  # CLI utils
-    brightnessctl
-    fastfetch
-    ffmpeg
-    ffmpegthumbnailer
-    file
-    git     
-    glib #  for gsettings to work
-    glxinfo
-    htop
-    libappindicator
-    libnotify
-    killall
-    openssl   # required by Rainbow borders
-    playerctl    
-    ranger
-    tree
-    unar
-    unzip
-    vim
-    wget
-    yt-dlp
-    zram-generator
-
-  # Hyprland stuff
-    ags
-    btop
-    cava
-    cliphist
-    gnome.eog
-    gnome.gnome-system-monitor
-    gnome.file-roller
-    grim
-    gtk-engine-murrine  # for gtk themes
-    hyprcursor  # requires unstable channel
-    hypridle    # requires unstable channel
-    hyprlock    # requires unstable channel
-    jq
-    networkmanagerapplet
-    nwg-look    # requires unstable channel
-    nvtopPackages.full
-    pyprland
-    qt6.qtwayland
-    qt6Packages.qtstyleplugin-kvantum  #kvantum
-    libsForQt5.qtstyleplugin-kvantum   #kvantum
-    slurp
-    swappy
-    swaynotificationcenter
-    swww
-    qt5ct
-    qt6ct
-    rofi-wayland
-    wl-clipboard
-    wlogout
-    yad
-
-    #waybar  # if wanted experimental next line
-    #(pkgs.waybar.overrideAttrs (oldAttrs: { mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];}))
-
-  # Sound
-    pamixer
-    pavucontrol
-    pipewire
-    wireplumber
-
-  # Others
-    home-manager
-    qemu_kvm
-    sugar.sddm-sugar-dark # Name: sugar-dark
-    tokyo-night # Name: tokyo-night-sddm
-    pkgs.libsForQt5.qt5.qtgraphicaleffects
+      with pkgs; [
+    # de stuff
+      brightnessctl
+      cliphist
+      dunst
+      eww
+      feh
+      gparted
+      gwenview
+      grim
+      kitty
+      libnotify
+      lm_sensors
+      mpv
+      networkmanagerapplet
+      rofi-wayland
+      polkit_gnome
+      slurp
+      swappy
+      swww
+      unrar
+      unzip
+      waybar
+      wl-clipboard
+      wlogout
+      wpgtk
+      yad
+    # audio
+      wireplumber
+      pavucontrol
+    # programs
+      anki-bin
+      bottles
+      cpufrequtils
+      firefox
+      gimp
+      hypridle
+      hyprlock
+      hyprpicker
+      krita
+      lutris
+      neovide
+      obs-studio
+      opentabletdriver
+      prismlauncher
+      protonup-qt
+      soundconverter
+      spicetify-cli
+      spotify
+      thunderbird
+      vencord
+      vesktop
+      vlc
+      udiskie
+      wine
+      winetricks
+    # CLI programs
+      atuin
+      bat
+      btop
+      clinfo
+      cowsay
+      curl
+      fastfetch
+      fd
+      ffmpeg
+      ffmpegthumbnailer
+      file
+      fzf
+      gh # github cli
+      git
+      jq
+      libappindicator
+      lazygit
+      lsd
+      lshw
+      ncspot
+      nh
+      nitch
+      playerctl
+      poppler
+      qmk
+      ripgrep
+      starship
+      socat
+      spotdl
+      unar
+      vim
+      wget
+      xdg-utils
+      ydotool
+      yt-dlp
+      zoxide
+    # libs/frameworks
+      libsForQt5.kdeconnect-kde
+      libsForQt5.qt5.qtwayland
+      meson
+      ninja
+      nixfmt-rfc-style
+      nodejs
+      pkg-config
+      python3
+      qt6.qtwayland
+      v4l-utils
+    # vm
+      qemu
+    # sddm
+      sugar.sddm-sugar-dark # Name: sugar-dark
+      tokyo-night # Name: tokyo-night-sddm
   ];
 }
