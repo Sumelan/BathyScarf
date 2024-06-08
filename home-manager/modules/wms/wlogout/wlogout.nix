@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, ... }:
 
 let
   palette = config.colorScheme.palette;
@@ -102,5 +102,11 @@ in
       	background-image: image(url("icons/hibernate.png"));
       }
     '';
+  };
+
+# Place Files Inside Home Directory
+  home.file.".config/wlogout/icons" = {
+    source = ./icons;
+    recursive = true;
   };
 }
