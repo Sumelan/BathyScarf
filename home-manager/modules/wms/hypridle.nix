@@ -2,10 +2,10 @@
   services.hypridle = {
     enable = true;
     settings = {
-      geberal = {
+      general = {
         lock_cmd = "pidof hyprlock || hyprlock";       # avoid starting multiple hyprlock instances.
         before_sleep_cmd = "loginctl lock-session";    # lock before suspend.
-        after_sleep_cmd = "hyprctl dispath dpms on";  # to avoid having to press a key twice to run on the dispaly.
+        after_sleep_cmd = "hyprctl dispath dpms on";  # to avoid having to press a key twice to run on the display.
       };
 
       listener = [
