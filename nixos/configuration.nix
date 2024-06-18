@@ -1,21 +1,17 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
       ./hardware-configuration.nix
-      ./packages.nix
-      ./packages-option.nix
+      ./desktop/amd-drivers.nix
+      ./pkgs/packages.nix
+      ./japanese-input.nix
       ./fonts/fonts.nix
-      ./intel-drivers.nix
       ./modules/bundle.nix
       ./disko-config.nix
-    ];
-  
-  disabledModules = [
-      ./modules/xserver.nix
   ];
 
-  # Define your hostname. 
+  # Define your hostname.
   networking.hostName = "BathyScarf";
 
   # Set your time zone.
@@ -35,34 +31,22 @@
       LC_TIME = "ja_JP.UTF-8";
     };
 
-  # Japanese input.
-  i18n.inputMethod = {
-   enabled = "fcitx5";
-   fcitx5.addons = with pkgs; [
-     fcitx5-mozc
-   ];
-  };
-
 # Power management.
   powerManagement = {
 	  enable = true;
-  }; 
+  };
 
   # flatpak
   services.flatpak.enable = true;
+
+  #Add ~/.local/bin/ to $PATH
+  environment.localBinInPath = false;
 
   # Automatic Garbage Collection
   nix.gc = {
     automatic = true;
     dates = "weekly";
     options = "--delete-older-than 7d";
-  };
-
- # OpenGL
-  hardware.opengl = {
-    enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
   };
 
   # Enableing flakes and optimize store.
