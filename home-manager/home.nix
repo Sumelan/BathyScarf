@@ -1,12 +1,10 @@
-{inputs, lib, config, pkgs, theme, gtkThemeFromScheme, ... }:
+{ inputs, pkgs, theme, ... }:
 {
   colorScheme = inputs.nix-colors.colorSchemes."${theme}";
 
   imports = [
-    ./zsh.nix
     inputs.nix-colors.homeManagerModules.default
     inputs.nixvim.homeManagerModules.nixvim
-    inputs.hyprland.homeManagerModules.default
     ./modules/bundle.nix
   ];
 
@@ -20,9 +18,6 @@
 
   programs = {
     home-manager.enable = true;
-    starship = {
-      enable = true;
-    };
   };
 
 # Create XDG Dirs
@@ -40,11 +35,13 @@
     };
   };
 
-# Place Files Inside Home Directory
-  home.file.".config/wlogout/icons" = {
-    source = ./modules/wms/wlogout/icons;
-    recursive = true;
-  };
+  home.packages = with pkgs; [
+    (writeShellScriptBin "powermenu" (builtins.readFile ./bin/rofiscripts/powermenu.sh) )
+    (writeShellScriptBin "screenshotmenu" (builtins.readFile ./bin/rofiscripts/screenshot.sh) )
+    (writeShellScriptBin "wifimenu" (builtins.readFile ./bin/rofiscripts/wifi.sh) )
+    (writeShellScriptBin "changebrightness" (builtins.readFile ./bin/notifs/changebrightness.sh) )
+    (writeShellScriptBin "changevolume" (builtins.readFile ./bin/notifs/changevolume.sh) )
+  ];
 
   home.stateVersion = "23.11";
 }
