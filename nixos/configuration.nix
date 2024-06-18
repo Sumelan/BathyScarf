@@ -3,7 +3,7 @@
 {
   imports = [
       ./hardware-configuration.nix
-      ./desktop/amd-drivers.nix
+      ./laptop/intel-drivers.nix
       ./pkgs/packages.nix
       ./japanese-input.nix
       ./fonts/fonts.nix
