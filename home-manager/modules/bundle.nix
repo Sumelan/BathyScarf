@@ -3,13 +3,17 @@
     ./git.nix
     ./gtk-qt.nix
     ./kitty.nix
+    ./starship.nix
     ./spicetify.nix
+    ./vscode.nix
+    ./yazi.nix
+    ./zsh.nix
     ./wms/hyprland.nix
+    ./wms/eww/eww.nix
     ./wms/hypridle.nix
+    ./wms/swappy.nix
+    ./wms/dunst/dunst.nix
     ./wms/hyprlock.nix
     ./wms/rofi/rofi.nix
-    ./wms/swappy.nix
-    ./wms/waybar/waybar.nix
-    ./wms/wlogout/wlogout.nix
   ];
 }
