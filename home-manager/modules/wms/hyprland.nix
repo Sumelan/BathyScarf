@@ -1,10 +1,9 @@
 { config, ... }:
 let
   theme = config.colorScheme.palette;
- #hyprplugins = inputs.hyprland-plugins.packages.${pkgs.system};
 in
 {
-  wayland.windowManager.hyprland = {
+  wayland.windowManager.hyprland =  {
     enable = true;
     xwayland.enable = true;
     systemd.enable = true;
@@ -20,7 +19,8 @@ in
       $browser = firefox
 
       #monitors
-      monitor = , preferred, auto, 1
+      monitor = HDMI-A-1, 1920x1080@60, 0x0, 1
+      monitor = HDMI-A-2, 1920x1080@60, 1920x0, 1
 
       #env variables
       env = XCURSOR_SIZE,24
@@ -30,13 +30,15 @@ in
       #start programs
       exec-once = dbus-update-activation-environment --systemd --all
       exec-once = systemctl --user import-environment QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-      exec-once = swww-daemon & swww img ~/Pictures/Wallpapers/nixos-chan.png
-      exec-once = pkill waybar && sleep .5 && waybar
+      exec-once = swww-daemon & swww img ~/Pictures/Wallpapers/kobato.png
+      exec-once = pkill dunst && Sleep .5 && dunst
+      exec-once = eww daemon
+      exec = eww open bar && eww reload &
       exec-once = nm-applet
       exec-once = wl-paste --type text --watch cliphist store & wl-paste --type image --watch cliphist store & wl-paste --watch cliphist store
-      exec-once = spotify
-      exec-once = firefox
       exec-once = systemd
+      exec-once = spotify
+      exec-once = kdeconnect-indicator
       exec-once = fcitx5
 
       #opacity window rules
@@ -45,22 +47,23 @@ in
       windowrule = opacity 0.9, neovide
       windowrule = opacity 0.8, bottles
       windowrule = opacity 0.8, fl64.exe
-      windowrulev2 = opacity 0.8, title:(FL Studio)
       #float window rules
       windowrulev2 = float, class:^([Rr]ofi)$
       #workspaces window rules
-      windowrule = workspace 10, vesktop
       windowrule = workspace 1, firefox
       windowrule = workspace special:magic, Spotify
       #workspace rules
+      workspace=10, monitor:HDMI-A-2, default:true
 
       #keybindings
       bind = $mainMod, RETURN, exec, $terminal
-      bind = $mainMod, D, exec, pkill rofi || rofi -show drun -modi drun,run,filebrowser,window
+      bind = $mainMod, D, exec, pkill rofi || rofi -show drun
       bind = $mainMod, T, exec, $fileManager
       bind = $mainMod, W, exec, $browser
       bind = $mainMod, C, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy
-      bind = $mainMod, S, exec, grim -g "$(slurp -d)" - |swappy -f -
+      bind = $mainMod, S, exec, screenshotmenu | swappy -f -
+
+      bind = CTRL ALT, P, exec, powermenu
 
       bind = $mainMod, Q, killactive
       bind = $mainMod, ESC, exit
@@ -68,16 +71,15 @@ in
       bind = $mainMod, F, fullscreen
       bind = $mainMod, P, pseudo, dwindle
 
-      bind = ,XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
-      bind = ,XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
-      binde = ,XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+      bind = ,XF86AudioRaiseVolume, exec, changevolume up
+      bind = ,XF86AudioLowerVolume, exec, changevolume down
+      binde = ,XF86AudioMute, exec, changevolume mute
       bind = ,XF86AudioPlay, exec, playerctl play-pause
       bind = ,XF86AudioNext, exec, playerctl next
       bind = ,XF86AudioPrev, exec, playerctl previous
-      bind = ,XF86MonBrightnessUp, exec, brightnessctl set +5%
-      bind = ,XF86MonBrightnessDown, exec, brightnessctl set -5%
-     # bind = ,XFSearch, exec,
-     # bind = ,Menu, exec, 
+      bind = ,XF86MonBrightnessUp, exec, changebrightness up
+      bind = ,XF86MonBrightnessDown, exec, changebrightness down
+      bind = ,Print, exec, screenshotmenu
 
       bind = $mainMod, H, movefocus, l
       bind = $mainMod, J, movefocus, d
