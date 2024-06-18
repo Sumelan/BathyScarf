@@ -11,7 +11,7 @@
       efiSupport = true;
       efiInstallAsRemovable = true; #Otherwise /boot/EFI/BOOT/BOOTX64.EFI isn't generate.
       devices = [ "nodev" ];
-      extraEntriesBeforeNixOS = true;
+      extraEntriesBeforeNixOS = false;
       extraEntries = ''
         menuentry "Reboot" {
           reboot
