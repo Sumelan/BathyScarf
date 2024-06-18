@@ -1,17 +1,21 @@
 {pkgs, ... }:
 {
+  imports = [
+      ./options.nix
+  ];
+
   nixpkgs.config = {
     allowUnfree = true;
   };
-
   environment.systemPackages =
     let
-      sugar = pkgs.callPackage ./sddm-sugar-dark.nix { };
-      tokyo-night = pkgs.libsForQt5.callPackage ./sddm-tokyo-night.nix { };
+      sugar = pkgs.callPackage ./sddm/sugar-dark.nix { };
+      tokyo-night = pkgs.libsForQt5.callPackage ./sddm/tokyo-night.nix { };
     in
       with pkgs; [
     # de stuff
       brightnessctl
+      cava
       cliphist
       dunst
       eww
@@ -19,9 +23,11 @@
       gparted
       gwenview
       grim
+      grimblast
       kitty
       libnotify
       lm_sensors
+      maim
       mpv
       networkmanagerapplet
       rofi-wayland
@@ -31,30 +37,34 @@
       swww
       unrar
       unzip
-      waybar
       wl-clipboard
-      wlogout
       wpgtk
       yad
     # audio
-      wireplumber
+      easyeffects
+      pamixer
       pavucontrol
+      wireplumber
     # programs
       anki-bin
+      bitwarden
       bottles
+      catppuccinifier-gui
       cpufrequtils
       firefox
       gimp
       hypridle
       hyprlock
       hyprpicker
+      hyprshade
+      kdenlive
       krita
       lutris
       neovide
       obs-studio
-      opentabletdriver
-      prismlauncher
+      obsidian
       protonup-qt
+      steam
       soundconverter
       spicetify-cli
       spotify
@@ -62,10 +72,12 @@
       vencord
       vesktop
       vlc
+      vscode
       udiskie
       wine
       winetricks
     # CLI programs
+      acpi
       atuin
       bat
       btop
@@ -97,18 +109,21 @@
       spotdl
       unar
       vim
+      vimPlugins.yuck-vim
       wget
       xdg-utils
       ydotool
       yt-dlp
       zoxide
     # libs/frameworks
+      gtk3
       libsForQt5.kdeconnect-kde
       libsForQt5.qt5.qtwayland
       meson
       ninja
       nixfmt-rfc-style
       nodejs
+      opencv
       pkg-config
       python3
       qt6.qtwayland
