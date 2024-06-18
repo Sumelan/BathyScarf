@@ -19,8 +19,7 @@ in
       $browser = firefox
 
       #monitors
-      monitor = HDMI-A-1, 1920x1080@60, 0x0, 1
-      monitor = HDMI-A-2, 1920x1080@60, 1920x0, 1
+      monitor = , preferred,auto,1
 
       #env variables
       env = XCURSOR_SIZE,24
@@ -53,7 +52,6 @@ in
       windowrule = workspace 1, firefox
       windowrule = workspace special:magic, Spotify
       #workspace rules
-      workspace=10, monitor:HDMI-A-2, default:true
 
       #keybindings
       bind = $mainMod, RETURN, exec, $terminal
