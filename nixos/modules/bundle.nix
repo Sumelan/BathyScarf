@@ -5,7 +5,6 @@
     ./env.nix
     ./network.nix
     ./nixvim/nixvim.nix
-    ./opentabletdriver.nix
     ./security.nix
     ./services.nix
     ./sound.nix
