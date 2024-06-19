@@ -14,7 +14,7 @@
           on-timeout = "brightnessctl -s set 10";    # set monitor backlight to minomum, avoid 0 on OLED monitor.
           on-resume = "brightnessctl -r";            # monitor backlight restor.
         }
-  turn off keyboard backlight, uncomment this section if have keyboard backlight.
+       #turn off keyboard backlight, uncomment this section if have keyboard backlight.
         {
           timeout = 150;                                           # 2.5 min
           on-timeout = "brightnessctl -sd rgb:kbd_backlight set 0"; # turn off keyboard backlight.
