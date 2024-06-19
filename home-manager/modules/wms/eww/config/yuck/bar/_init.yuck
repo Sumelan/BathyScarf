@@ -15,7 +15,7 @@
         (box :orientation 'v' :space-evenly false :class "musicbar" :halign 'center'  :style "background-image:  url('${cover_art}');") 
         (box :class "barmusic-g")
         (box :orientation 'h' :class "bmusicbuttons" :halign 'center' :valign 'center' :space-evenly false :spacing 120
-          (box :valign 'center' :class "hbmusicbutton"  "󰋎")
+          (box :valign 'center' :class "hbmusicbutton"  "")
         (box :orientation 'h' :class "bmusicbuttons" :halign 'center' :valign 'center' :space-evenly false
           (button :onclick "~/.config/eww/scripts/ms.sh  --prev":valign 'center' :class "bmusicbutton"  "󰒮")
           (button :onclick "~/.config/eww/scripts/ms.sh  --toggle" :valign 'center' :class "bmusicbutton"  "${song_status}")

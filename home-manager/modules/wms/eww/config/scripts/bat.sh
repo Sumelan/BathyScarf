@@ -18,12 +18,12 @@ elif [ "$per" -gt "49" ]; then
 elif [ "$per" -gt "40" ]; then
 	icon="󰁽"
 elif [ "$per" -gt "20" ]; then
-	icon="assets/battery_nearly-low.png"
+	icon="󰁻"
 elif [ "$per" -gt "10" ]; then
-	icon="assets/battery_low.png"
+	icon="󰁺"
 	notify-send -u critical "Battery Low" "Connect Charger"
 elif [ "$per" -gt "0" ]; then
-	icon="assets/battery_low.png"
+	icon="󰂃"
 	notify-send -u critical "Battery Low" "Connect Charger"
 else
         echo  && exit
