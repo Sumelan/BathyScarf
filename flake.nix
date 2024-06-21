@@ -61,7 +61,6 @@
                 inherit inputs;
                 inherit gitUsername;
                 inherit theme;
-                inherit (inputs.nix-colors.lib-contrib { inherit pkgs; }) gtkThemeFromScheme;
                 inherit spicetify-nix;
               };
               home-manager.useGlobalPkgs = true;

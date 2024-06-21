@@ -2,6 +2,7 @@
   imports = [
     ./git.nix
     ./kitty.nix
+    ./neovim.nix
     ./stylix-option.nix
     ./spicetify.nix
     ./starship.nix

@@ -60,7 +60,7 @@ in
       bind = $mainMod, W, exec, $browser
       bind = $mainMod, C, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy
       bind = $mainMod, S, exec, screenshotmenu
-
+      bind = $mainMod ALT, W, exec, wallsetter
       bind = CTRL ALT, P, exec, powermenu
 
       bind = $mainMod, Q, killactive
