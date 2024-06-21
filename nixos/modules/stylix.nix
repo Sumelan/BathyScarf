@@ -2,7 +2,7 @@
 {
   stylix = {
     enable = true;
-    image = /home/bathys/Pictures/wallpapers/honkai-kafka-03.png;
+    image = /home/bathys/Pictures/wallpapers/honkai-kafka-06.png;
     # base16Scheme = {
     #   base00 = "232136";
     #   base01 = "2a273f";

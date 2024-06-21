@@ -14,7 +14,7 @@ while true; do
 
 	PREVIOUS=$WALLPAPER
 
-  	${pkgs.swww}/bin/swww img "$WALLPAPER" --transition-type random --transition-step 1 --transition-fps 60
+  	swww img "$WALLPAPER" --transition-type random --transition-step 1 --transition-fps 60
   	sleep $TIMEOUT
   done
 
