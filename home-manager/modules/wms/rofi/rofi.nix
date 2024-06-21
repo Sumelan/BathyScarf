@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 let
-  theme = config.colorScheme.palette;
+  theme = config.stylix.base16Scheme;
 in
 {
   programs.rofi = {

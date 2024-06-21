@@ -5,13 +5,13 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
     spicetify-nix.url = "github:the-argus/spicetify-nix";
-    nix-colors.url = "github:misterio77/nix-colors";
+    stylix.url = "github:danth/stylix";
+    fine-cmdline = {
+      url = "github:VonHeikemen/fine-cmdline.nvim";
+      flake = false;
+    };
     disko = {
       url = "github:nix-community/disko";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nixvim = {
-      url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
@@ -51,7 +51,7 @@
           };
           modules = [
             ./nixos/configuration.nix
-            inputs.nixvim.nixosModules.nixvim
+            inputs.stylix.nixosModules.stylix
             inputs.disko.nixosModules.disko
             home-manager.nixosModules.home-manager
               {

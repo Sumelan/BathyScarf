@@ -1,11 +1,10 @@
 {
   imports = [
     ./git.nix
-    ./gtk-qt.nix
     ./kitty.nix
-    ./starship.nix
+    ./stylix-option.nix
     ./spicetify.nix
-    ./vscode.nix
+    ./starship.nix
     ./yazi.nix
     ./zsh.nix
     ./wms/hyprland.nix

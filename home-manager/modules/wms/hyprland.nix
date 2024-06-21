@@ -1,6 +1,6 @@
 { config, ... }:
 let
-  theme = config.colorScheme.palette;
+  theme = config.stylix.base16Scheme;
 in
 {
   wayland.windowManager.hyprland =  {
@@ -29,7 +29,7 @@ in
       #start programs
       exec-once = dbus-update-activation-environment --systemd --all
       exec-once = systemctl --user import-environment QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-      exec-once = swww-daemon & swww img ~/Pictures/Wallpapers/kobato.png
+      exec-once = swww-daemon & swww img ~/Pictures/wallpapers/honkai-kafka-03.png
       exec-once = pkill dunst && Sleep .5 && dunst
       exec-once = eww daemon && sleep .5
       exec = eww open bar && sleep .5 && eww reload &

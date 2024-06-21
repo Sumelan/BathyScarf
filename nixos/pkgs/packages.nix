@@ -7,12 +7,7 @@
   nixpkgs.config = {
     allowUnfree = true;
   };
-  environment.systemPackages =
-    let
-      sugar = pkgs.callPackage ./sddm/sugar-dark.nix { };
-      tokyo-night = pkgs.libsForQt5.callPackage ./sddm/tokyo-night.nix { };
-    in
-      with pkgs; [
+  environment.systemPackages = with pkgs; [
     # de stuff
       brightnessctl
       cava
@@ -54,6 +49,7 @@
       catppuccinifier-gui
       cpufrequtils
       gimp
+      greetd.tuigreet
       hypridle
       hyprlock
       hyprpicker
@@ -73,7 +69,6 @@
       vencord
       vesktop
       vlc
-      vscode
       udiskie
       wine
       winetricks
@@ -81,10 +76,12 @@
       acpi
       atuin
       bat
-      btop
       clinfo
+      cmatrix
       cowsay
       curl
+      duf
+      eza
       fastfetch
       fd
       ffmpeg
@@ -93,14 +90,21 @@
       fzf
       gh # github cli
       git
+      htop
+      imv
+      inxi
       jq
+      killall
       libappindicator
       lazygit
+      lolcat
       lsd
       lshw
+      ncdu
       ncspot
       nh
       nitch
+      pciutils
       playerctl
       poppler
       qmk
@@ -119,6 +123,8 @@
       gtk3
       libsForQt5.kdeconnect-kde
       libsForQt5.qt5.qtwayland
+      libvirt
+      lxqt.lxqt-policykit
       meson
       ninja
       nixfmt-rfc-style
@@ -129,9 +135,8 @@
       qt6.qtwayland
       v4l-utils
     # vm
+      appimage-run
+      virt-viewer
       qemu
-    # sddm
-      sugar.sddm-sugar-dark # Name: sugar-dark
-      tokyo-night # Name: tokyo-night-sddm
   ];
 }
