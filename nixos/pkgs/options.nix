@@ -25,4 +25,5 @@
     file-roller.enable = true;
     kdeconnect.enable = true;
   };
+  hardware.brillo.enable = true;
 }

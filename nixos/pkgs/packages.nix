@@ -49,9 +49,10 @@
       anki-bin
       bitwarden
       bottles
+      brave
+      brillo
       catppuccinifier-gui
       cpufrequtils
-      firefox
       gimp
       hypridle
       hyprlock
@@ -109,7 +110,6 @@
       spotdl
       unar
       vim
-      vimPlugins.yuck-vim
       wget
       xdg-utils
       ydotool
