@@ -1,7 +1,4 @@
 { config, pkgs, ... }:
-let
-  theme = config.stylix.base16Scheme;
-in
 {
   programs.rofi = {
     enable = true;
@@ -24,12 +21,6 @@ in
     @theme "/dev/null"
     * {
     font:                        "Product Sans 12";
-    background:                  #${theme.base01};
-    background-alt:              #${theme.base00};
-    foreground:                  #${theme.base04};
-    selected:                    #${theme.base0D};
-    active:                      #${theme.base0A};
-    urgent:                      #${theme.base08};
     }
 
     window {

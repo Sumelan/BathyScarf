@@ -1,4 +1,4 @@
-{ inputs, pkgs, theme, ... }:
+{ inputs, pkgs, ... }:
 {
   imports = [
     ./eww_colors.nix

@@ -1,7 +1,4 @@
 { config, ... }:
-let
-  theme = config.stylix.base16Scheme;
-in
 {
   wayland.windowManager.hyprland =  {
     enable = true;
@@ -153,8 +150,6 @@ in
         gaps_in = 4
         gaps_out = 6
         border_size = 0
-        col.active_border = rgba(${theme.base02}ff)
-        col.inactive_border = rgba(${theme.base00}ff)
         layout = dwindle
         allow_tearing = true
       }

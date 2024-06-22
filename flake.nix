@@ -5,7 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
     spicetify-nix.url = "github:the-argus/spicetify-nix";
-    stylix.url = "github:danth/stylix";
+    catppuccin.url = "github:catppuccin/nix";
     fine-cmdline = {
       url = "github:VonHeikemen/fine-cmdline.nvim";
       flake = false;
@@ -19,24 +19,16 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = { nixpkgs, home-manager, spicetify-nix, ... }@inputs:
+  outputs = { nixpkgs, catppuccin, home-manager, spicetify-nix, ... }@inputs:
 
     let
       system = "x86_64-linux";
-
       # User Variables
       hostname = "BathyScarf";
       username = "bathys";
       gitUsername = "bathys";
       gitEmail = "bathys@proton.me";
       theme = "catppuccin-macchiato";
-
-      pkgs = import nixpkgs {
-        inherit system;
-        config = {
-          allowUnfree = true;
-        };
-      };
     in
     {
       nixosConfigurations = {
@@ -51,7 +43,7 @@
           };
           modules = [
             ./nixos/configuration.nix
-            inputs.stylix.nixosModules.stylix
+            catppuccin.nixosModules.catppuccin
             inputs.disko.nixosModules.disko
             home-manager.nixosModules.home-manager
               {
@@ -66,10 +58,15 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.backupFileExtension = "backup";
-              home-manager.users.${username} = import ./home-manager/home.nix;
-            } 
+              home-manager.users.${username} = {
+                imports = [
+                  ./home-manager/home.nix
+                  catppuccin.homeManagerModules.catppuccin
+                ];
+              };
+            }
           ];
         };
       };
     };
-  }
+}
