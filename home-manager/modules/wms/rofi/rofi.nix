@@ -35,7 +35,7 @@
     enabled:                     true;
     border-radius:               15px;
     cursor:                      "default";
-    background-color:            @background;
+    background-color:            #363a4f;
     }
 
     mainbox {
@@ -63,8 +63,8 @@
     spacing:                     10px;
     padding:                     15px;
     border-radius:               10px;
-    background-color:            @background-alt;
-    text-color:                  @foreground;
+    background-color:            #5b6078;
+    text-color:                  #cad3f5;
     children:                    [ "textbox-prompt-colon", "entry" ];
     }
     textbox-prompt-colon {
@@ -88,18 +88,18 @@
     enabled:                     true;
     spacing:                     20px;
     background-color:            transparent;
-    text-color:                  @foreground;
+    text-color:                  #cad3f5;
     }
     button {
     padding:                     15px;
     border-radius:               10px;
-    background-color:            @background-alt;
+    background-color:            #5b6078;
     text-color:                  inherit;
     cursor:                      pointer;
     }
     button selected {
-    background-color:            @background-alt;
-    text-color:                  @selected;
+    background-color:            #5b6078;
+    text-color:                  #c6a0f6;
     }
 
     listview {
@@ -116,7 +116,7 @@
 
     spacing:                     10px;
     background-color:            transparent;
-    text-color:                  @foreground;
+    text-color:                  #cad3f5;
     cursor:                      "default";
     }
 
@@ -126,7 +126,7 @@
     padding:                     8px;
     border-radius:               10px;
     background-color:            transparent;
-    text-color:                  @foreground;
+    text-color:                  #cad3f5;
     cursor:                      pointer;
     }
     element normal.normal {
@@ -134,24 +134,24 @@
     text-color:                  inherit;
     }
     element normal.urgent {
-    background-color:            @urgent;
-    text-color:                  @foreground;
+    background-color:            #ed8796;
+    text-color:                  #cad3f5;
     }
     element normal.active {
-    background-color:            @active;
-    text-color:                  @foreground;
+    background-color:            #8aadf4;
+    text-color:                  #cad3f5;
     }
     element selected.normal {
-    background-color:            @background-alt;
-    text-color:                  @selected;
+    background-color:            #5b6078;
+    text-color:                  #c6a0f6;
     }
     element selected.urgent {
-    background-color:            @urgent;
-    text-color:                  @foreground;
+    background-color:            #ed8796;
+    text-color:                  #cad3f5;
     }
     element selected.active {
-    background-color:            @urgent;
-    text-color:                  @foreground;
+    background-color:            #ed8796;
+    text-color:                  #cad3f5;
     }
     element-icon {
     background-color:            transparent;
@@ -173,16 +173,16 @@
     textbox {
     padding:                     15px;
     border-radius:               10px;
-    background-color:            @background-alt;
-    text-color:                  @foreground;
+    background-color:            #5b6078;
+    text-color:                  #cad3f5;
     vertical-align:              0.5;
     horizontal-align:            0.0;
     }
     error-message {
     padding:                     15px;
     border-radius:               20px;
-    background-color:            @background;
-    text-color:                  @foreground;
+    background-color:            #363a4f;
+    text-color:                  #cad3f5;
     }
   '';
 }
