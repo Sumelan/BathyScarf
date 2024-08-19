@@ -39,6 +39,4 @@ done
 
 create_taglist
 
-socat -u UNIX-CONNECT:/tmp/hypr/"$HYPRLAND_INSTANCE_SIGNATURE"/.socket2.sock - | while read -r event; do
-handle_event "$event"
-done
+socat -u "UNIX-CONNECT:/run/user/${UID}/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock" - | while read -r line; do handle_event "$line"; done

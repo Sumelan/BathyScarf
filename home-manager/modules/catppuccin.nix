@@ -5,7 +5,7 @@
     flavor = "macchiato";
     pointerCursor = {
       enable = true;
-      accent = "sky";
+      accent = "rosewater";
       flavor = "macchiato";
     };
   };
@@ -15,7 +15,7 @@
     accent = "flamingo";
     flavor = "macchiato";
     size = "standard";
-    tweaks = [ "normal" ];
+    tweaks = [ "rimless" "normal" ];
     icon = {
       enable = true;
       accent = "sapphire";

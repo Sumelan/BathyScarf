@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./eww_colors.nix
@@ -22,6 +22,14 @@
     userDirs = {
       enable = true;
       createDirectories = true;
+    };
+  };
+
+  qt = {
+    enable = true;
+    platformTheme.name = "kvantum";
+    style = {
+      name = "kvantum";
     };
   };
 
