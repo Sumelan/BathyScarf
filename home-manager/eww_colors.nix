@@ -1,10 +1,11 @@
 {
   xdg.configFile.".config/eww/style/_colors.scss".text = ''
-    $background : #363a4f;
-    $foreground : #939ab7;
-    $background-alt : #24273a;
-    $background-light : #5b6078;
-    $foreground-alt : #8087a2;
+    $background : #24273a;
+    $foreground : #b8c0e0;
+    $background-alt : #363a4f;
+    $background-light : #6e738d;
+    $foreground-alt : #a5adcb;
+
     $red : #902c3b;
     $red-light : #ed8796;
 
@@ -21,10 +22,10 @@
     $cyan-light : #ee99a0;
 
     $magenta : #ff00ff;
-    $magenta-light : #b7bdf8;
+    $magenta-light : #c6a0f6;
 
     $comment : #cad3f5;
-    $accent : #c6a0f6;
+    $accent : #8aadf4;
 
   '';
 }
