@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
   imports = [
-    ./eww_colors.nix
     ./modules/bundle.nix
   ];
 

@@ -2,36 +2,29 @@
   @include rounding;
   padding: 16px;
   margin-top: 2px;
-
   inner {
     &:hover {
-      background-color: $background-alt;
+      background-color: $surface0;
     }
   }
-
   button {
     border-style: none;
     box-shadow: inherit;
     text-shadow: inherit;
-    background-color: $background-alt;
-
+    background-color: $surface0;
     min-width: 18px;
     min-height: 18px;
     margin: 0 0.4rem;
     border-radius: 10px;
-
     &:hover {
-      background-color: $foreground;
+      background-color: $subtext1;
     }
-
     &.occupied {
-      background: rgba($foreground, 0.6);
-
+      background: rgba($text, 0.6);
       &:hover {
-        background-color: $foreground;
+        background-color: $text;
       }
     }
-
     &.active {
       background: linear-gradient(to right, $maroon, $red);
       background-size: cover;
@@ -40,7 +33,7 @@
 }
 
 .bar {
-  background: $background;
+  background: $base;
 }
 
 .barpor {
@@ -50,22 +43,20 @@
 
 .launcher {
   font-family: "Iosevka Nerd Font";
-  color: $background-alt;
-  background: $accent;
+  color: $surface0;
+  background: $blue;
   @include rounding;
   padding: 3px 12px;
   margin: 5px 0;
   margin-left: 0.5rem;
   font-size: 22px;
-
-  &:hover {
-    color: $green
+  &.hover {
+    color: $green;
   }
 }
 
-
 .both {
-  background-color: $background-alt;
+  background-color: $surface0;
   padding: 3px 12px;
   border-radius: 50px 7px 7px 50px;
   margin-top: 2px;
@@ -78,7 +69,7 @@
 
 .time {
   font-family: "Rubik";
-  background-color: $background-alt;
+  background-color: $surface0;
   padding: 3px 12px;
   border-radius: 7px 50px 50px 7px;
   margin-top: 2px;
@@ -91,7 +82,7 @@
 
 .powericon {
   font-family: "Iosevka Nerd Font";
-  background-color: $background-alt;
+  background-color: $surface0;
   @include rounding;
   padding: 3px 12px;
   color: $red;
@@ -102,7 +93,7 @@
 .batteryicon {
   font-family: "Iosevka Nerd Font";
   font-size: 20px;
-  color: $background;
+  color: $base;
 }
 
 .bat_progress trough {
@@ -114,14 +105,14 @@
 
 .bat_progress trough highlight {
   @include rounding;
-  background: linear-gradient(to right, $blue, $blue-light);
+  background: linear-gradient(to right, $blue, $sapphire);
 }
 
 .batterybar {
   margin: 2px 0;
   @include rounding;
   padding: 8px;
-  background: $background-alt;
+  background: $surface0;
 }
 
 .wifiicon {
@@ -140,7 +131,7 @@
 }
 
 .barmusic-g {
-  background-image: linear-gradient(to right, rgba($background, 0.8) 40%, rgba($background, 0.7));
+  background-image: linear-gradient(to right, rgba($base, 0.8) 40%, rgba($base, 0.7));
 }
 
 .hbmusicbutton {
@@ -166,7 +157,7 @@
 }
 
 .icon {
-  background: $background-alt;
+  background: $surface0;
   padding: 0.4rem 1rem;
   font-size: 18px;
   @include rounding;
@@ -176,7 +167,7 @@
 }
 
 .themes {
-  background: $background-alt;
+  background: $surface0;
   margin: 4px 0;
   padding: 0.4rem;
 }

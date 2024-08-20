@@ -1,19 +1,19 @@
 .control {
   @include rounding;
-  background: $background;
+  background: $base;
   padding: 1rem;
 }
 
 .sliders {
   @include rounding;
-  background: $background-alt;
+  background: $surface0;
   padding: 2rem;
 }
 
 .volscale trough {
   min-width: 8rem;
   min-height: 16px;
-  background: rgba($comment, 0.4);
+  background: rgba($text, 0.4);
   @include rounding;
 }
 
@@ -25,7 +25,7 @@
 .brightscale trough {
   min-width: 8rem;
   min-height: 16px;
-  background: rgba($comment, 0.4);
+  background: rgba($text, 0.4);
   @include rounding;
 }
 
@@ -51,7 +51,7 @@
 }
 
 .music-g {
-  background-image: linear-gradient(to right, rgba($background, 0.95) 30%, rgba($background, 0.5));
+  background-image: linear-gradient(to right, rgba($base, 0.95) 30%, rgba($base, 0.5));
 }
 
 .musicbutton {
@@ -61,7 +61,7 @@
 }
 
 .musicbuttons {
-  background: $background-alt;
+  background: $surface0;
   padding: 0.5rem 1rem;
   @include rounding;
 }
@@ -77,11 +77,11 @@
 .music-scale trough {
   min-width: 8rem;
   min-height: 10px;
-  background: rgba($background-alt, 0);
+  background: rgba($surface0, 0);
 }
 
 .music-scale trough highlight {
-  background: $magenta;
+  background: $mauve;
 }
 
 .musicinfo {
@@ -96,15 +96,15 @@
 
 .setbtn {
   font-family: Material Design Icons;
-  background: rgba($comment, 0.2);
+  background: rgba($text, 0.2);
   @include rounding;
   padding: 1.7rem;
   font-size: 24px;
 }
 
 .active {
-  background: $accent;
-  color: $background;
+  background: $blue;
+  color: $base;
 }
 
 .scaleicon {
@@ -118,7 +118,7 @@
 }
 
 .buttons {
-  background: $background-alt;
+  background: $surface0;
   padding: 16px;
   @include rounding;
 }

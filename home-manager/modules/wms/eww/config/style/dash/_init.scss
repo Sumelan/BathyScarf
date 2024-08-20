@@ -1,5 +1,5 @@
 .dash {
-  background: $background;
+  background: $base;
   padding: 2rem;
   @include rounding;
 }
@@ -7,7 +7,7 @@
 .notifcenter {
   @include rounding;
   padding: 1rem;
-  background: rgba($background-alt, 0.4);
+  background: rgba($surface0, 0.4);
 }
 
 .eon {
@@ -18,7 +18,7 @@
 
 .notification {
   font-family: Rubik;
-  background: rgba($background-alt, 0.6);
+  background: rgba($surface0, 0.6);
   @include rounding;
 
   &-close {
@@ -31,7 +31,7 @@
 .notification-title {
   padding: 1rem;
   @include rounding;
-  background: $background-alt;
+  background: $surface0;
 }
 
 .notification-body {
@@ -44,12 +44,12 @@
 }
 
 .dashgradient {
-  background-image: linear-gradient(to right, rgba($background, 0.5) 30%, rgba($background, 0.7));
+  background-image: linear-gradient(to right, rgba($base, 0.5) 30%, rgba($base, 0.7));
 }
 
 .dashtime {
   font-family: Rubik;
-  background: $background-alt;
+  background: $surface0;
   @include rounding;
   padding: 1rem;
 }
@@ -68,11 +68,11 @@
 .stats {
   padding: 1rem;
   @include rounding;
-  background: rgba($background-alt, 0.4);
+  background: rgba($surface0, 0.4);
 }
 
 .gridline {
-  background: $background-alt;
+  background: $surface0;
   @include rounding;
 }
 
@@ -85,40 +85,40 @@
 
 .magentascale trough highlight {
   @include rounding;
-  background: $magenta-light;
+  background: $lavender;
 }
 
 .greenscale trough highlight {
   @include rounding;
-  background: $green-light;
+  background: $green;
 }
 
 .bluescale trough highlight {
   @include rounding;
-  background: $blue-light;
+  background: $blue;
 }
 
 .redscale trough highlight {
   @include rounding;
-  background: $red-light;
+  background: $red;
 }
 
 .yellowscale trough highlight {
   @include rounding;
-  background: $yellow-light;
+  background: $yellow;
 }
 
 .circgreen {
-  color: $green-light;
+  color: $green;
 }
 
 .circred {
-  color: $red-light;
+  color: $red;
 }
 
 .altstat {
   @include rounding;
-  background: rgba($background-alt, 0.8);
+  background: rgba($surface0, 0.8);
   padding: 1rem 2rem;
 }
 
@@ -130,13 +130,13 @@
 
 .clabel {
   font-family: Iosevka Nerd Font;
-  color: $comment;
+  color: $text;
 }
 
 
 .dashmusic {
   @include rounding;
-  background: rgba($background-alt, 0.8);
+  background: rgba($surface0, 0.8);
   padding: 1rem;
 }
 
