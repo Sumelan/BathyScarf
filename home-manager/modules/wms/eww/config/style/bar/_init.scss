@@ -33,7 +33,7 @@
     }
 
     &.active {
-      background: linear-gradient(to right, $accent, $accent);
+      background: linear-gradient(to right, $maroon, $red);
       background-size: cover;
     }
   }
@@ -127,6 +127,7 @@
 .wifiicon {
   font-size: 20px;
   font-family: "Iosevka Nerd Font";
+  color: $blue;
 }
 
 .musicbar {

@@ -40,10 +40,10 @@ color() {
 }
 icon() {
     if [[ $STATUS == "接続済み" ]]; then
-        echo "󰤨 "
+        echo " "
 
     else
-        echo "󰤮 "
+        echo "󰖪 "
     fi
 }
 speed() {

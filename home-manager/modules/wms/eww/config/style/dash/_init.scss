@@ -85,35 +85,35 @@
 
 .magentascale trough highlight {
   @include rounding;
-  background: $magenta;
+  background: $magenta-light;
 }
 
 .greenscale trough highlight {
   @include rounding;
-  background: $green;
+  background: $green-light;
 }
 
 .bluescale trough highlight {
   @include rounding;
-  background: $blue;
+  background: $blue-light;
 }
 
 .redscale trough highlight {
   @include rounding;
-  background: $red;
+  background: $red-light;
 }
 
 .yellowscale trough highlight {
   @include rounding;
-  background: $yellow;
+  background: $yellow-light;
 }
 
 .circgreen {
-  color: $green;
+  color: $green-light;
 }
 
 .circred {
-  color: $red;
+  color: $red-light;
 }
 
 .altstat {

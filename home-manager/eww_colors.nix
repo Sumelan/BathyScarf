@@ -18,8 +18,9 @@
     $blue : #6fa8dc;
     $blue-light : #8aadf4;
 
-    $cyan : #00ffff;
-    $cyan-light : #ee99a0;
+    $sky : #91d7e3;
+
+    $maroon : #ee99a0;
 
     $magenta : #ff00ff;
     $magenta-light : #c6a0f6;
