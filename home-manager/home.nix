@@ -25,6 +25,20 @@
     };
   };
 
+  gtk = {
+    enable = true;
+    font = {
+      name = "ShureTechMono Nerd Font";
+      size = 12;
+    };
+    gtk3.extraConfig = {
+      gtk-application-prefer-dark-theme = 1;
+    };
+    gtk4.extraConfig = {
+      gtk-application-prefer-dark-theme = 1;
+    };
+  };
+
   qt = {
     enable = true;
     platformTheme.name = "kvantum";

@@ -1,6 +1,6 @@
 { pkgs, ... }: 
 {
- hardware.sane = {
+  hardware.sane = {
     enable = true;
     extraBackends = [ pkgs.sane-airscan ];
     disabledDefaultBackends = [ "escl" ];

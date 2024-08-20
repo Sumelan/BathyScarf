@@ -41,7 +41,6 @@
       wireplumber
     # programs
       anki-bin
-      bitwarden
       bottles
       brave
       brillo
@@ -57,6 +56,7 @@
       krita
       lutris
       neovide
+      nwg-look
       obs-studio
       obsidian
       protonup-qt
@@ -100,7 +100,6 @@
       lsd
       lshw
       ncdu
-      ncspot
       nh
       nitch
       pciutils
