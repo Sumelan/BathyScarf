@@ -36,7 +36,7 @@
                    :value battery
                    :thickness 3
                    :clockwise true
-                     :start-at 30
+                   :start-at 30
    (box :class "t")
     ))
 )

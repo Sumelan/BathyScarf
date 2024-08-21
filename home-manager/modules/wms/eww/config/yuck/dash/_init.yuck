@@ -121,7 +121,7 @@
                       :id {entry["id"]["data"]}
 										  :summary {entry["summary"]["data"]}
 										  :body {entry["body"]["data"]}
-                      :icon {(entry["icon_path"]["data"] ?: "/home/bathys/.config/awesome/theme/assets/notif.png")}
+                      :icon {(entry["icon_path"]["data"] ?: "/home/bathys/.config/eww/assets/notification.png")}
 										  :reveal_close_icon "false"
 										  :is_ss {entry["appname"]["data"] == "Screenshot Tool" ? "true" : "false"}
 									  )

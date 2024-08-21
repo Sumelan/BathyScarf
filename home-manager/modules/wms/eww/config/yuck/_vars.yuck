@@ -32,7 +32,8 @@
 
 (defpoll username :interval "48h"  "whoami")
 (defpoll hostname :interval "48h"  "hostname")
-(defpoll uptime :interval "1m" "uptime -p | sed -e 's/up //;s/ hours,/h/;s/ hour,/h/;s/ minutes/m/;s/ minute/m/'")
+(defpoll uptime :interval "1m" "uptime | awk '{ print $2 $3 $4 $5}' | sed -e 's/up/UP - /;s/day/day /;s/稼働時間/UP - /;s/:/h /;s/,/m/;s/1ユーザ,//'
+")
 
 (defpoll apactive :interval '1s' "~/.config/eww/scripts/ap.sh --class")
 (defpoll dndactive :interval '1s' "~/.config/eww/scripts/dnd.sh --class")
