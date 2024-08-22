@@ -24,7 +24,7 @@ rofi_cmd() {
 
 # Pass variables to rofi dmenu
 run_rofi() {
-	echo -e "$active\n$screen\n$output\n$area\n$window" | rofi_cmd
+	echo -e "$active\n$screen\n$output\n$area" | rofi_cmd
 }
 
 # Mode selection

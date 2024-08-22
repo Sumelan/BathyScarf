@@ -163,15 +163,15 @@
           text-color = mkLiteral "@blue";
         };
         "element selected.normal" = {
-          background-color = mkLiteral "@overlay1";
+          background-color = mkLiteral "@surface2";
           text-color = mkLiteral "@maroon";
         };
         "element selected.urgent" = {
-          background-color = mkLiteral "@overlay1";
+          background-color = mkLiteral "@surface2";
           text-color = mkLiteral "@red";
         };
         "element selected.active" = {
-          background-color = mkLiteral "@overlay1";
+          background-color = mkLiteral "@surface2";
           text-color = mkLiteral "@blue";
         };
         "element-icon" = {

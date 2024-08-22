@@ -7,7 +7,7 @@ case "$chosen" in
   "  Restart") reboot ;;
   "  Suspend") systemctl suspend-then-hibernate ;;
 	"  Hibernate") systemctl hibernate ;;
- 	"󰗽  Log Out") loginctl kill-user $USER ;;
+ 	"󰍃  Log Out") loginctl kill-user $USER ;;
  	"  Lock") hyprlock ;;
  	*) exit 1 ;;
 esac
