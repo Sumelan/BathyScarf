@@ -14,7 +14,6 @@
       cliphist
       dunst
       eww
-      feh
       gparted
       gwenview
       grim
@@ -27,6 +26,7 @@
       networkmanagerapplet
       rofi-wayland
       polkit_gnome
+      pqiv
       slurp
       swappy
       swww
@@ -71,6 +71,7 @@
       udiskie
       wine
       winetricks
+      xdragon
     # CLI programs
       acpi
       atuin
@@ -81,6 +82,7 @@
       curl
       duf
       eza
+      exiftool
       fastfetch
       fd
       ffmpeg
@@ -99,6 +101,7 @@
       lolcat
       lsd
       lshw
+      mediainfo
       ncdu
       nh
       nitch
