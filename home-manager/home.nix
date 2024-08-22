@@ -28,7 +28,7 @@
     enable = true;
     font = {
       name = "ShureTechMono Nerd Font";
-      size = 12;
+      size = 14;
     };
     gtk3.extraConfig = {
       gtk-application-prefer-dark-theme = 1;

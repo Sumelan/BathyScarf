@@ -1,7 +1,7 @@
 {
   catppuccin = {
     enable = true;
-    accent = "blue";
+    accent = "green";
     flavor = "macchiato";
     pointerCursor = {
       enable = true;
@@ -106,7 +106,7 @@
   # Hyprland
   wayland.windowManager.hyprland.catppuccin = {
     enable = true;
-    accent = "blue";
+    accent = "green";
     flavor = "macchiato";
   };
 }

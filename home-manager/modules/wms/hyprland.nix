@@ -9,7 +9,7 @@
       ## variables
       $mainMod = SUPER
       $terminal = kitty
-      $fileManager = yazi
+      $fileManager = Thunar
       $browser = brave
 
       env = NIXOS_OZONE_WL, 1
@@ -128,11 +128,12 @@
         new_status = inherit
       }
 
-      #keybindings
+      # keybindings
       bind = $mainMod, Return, exec, $terminal
       bind = $mainMod SHIFT, Return, exec, pkill rofi || rofi -show drun
       bind = $mainMod, T, exec, $fileManager
       bind = $mainMod, W, exec, $browser
+      bind = $mainMod, Y, exec, kitty -e yazi
       bind = $mainMod, C, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy
       bind = $mainMod, S, exec, screenshotmenu
       bind = $mainMod ALT, W, exec, wallsetter
