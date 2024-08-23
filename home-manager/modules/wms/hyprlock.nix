@@ -17,10 +17,10 @@
       ];
       image = [
         {
-          path = "/home/bathys/Pictures/pfp.png";
+          path = "$HOME/.config/pfp.png";
           size = 150;
           border_size = 4;
-          border_color = "rgb(0C96F9)";
+          border_color = "rgb(A6DA95)";
           rounding = -1; # Negative means circle
           position = "0, 200";
           halign = "center";
@@ -34,9 +34,9 @@
           monitor = "";
           dots_center = true;
           fade_on_empty = false;
-          font_color = "rgb(CFE6F4)";
-          inner_color = "rgb(657DC2)";
-          outer_color = "rgb(0D0E15)";
+          font_color = "rgb(8AADF4)";
+          inner_color = "rgb(5B6078)";
+          outer_color = "rgb(24273A)";
           outline_thickness = 5;
           placeholder_text = "Password...";
           shadow_passes = 2;

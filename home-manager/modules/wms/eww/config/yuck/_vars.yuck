@@ -15,8 +15,8 @@
 (defpoll volume :interval "1s" `pamixer --get-volume`)
 (defpoll brightness :interval "1s" `brightnessctl -m -d amdgpu_bl0 | awk -F, '{print substr($4, 0, length($4)-1)}' | tr -d '%'`)
 
-(defvar pfp "/home/bathys/.config/eww/assets/pfp.png")
-(defvar fullpfp "/home/bathys/.config/eww/assets/fullpfp.png")
+(defvar pfp "/home/bathys/.config/pfp.png")
+(defvar fullpfp "/home/bathys/.config/fullpfp.png")
 
 (defpoll cputemp :interval "1s" "~/.config/eww/scripts/cpu.sh")
 (defpoll wifisped :interval "1s" "~/.config/eww/scripts/wifi.sh --speed")
@@ -32,8 +32,7 @@
 
 (defpoll username :interval "48h"  "whoami")
 (defpoll hostname :interval "48h"  "hostname")
-(defpoll uptime :interval "1m" "uptime | awk '{ print $2 $3 $4 $5}' | sed -e 's/up/UP - /;s/day/day /;s/稼働時間/UP - /;s/:/h /;s/,/m/;s/1ユーザ,//'
-")
+(defpoll uptime :interval "1m" "uptime | awk '{ print $2 $3 $4 $5}' | sed -e 's/up/UP - /;s/day/day /;s/稼働時間/UP - /;s/:/h /;s/,/m/;s/1ユーザ,//'")
 
 (defpoll apactive :interval '1s' "~/.config/eww/scripts/ap.sh --class")
 (defpoll dndactive :interval '1s' "~/.config/eww/scripts/dnd.sh --class")

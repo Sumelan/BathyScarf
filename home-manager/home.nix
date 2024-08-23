@@ -37,7 +37,6 @@
       gtk-application-prefer-dark-theme = 1;
     };
   };
-
   qt = {
     enable = true;
     platformTheme.name = "kvantum";
@@ -52,6 +51,16 @@
       uris = [ "qemu:///system" ];
     };
   };
+
+  # Place Files Inside Home Directory
+  home.file."Pictures/wallpapers/default.png" = {
+    source = ./assets/nix-wallpaper-stripes-logo.png;
+    recursive = true;
+  };
+  home.file.".pfp.icon".source = ./assets/pfp.png;
+  home.file.".fullpfp.icon".source = ./assets/fullpfp.png;
+  home.file.".config/pfp.png".source = ./assets/pfp.png;
+  home.file.".config/fullpfp.png".source = ./assets/fullpfp.png;
 
   home.packages = with pkgs; [
     (writeShellScriptBin "wallsetter" (builtins.readFile ./bin/wallsetter/wallsetter.sh) )
