@@ -9,7 +9,7 @@
       ## variables
       $mainMod = SUPER
       $terminal = kitty
-      $fileManager = Thunar
+      $fileManager = thunar
       $browser = brave
 
       env = NIXOS_OZONE_WL, 1
