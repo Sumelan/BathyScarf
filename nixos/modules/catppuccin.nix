@@ -1,7 +1,7 @@
 {
   catppuccin = {
     enable = true;
-    accent = "blue";
+    accent = "green";
     flavor = "macchiato";
   };
   # console

@@ -14,7 +14,6 @@
       cliphist
       dunst
       eww
-      gparted
       gwenview
       grim
       grimblast
