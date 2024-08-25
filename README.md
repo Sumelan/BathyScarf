@@ -20,7 +20,7 @@ Configuration files for my Acer Laptop.
 ## Credit
 I have learned many from config files found on git.
 
-- Hyprland stuffs from the "Hyprland-Dots".
+- Hyprland stuffs from the "Hyprland-Dots".  
   https://github.com/JaKooLit/Hyprland-Dots
   
 - NixOS from "ZaneyOS".  
