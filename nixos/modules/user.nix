@@ -6,7 +6,7 @@
     users.bathys = {
       isNormalUser = true;
       description = "Bathys Scarf";
-      extraGroups = [ "networkmanager" "wheel" "input" "libvirtd" ];
+      extraGroups = [ "networkmanager" "wheel" "libvirtd" "scanner" "lp" "video" ];
     };
     mutableUsers = true;
     defaultUserShell = pkgs.zsh;
