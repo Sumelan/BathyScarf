@@ -45,6 +45,7 @@
       brillo
       catppuccinifier-gui
       cpufrequtils
+      firefox
       gimp
       greetd.tuigreet
       hypridle

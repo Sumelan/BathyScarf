@@ -1,6 +1,7 @@
 {
   imports = [
     ./catppuccin.nix
+    ./fastfetch.nix
     ./git.nix
     ./kitty.nix
     ./neovim.nix
@@ -9,11 +10,11 @@
     ./yazi.nix
     ./zsh.nix
     ./wms/hyprland.nix
-    ./wms/eww/eww.nix
     ./wms/hypridle.nix
-    ./wms/swappy.nix
-    ./wms/dunst/dunst.nix
     ./wms/hyprlock.nix
+    ./wms/dunst/dunst.nix
     ./wms/rofi/rofi.nix
+    ./wms/eww/eww.nix
+    ./wms/swappy.nix
   ];
 }
