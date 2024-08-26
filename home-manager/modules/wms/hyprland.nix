@@ -140,7 +140,6 @@
       bind = $mainMod ALT, P, exec, powermenu
 
       bind = $mainMod, Q, killactive
-      bind = $mainMod, V, togglefloating
       bind = $mainMod, F, fullscreen
       bind = $mainMod SHIFT, F, togglefloating
       bind = $mainMod SHIFT, C, exit
