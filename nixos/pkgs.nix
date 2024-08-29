@@ -80,6 +80,7 @@
       grimblast
       htop
       inxi
+      jq
       killall
       lazygit
       lolcat
