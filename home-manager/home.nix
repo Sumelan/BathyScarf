@@ -12,8 +12,22 @@
     homeDirectory = "/home/bathys";
   };
 
+  # Programs
   programs = {
     home-manager.enable = true;
+    brave = {
+      enable = true;
+      # Enable fcitx5
+      commandLineArgs = ["--enable-features=UseOzonePlatfor" "--ozone-platform=x11"];
+    };
+    starship = {
+      enable = true;
+    };
+    git = {
+      enable = true;
+      userName  = "bathys";
+      userEmail = "bathys@proton.me";
+    };
   };
 
 # Create XDG Dirs
@@ -24,11 +38,22 @@
     };
   };
 
+  dconf.settings = {
+    "org/virt-manager/virt-manager/connections" = {
+      autoconnect = [ "qemu:///system" ];
+      uris = [ "qemu:///system" ];
+    };
+  };
+
+  # Styling Options
+  stylix.targets = {
+    rofi.enable = false;
+    hyprland.enable = false;
+  };
   gtk = {
-    enable = true;
-    font = {
-      name = "ShureTechMono Nerd Font";
-      size = 14;
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
     };
     gtk3.extraConfig = {
       gtk-application-prefer-dark-theme = 1;
@@ -39,22 +64,13 @@
   };
   qt = {
     enable = true;
-    platformTheme.name = "kvantum";
-    style = {
-      name = "kvantum";
-    };
+    style.name = "adwaita-dark";
+    platformTheme.name = "gtk3";
   };
-
-  dconf.settings = {
-    "org/virt-manager/virt-manager/connections" = {
-      autoconnect = [ "qemu:///system" ];
-      uris = [ "qemu:///system" ];
-    };
-  };
-
+  
   # Place Files Inside Home Directory
-  home.file."Pictures/wallpapers/default.png" = {
-    source = ./assets/nix-wallpaper-stripes-logo.png;
+  home.file.".config/wallpaper.png" = {
+    source = ./assets/bathyscarf-wallpaper.png;
     recursive = true;
   };
   home.file.".pfp.icon".source = ./assets/pfp.png;
@@ -62,6 +78,7 @@
   home.file.".config/pfp.png".source = ./assets/pfp.png;
   home.file.".config/fullpfp.png".source = ./assets/fullpfp.png;
 
+  # Scripts
   home.packages = with pkgs; [
     (writeShellScriptBin "wallsetter" (builtins.readFile ./bin/wallsetter/wallsetter.sh) )
     (writeShellScriptBin "powermenu" (builtins.readFile ./bin/rofiscripts/powermenu.sh) )

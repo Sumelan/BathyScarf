@@ -4,11 +4,11 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
+    stylix.url = "github:danth/stylix";
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    catppuccin.url = "github:catppuccin/nix";
     fine-cmdline = {
       url = "github:VonHeikemen/fine-cmdline.nvim";
       flake = false;
@@ -22,7 +22,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = { nixpkgs, catppuccin, home-manager, spicetify-nix, ... }@inputs:
+  outputs = { self, nixpkgs, stylix, disko, home-manager, ... }@inputs:
 
     let
       system = "x86_64-linux";
@@ -32,32 +32,29 @@
       username = "bathys";
       gitUsername = "bathys";
       gitEmail = "bathys@proton.me";
-      theme = "catppuccin-macchiato";
     in
     {
       nixosConfigurations = {
         "${hostname}" = nixpkgs.lib.nixosSystem {
           specialArgs = {
             inherit system;
-            inherit inputs;
             inherit username;
             inherit hostname;
             inherit gitUsername;
             inherit gitEmail;
+            inherit inputs;
           };
           modules = [
             ./nixos/configuration.nix
-            catppuccin.nixosModules.catppuccin
-            inputs.disko.nixosModules.disko
+            stylix.nixosModules.stylix
+            disko.nixosModules.disko
             home-manager.nixosModules.home-manager
               {
               home-manager.extraSpecialArgs = {
                 inherit username;
                 inherit gitEmail;
-                inherit inputs;
                 inherit gitUsername;
-                inherit theme;
-                inherit spicetify-nix;
+                inherit inputs;
               };
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
@@ -65,7 +62,6 @@
               home-manager.users.${username} = {
                 imports = [
                   ./home-manager/home.nix
-                  catppuccin.homeManagerModules.catppuccin
                 ];
               };
             }

@@ -9,12 +9,12 @@
     jetbrains-mono
     font-awesome
     terminus_font
-    nerdfonts
     material-design-icons
+    nerdfonts
+    rubik
     ];
 
     fontDir.enable = true;
-
     fontconfig = {
       defaultFonts = {
          serif = [ "Noto Serif CJK JP" "Noto Color Emoji"  ];

@@ -1,20 +1,16 @@
 {
   imports = [
-    ./catppuccin.nix
     ./fastfetch.nix
-    ./git.nix
     ./kitty.nix
     ./neovim.nix
     ./spicetify.nix
-    ./starship.nix
     ./yazi.nix
     ./zsh.nix
-    ./wms/hyprland.nix
-    ./wms/hypridle.nix
-    ./wms/hyprlock.nix
-    ./wms/dunst/dunst.nix
-    ./wms/rofi/rofi.nix
-    ./wms/eww/eww.nix
-    ./wms/swappy.nix
+    ./dunst/dunst.nix
+    ./eww/eww.nix
+    ./hypr/hypridle.nix
+    ./hypr/hyprland.nix
+    ./hypr/hyprlock.nix
+    ./rofi/rofi.nix
   ];
 }
