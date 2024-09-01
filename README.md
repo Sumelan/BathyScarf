@@ -14,8 +14,9 @@ Configuration files for my Acer Laptop.
 - **GUI File Manager**: Thunar
 
 ## Screenshot
-
-
+![screenshot_01-09-24_16:36:14](https://github.com/user-attachments/assets/f7ae533e-69a3-4dc8-ac53-035d34d8b159)
+![screenshot_01-09-24_16:36:29](https://github.com/user-attachments/assets/2352321f-f0c9-495a-821b-c56f20894157)
+![screenshot_01-09-24_15:13:20](https://github.com/user-attachments/assets/4f564658-0114-401c-b518-e87924784cce)
 
 ## Credit
 I have learned many from config files found on git.
