@@ -1,12 +1,11 @@
 {
   programs.fastfetch = {
     enable = true;
-
     settings = {
       display = {
         color = {
           keys = "35";
-          output = "90";
+          output = "97";
         };
       };
 
