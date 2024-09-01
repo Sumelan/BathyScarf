@@ -4,7 +4,7 @@
   imports = [
       ./hardware-configuration.nix
       ./driver/intel-drivers.nix
-      ./pkgs.nix
+      ./packages.nix
       ./fonts/fonts.nix
       ./modules/bundle.nix
       ./disko-config.nix
@@ -195,7 +195,7 @@
    swapDevices = 1;
   };
 
-# Extra Module Options
+  # Extra Module Options
   drivers.intel.enable = true;
 
   #Add ~/.local/bin/ to $PATH

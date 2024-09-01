@@ -2,6 +2,9 @@
 {
   stylix = {
     enable = true;
+    base16Scheme = { 
+      yaml = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
+    };
     image = ../../home-manager/assets/bathyscarf-wallpaper.png;
     polarity = "dark";
     opacity.terminal = 0.8;
@@ -24,7 +27,7 @@
       sizes = {
         applications = 12;
         terminal = 14;
-        desktop = 11;
+        desktop = 12;
         popups = 12;
       };
     };

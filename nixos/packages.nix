@@ -12,7 +12,6 @@
       hyprpicker
       rofi-wayland
       swww
-      wofi
     # audio
       pamixer
       pavucontrol
@@ -57,11 +56,13 @@
       ]))
       yad
     # tools
+      cliphist
       file-roller
       networkmanagerapplet
     ## cli-programs
       bat
       brightnessctl
+      brillo
       cava
       cmatrix
       cowsay
@@ -100,7 +101,6 @@
       wget
       wl-clipboard
       xdragon
-      yazi
       ydotool
       yt-dlp
       zoxide
@@ -154,4 +154,5 @@
     file-roller.enable = true;
     kdeconnect.enable = true;
   };
+  hardware.brillo.enable = true;
 }
