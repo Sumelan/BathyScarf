@@ -179,7 +179,7 @@
     nfs.server.enable = false;
     ### Laptop
     thermald.enable = true;
-    tlp.enable = true;
+   #tlp.enable = true;
     logind.extraConfig = ''
       # don’t shutdown when power button is short-pressed
       HandlePowerKey=ignore
@@ -264,6 +264,12 @@
       luajitPackages = final.luajit.pkgs;
     })
   ];
+
+  # Cosmic
+  lib.mkDefault.services = {
+    desktopManager.cosmic.enable = true;
+    displayManager.cosmic-greeter.enable = true;
+  };
 
   # Set system version.
   system.stateVersion = "23.11";
