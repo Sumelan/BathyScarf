@@ -242,6 +242,11 @@
     defaultNetwork.settings.dns_enabled = true;
   };
 
+  # OpenGL
+  hardware.graphics = {
+    enable = true;
+  };
+
   # Automatic Garbage Collection
   nix.gc = {
     automatic = true;
