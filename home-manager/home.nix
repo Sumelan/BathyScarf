@@ -4,9 +4,6 @@
     ./modules/bundle.nix
   ];
 
-# Nicely reload system units when changing configs
-  systemd.user.startServices = "sd-switch";
-
 # Home Manager Settings
   home = {
     username = "${username}";
