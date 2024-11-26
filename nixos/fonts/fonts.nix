@@ -2,16 +2,9 @@
 {
   fonts = {
     packages = with pkgs; [
-    noto-fonts
     noto-fonts-cjk
     noto-fonts-emoji
-    fira-code
-    jetbrains-mono
     font-awesome
-    terminus_font
-    material-design-icons
-    nerdfonts
-    rubik
     ];
 
     fontDir.enable = true;
