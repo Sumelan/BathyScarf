@@ -219,7 +219,7 @@
     GSETTINGS_BACKEND = "keyfile";
   };
 
-  # Virt Manager
+  # Virtualization / Containers
   virtualisation.libvirtd.enable = true;
   virtualisation.podman = {
     enable = true;
