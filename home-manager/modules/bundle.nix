@@ -6,8 +6,8 @@
     ./spicetify.nix
     ./yazi.nix
     ./zsh.nix
-    ./dunst/dunst.nix
-    ./eww/eww.nix
+    ./swaync/swaync.nix
+    ./wlogout/wlogout.nix
     ./hypr/hypridle.nix
     ./hypr/hyprland.nix
     ./hypr/hyprlock.nix
