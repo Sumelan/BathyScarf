@@ -7,7 +7,6 @@
       ./packages.nix
       ./fonts/fonts.nix
       ./modules/bundle.nix
-      ./disko-config.nix
   ];
 
   # Define your hostname.
