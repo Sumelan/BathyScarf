@@ -84,11 +84,6 @@
 
   # Security / Polkit
   security = {
-    pam.services.swaylock = {
-      text = ''
-        auth include login
-      '';
-    };
     rtkit.enable = true;
     polkit.enable = true;
     polkit.extraConfig = ''
@@ -107,6 +102,12 @@
           }
       } )
       '';
+    pam.services.swaylock = {
+      text = ''
+        auth include login
+      '';
+    };
+  };
     # sudo without password
     sudo.wheelNeedsPassword = false;
   };
