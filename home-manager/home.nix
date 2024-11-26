@@ -68,12 +68,11 @@
     source = ./assets/bathyscarf-wallpaper.png;
     recursive = true;
   };
-  home.file.".pfp.icon".source = ./assets/pfp.png;
-  home.file.".fullpfp.icon".source = ./assets/fullpfp.png;
+  home.file.".pfp.icon".source = ./assets/pfp.png
   home.file.".config/pfp.png".source = ./assets/pfp.png;
-  home.file.".config/fullpfp.png".source = ./assets/fullpfp.png;
 
   # Scripts
+/*
   home.packages = with pkgs; [
     (writeShellScriptBin "wallsetter" (builtins.readFile ./bin/wallsetter/wallsetter.sh) )
     (writeShellScriptBin "powermenu" (builtins.readFile ./bin/rofiscripts/powermenu.sh) )
@@ -81,6 +80,6 @@
     (writeShellScriptBin "changebrightness" (builtins.readFile ./bin/notifs/changebrightness.sh) )
     (writeShellScriptBin "changevolume" (builtins.readFile ./bin/notifs/changevolume.sh) )
   ];
-
+*/
   home.stateVersion = "24.05";
 }
