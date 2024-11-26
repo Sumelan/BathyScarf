@@ -8,24 +8,19 @@
   systemd.user.startServices = "sd-switch";
 
   home = {
-    username = "bathys";
-    homeDirectory = "/home/bathys";
+    username = "sumelan";
+    homeDirectory = "/home/sumelan";
   };
 
   # Programs
   programs = {
     home-manager.enable = true;
-    brave = {
-      enable = true;
-      # Enable fcitx5
-      commandLineArgs = ["--enable-features=UseOzonePlatfor" "--ozone-platform=x11"];
-    };
     starship = {
       enable = true;
     };
     git = {
       enable = true;
-      userName  = "bathys";
+      userName  = "sumelan";
       userEmail = "bathys@proton.me";
     };
   };
