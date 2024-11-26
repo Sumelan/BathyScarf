@@ -5,12 +5,11 @@
   };
   environment.systemPackages = with pkgs; [
     # Desktop stuff
-      dunst
-      eww
       hypridle
       hyprlock
       hyprpicker
       rofi-wayland
+      swaynotificationcenter
       swww
     # audio
       pamixer
@@ -22,7 +21,7 @@
     # disocrd
       vesktop
     # browzer
-      brave
+      firefox
     # image-viewer
       imv
       pqiv
@@ -42,18 +41,10 @@
       mpv
     # terminal
       kitty
-    # game
-      lutris
-      steam
     # developping
       meson
       ninja
       pkg-config
-      (python312.withPackages (ps: with ps; [
-        psutil
-        configargparse
-        sh
-      ]))
       yad
     # tools
       cliphist
@@ -62,7 +53,6 @@
     ## cli-programs
       bat
       brightnessctl
-      brillo
       cava
       cmatrix
       cowsay
@@ -138,11 +128,6 @@
       enableSSHSupport = true;
     };
     nm-applet.enable = true;
-    steam = {
-      enable = true;
-      remotePlay.openFirewall = true;
-      dedicatedServer.openFirewall = true;
-    };
     virt-manager.enable = true;
     thunar = {
       enable = true;
@@ -154,5 +139,4 @@
     file-roller.enable = true;
     kdeconnect.enable = true;
   };
-  hardware.brillo.enable = true;
 }
