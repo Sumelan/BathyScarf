@@ -82,9 +82,13 @@
     };
   };
 
-  # Security
+  # Security / Polkit
   security = {
-    pam.services.swaylock = {};  #REQUIRE if use swaylock.
+    pam.services.swaylock = {
+      text = ''
+        auth include login
+      '';
+    };
     rtkit.enable = true;
     polkit.enable = true;
     polkit.extraConfig = ''
