@@ -92,6 +92,11 @@
     ];
   };
 
+  # Power management.
+  powerManagement = {
+    enable = true;
+  };
+
   # Security / Polkit
   security = {
     rtkit.enable = true;
@@ -118,7 +123,7 @@
       '';
     };
   };
-    # sudo without password
+  # sudo without password
     sudo.wheelNeedsPassword = false;
   };
 
@@ -144,10 +149,16 @@
       TimeoutStopSec = 10;
     };
   };
-
-  # Power management.
-  powerManagement = {
-	  enable = true;
+  systemd.services.flatpak-repo = {
+    path = [ pkgs.flatpak ];
+    script = ''
+      flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+    '';
+  };
+  hardware.sane = {
+    enable = true;
+    extraBackends = [ pkgs.sane-airscan ];
+    disabledDefaultBackends = [ "escl" ];
   };
 
   # Services
