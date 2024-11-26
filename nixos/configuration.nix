@@ -149,18 +149,14 @@
       TimeoutStopSec = 10;
     };
   };
+  # Flatpak
   systemd.services.flatpak-repo = {
     path = [ pkgs.flatpak ];
     script = ''
       flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     '';
   };
-  hardware.sane = {
-    enable = true;
-    extraBackends = [ pkgs.sane-airscan ];
-    disabledDefaultBackends = [ "escl" ];
-  };
-
+  
   # Services
   services = {
     xserver = {
@@ -251,11 +247,6 @@
     enable = true;
     dockerCompat = true;
     defaultNetwork.settings.dns_enabled = true;
-  };
-
-  # OpenGL
-  hardware.graphics = {
-    enable = true;
   };
 
   # Optimization settings and garbage collection automation
