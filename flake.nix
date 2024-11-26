@@ -5,7 +5,6 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
     stylix.url = "github:danth/stylix";
-    yazi.url = "github:sxyazi/yazi";
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -30,7 +29,7 @@
 
       # User Variables
       hostname = "BathyScarf";
-      username = "bathys";
+      username = "sumelan";
     in
     {
       nixosConfigurations = {
