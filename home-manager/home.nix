@@ -63,16 +63,6 @@
   };
 
   # Place Files Inside Home Directory
-  home.file."Pictures/Wallpapers" = {
-    source = ../assets/wallpapers;
-    recursive = true;
-  };
-  home.file.".config/wlogout/icons" = {
-    source = ../modules/wlogout;
-    recursive = true;
-  };
-  home.file.".face.icon".source = ../assets/face.jpg;
-  home.file.".config/face.jpg".source = ../assets/face.jpg;
   home.file.".config/swappy/config".text = ''
     [Default]
     save_dir=/home/${username}/Pictures/Screenshots
