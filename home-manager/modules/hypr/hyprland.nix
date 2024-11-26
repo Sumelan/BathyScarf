@@ -10,7 +10,7 @@
       $mainMod = SUPER
       $term = kitty
       $file = thunar
-      $browser = brave
+      $browser = firefox
 
       env = NIXOS_OZONE_WL, 1
       env = NIXPKGS_ALLOW_UNFREE, 1
@@ -28,20 +28,15 @@
       # start programs
       exec-once = dbus-update-activation-environment --systemd --all
       exec-once = systemctl --user import-environment QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-      exec-once = pkill swww;sleep .5 && swww-daemon
-      exec-once = swww img ~/.config/wallpaper.png
-      exec-once = pkill dunst;sleep .5 && dunst
-      exec-once = plill eww;sleep .5 && eww daemon
-      exec = eww open bar && sleep .5 && eww reload
+      exec-once = killall -q swww;sleep .5 && swww init
+      exec-once = killall -q waybar;sleep .5 && waybar
+      exec-once = killall -q swaync;sleep .5 && swaync
       exec-once = nm-applet --indicator
-      exec-once = blueman-applet
       exec-once = lxqt-policykit-agent
-      exec-once = wl-paste --type text --watch cliphist store & wl-paste --type image --watch cliphist store & wl-paste --watch cliphist store
-      exec-once = systemd
-      exec-once = kdeconnect-indicator
-      exec-once = fcitx5
-      #monitors
-      monitor = , preferred,auto,1
+      exec-once = sleep 1.5 && swww img /home/${username}/Pictures/Wallpapers/beautifulmountainscape.jpg
+
+      # Monitor
+      monitor=,preferred,auto,1
 
       # settings
       general {
@@ -64,13 +59,8 @@
         accel_profile = flat
       }
       # window rules
-      windowrulev2 = opacity 0.9 0.7, class:^(Brave)$
+      windowrulev2 = opacity 0.9 0.7, class:^(Firefox)$
       windowrulev2 = opacity 0.9 0.7, class:^(thunar)$
-      windowrulev2 = stayfocused, title:^()$,class:^(steam)$
-      windowrulev2 = minsize 1 1, title:^()$,class:^(steam)$
-      windowrule = noborder,^(wofi)$
-      windowrule = center,^(wofi)$
-      windowrule = center,^(steam)$
       windowrule = float, nm-connection-editor|blueman-manager
       windowrule = float, swayimg|vlc|Viewnior|pavucontrol
       windowrule = float, nwg-look|qt5ct|mpv
@@ -121,9 +111,6 @@
       dwindle {
         pseudotile = true
         preserve_split = true
-      }
-      master {
-        new_status = inherit
       }
 
       # keybindings
@@ -203,10 +190,11 @@
       bind = ,XF86MonBrightnessDown, exec, changebrightness down
       bind = ,Print, exec, screenshotmenu
 
-      ##open eww widget
+/*
       bind = ,Menu, exec, eww open --toggle dash
       bind = ,Pause, exec, eww open --toggle control
       bind = ,Insert, exec, eww open --toggle moment
+*/
     '';
   };
 }
