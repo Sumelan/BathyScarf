@@ -91,6 +91,7 @@
       wget
       wl-clipboard
       xdragon
+      yazi
       ydotool
       yt-dlp
       zoxide
