@@ -2,8 +2,7 @@
 {
   stylix = {
     enable = true;
-    image = ./wallpaper.png;
-    base16Scheme.yaml = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+    image = ../../home-manager/wallpaper.png;
     polarity = "dark";
     opacity.terminal = 0.8;
     cursor.package = pkgs.bibata-cursors;
