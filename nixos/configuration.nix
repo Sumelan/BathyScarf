@@ -157,7 +157,7 @@
     '';
   };
   
-  # Services
+  # Services to start
   services = {
     xserver = {
       enable = false;
@@ -209,7 +209,7 @@
     };
     rpcbind.enable = false;
     nfs.server.enable = false;
-    ### Laptop
+  ### Laptop
     thermald.enable = true;
     tlp.enable = true;
     logind.extraConfig = ''
@@ -217,8 +217,7 @@
       HandlePowerKey=ignore
   	'';
   };
-
-# Sound
+  # Sound
   hardware.pulseaudio.enable = false;
   services.pipewire = {
     enable = true;
@@ -255,7 +254,6 @@
     };
   };
   services.blueman.enable = true;
-
   # Sane
   hardware.sane = {
     enable = true;
@@ -263,8 +261,8 @@
     disabledDefaultBackends = [ "escl" ];
   };
   # Extra Logitech Support
-  hardware.logitech.wireless.enable = true;
-  hardware.logitech.wireless.enableGraphical = true;
+  hardware.logitech.wireless.enable = false;
+  hardware.logitech.wireless.enableGraphical = false;
   # OpenGL
   hardware.graphics = {
     enable = true;
