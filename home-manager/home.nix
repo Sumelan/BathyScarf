@@ -7,9 +7,11 @@
 # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 
+# Home Manager Settings
   home = {
-    username = "sumelan";
-    homeDirectory = "/home/sumelan";
+    username = "${username}";
+    homeDirectory = "/home/${username}";
+    stateVersion = "24.05";
   };
 
   # Programs
@@ -41,10 +43,10 @@
   };
 
   # Styling Options
-  stylix.targets = {
-    rofi.enable = true;
-    hyprland.enable = true;
-  };
+  stylix.targets.waybar.enable = false;
+  stylix.targets.rofi.enable = false;
+  stylix.targets.hyprland.enable = false;
+
   gtk = {
     iconTheme = {
       name = "Papirus-Dark";
@@ -62,27 +64,46 @@
     style.name = "adwaita-dark";
     platformTheme.name = "gtk3";
   };
-  
+
   # Place Files Inside Home Directory
-/*
-  home.file.".config/wallpaper.png" = {
-    source = ./assets/bathyscarf-wallpaper.png;
+  home.file."Pictures/Wallpapers" = {
+    source = ../../config/wallpapers;
     recursive = true;
-  }
-*/
-
-  home.file.".pfp.icon".source = ./assets/pfp.png
-  home.file.".config/pfp.png".source = ./assets/pfp.png;
-
-/*
-  # Scripts
-  home.packages = with pkgs; [
-    (writeShellScriptBin "wallsetter" (builtins.readFile ./bin/wallsetter/wallsetter.sh) )
-    (writeShellScriptBin "powermenu" (builtins.readFile ./bin/rofiscripts/powermenu.sh) )
-    (writeShellScriptBin "screenshotmenu" (builtins.readFile ./bin/rofiscripts/screenshot.sh) )
-    (writeShellScriptBin "changebrightness" (builtins.readFile ./bin/notifs/changebrightness.sh) )
-    (writeShellScriptBin "changevolume" (builtins.readFile ./bin/notifs/changevolume.sh) )
+  };
+  home.file.".config/wlogout/icons" = {
+    source = ../../config/wlogout;
+    recursive = true;
+  };
+  home.file.".face.icon".source = ../../config/face.jpg;
+  home.file.".config/face.jpg".source = ../../config/face.jpg;
+  home.file.".config/swappy/config".text = ''
+    [Default]
+    save_dir=/home/${username}/Pictures/Screenshots
+    save_filename_format=swappy-%Y%m%d-%H%M%S.png
+    show_panel=false
+    line_size=5
+    text_size=20
+    text_font=Ubuntu
+    paint_mode=brush
+    early_exit=true
+    fill_shape=false
+  '';
+# Scripts
+  home.packages = [
+    (import ../../scripts/emopicker9000.nix { inherit pkgs; })
+    (import ../../scripts/task-waybar.nix { inherit pkgs; })
+    (import ../../scripts/squirtle.nix { inherit pkgs; })
+    (import ../../scripts/nvidia-offload.nix { inherit pkgs; })
+    (import ../../scripts/wallsetter.nix {
+      inherit pkgs;
+      inherit username;
+    })
+    (import ../../scripts/web-search.nix { inherit pkgs; })
+    (import ../../scripts/rofi-launcher.nix { inherit pkgs; })
+    (import ../../scripts/screenshootin.nix { inherit pkgs; })
+    (import ../../scripts/list-hypr-bindings.nix {
+      inherit pkgs;
+      inherit host;
+    })
   ];
-*/
-  home.stateVersion = "24.05";
 }
