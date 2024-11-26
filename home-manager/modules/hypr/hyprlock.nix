@@ -17,7 +17,7 @@
       ];
       image = [
         {
-          path = "/home/${username}/.config/face.png";
+          path = "/home/sumelan/.config/face.png";
           size = 150;
           border_size = 4;
           border_color = "rgb(A6DA95)";

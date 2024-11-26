@@ -3,9 +3,10 @@
 {
   imports = [
       ./hardware-configuration.nix
+      ./btrfs.nix
       ./driver/intel-drivers.nix
       ./packages.nix
-      ./fonts/fonts.nix
+      ./fonts/systemFonts.nix
       ./modules/bundle.nix
   ];
 
@@ -67,7 +68,7 @@
     openssh = {
       enable = true;
   # Add your SSH public key(s) here, if you plan on using SSH to connect.
-      authorizedKeys.keys = [ ];
+    # authorizedKeys.keys = [ ];
       settings = {
         PermitRootLogin = "no";
   # Change to false if you want to SSH using public key(s). (recommended)
@@ -121,7 +122,6 @@
         auth include login
       '';
     };
-  };
   # sudo without password
     sudo.wheelNeedsPassword = false;
   };

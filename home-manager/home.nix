@@ -6,8 +6,8 @@
 
 # Home Manager Settings
   home = {
-    username = "${username}";
-    homeDirectory = "/home/${username}";
+    username = "sumelan";
+    homeDirectory = "/home/sumelan";
     stateVersion = "24.05";
   };
 
@@ -65,7 +65,7 @@
   # Place Files Inside Home Directory
   home.file.".config/swappy/config".text = ''
     [Default]
-    save_dir=/home/${username}/Pictures/Screenshots
+    save_dir=/home/sumelan/Pictures/Screenshots
     save_filename_format=swappy-%Y%m%d-%H%M%S.png
     show_panel=false
     line_size=5

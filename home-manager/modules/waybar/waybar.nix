@@ -1,4 +1,7 @@
-{ pkgs, config, ... }:
+{ pkgs, config, lib, ... }:
+let 
+  betterTransition = "all 0.3s cubic-bezier(.55,-0.68,.48,1.682)";
+in
 {
   programs.waybar = {
     enable = true;
@@ -36,7 +39,7 @@
           on-scroll-down = "hyprctl dispatch workspace e-1";
         };
         "clock" = {
-          format = if clock24h == true then '' {:L%H:%M}'' else '' {:L%I:%M %p}'';
+          format = " {:L%H:%M}";
           tooltip = true;
           tooltip-format = "<big>{:%A, %d.%B %Y }</big>\n<tt><small>{calendar}</small></tt>";
         };
@@ -167,7 +170,7 @@
         };
       }
     ];
-    style = concatStrings [
+    style = lib.concatStrings [
       ''
         * {
           font-family: JetBrainsMono Nerd Font Mono;
@@ -228,7 +231,7 @@
           margin: 4px 0px;
           margin-left: 7px;
           padding: 0px 18px;
-          background: #${config.stylix.base16Scheme.base04};
+          background: #${config.stylix.base16Scheme.yaml.base04};
           color: #${config.stylix.base16Scheme.base00};
           border-radius: 24px 10px 24px 10px;
         }
@@ -260,4 +263,5 @@
         }
       ''
     ];
-  };
+   };
+  }
