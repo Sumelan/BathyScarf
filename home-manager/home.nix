@@ -64,15 +64,18 @@
   };
   
   # Place Files Inside Home Directory
+/*
   home.file.".config/wallpaper.png" = {
     source = ./assets/bathyscarf-wallpaper.png;
     recursive = true;
-  };
+  }
+*/
+
   home.file.".pfp.icon".source = ./assets/pfp.png
   home.file.".config/pfp.png".source = ./assets/pfp.png;
 
-  # Scripts
 /*
+  # Scripts
   home.packages = with pkgs; [
     (writeShellScriptBin "wallsetter" (builtins.readFile ./bin/wallsetter/wallsetter.sh) )
     (writeShellScriptBin "powermenu" (builtins.readFile ./bin/rofiscripts/powermenu.sh) )
