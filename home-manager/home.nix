@@ -64,15 +64,15 @@
 
   # Place Files Inside Home Directory
   home.file."Pictures/Wallpapers" = {
-    source = ../../config/wallpapers;
+    source = ../assets/wallpapers;
     recursive = true;
   };
   home.file.".config/wlogout/icons" = {
-    source = ../../config/wlogout;
+    source = ../modules/wlogout;
     recursive = true;
   };
-  home.file.".face.icon".source = ../../config/face.jpg;
-  home.file.".config/face.jpg".source = ../../config/face.jpg;
+  home.file.".face.icon".source = ../assets/face.jpg;
+  home.file.".config/face.jpg".source = ../assets/face.jpg;
   home.file.".config/swappy/config".text = ''
     [Default]
     save_dir=/home/${username}/Pictures/Screenshots
@@ -86,21 +86,5 @@
     fill_shape=false
   '';
 # Scripts
-  home.packages = [
-    (import ../../scripts/emopicker9000.nix { inherit pkgs; })
-    (import ../../scripts/task-waybar.nix { inherit pkgs; })
-    (import ../../scripts/squirtle.nix { inherit pkgs; })
-    (import ../../scripts/nvidia-offload.nix { inherit pkgs; })
-    (import ../../scripts/wallsetter.nix {
-      inherit pkgs;
-      inherit username;
-    })
-    (import ../../scripts/web-search.nix { inherit pkgs; })
-    (import ../../scripts/rofi-launcher.nix { inherit pkgs; })
-    (import ../../scripts/screenshootin.nix { inherit pkgs; })
-    (import ../../scripts/list-hypr-bindings.nix {
-      inherit pkgs;
-      inherit host;
-    })
-  ];
-}
+
+  }
