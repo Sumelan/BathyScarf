@@ -44,16 +44,16 @@
   programs.zsh.enable = true;
   # User
   users = {
-    users.bathys = {
+    users.sumelan = {
       isNormalUser = true;
-      description = "Bathys Scarf";
+      description = "Su_melan";
       extraGroups = [ "networkmanager" "wheel" "libvirtd" "video" ];
     };
     mutableUsers = true;
     defaultUserShell = pkgs.zsh;
   };
   # Enable automatic login for the user.
- services.getty.autologinUser = "bathys";
+ services.getty.autologinUser = "sumelan";
 
   # Network
   networking.networkmanager.enable = true;
