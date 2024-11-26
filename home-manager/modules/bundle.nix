@@ -7,6 +7,7 @@
     ./yazi.nix
     ./zsh.nix
     ./swaync/swaync.nix
+    ./waybar/waybar.nix
     ./wlogout/wlogout.nix
     ./hypr/hypridle.nix
     ./hypr/hyprland.nix
