@@ -82,5 +82,5 @@
     (writeShellScriptBin "changevolume" (builtins.readFile ./bin/notifs/changevolume.sh) )
   ];
 
-  home.stateVersion = "23.11";
+  home.stateVersion = "24.05";
 }
