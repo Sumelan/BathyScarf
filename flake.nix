@@ -13,10 +13,6 @@
       url = "github:VonHeikemen/fine-cmdline.nvim";
       flake = false;
     };
-    disko = {
-      url = "github:nix-community/disko";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -43,7 +39,6 @@
           modules = [
             ./nixos/configuration.nix
             inputs.stylix.nixosModules.stylix
-            inputs.disko.nixosModules.disko
             home-manager.nixosModules.home-manager
               {
               home-manager.extraSpecialArgs = {
