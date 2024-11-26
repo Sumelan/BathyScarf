@@ -5,6 +5,7 @@
     noto-fonts-cjk
     noto-fonts-emoji
     font-awesome
+    material-icons
     ];
 
     fontDir.enable = true;
