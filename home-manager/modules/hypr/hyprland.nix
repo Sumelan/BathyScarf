@@ -123,7 +123,7 @@
       bind = $modifier SHIFT,Return,exec,rofi-launcher
       bind = $modifier SHIFT,W,exec,web-search
       bind = $modifier ALT,W,exec,wallsetter
-      bind = $modifier SHIFT,N,exec,swaync-client -rs
+      bind = $modifier SHIFT,N,exec,swaync-client -t
       bind = $modifier,W,exec,$browser
       bind = $modifier,E,exec,emopicker9000
       bind = $modifier,S,exec,screenshootin

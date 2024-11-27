@@ -65,6 +65,16 @@
   };
 
   # Place Files Inside Home Directory
+  home.file.".face.icon".source = ./face.png;
+  home.file.".config/face.png".source = ./face.png;
+  home.file."Pictures/Wallpapers" = {
+    source = ./wallpapers;
+    recursive = true;
+  };
+  home.file.".config/wlogout/icons" = {
+    source = ./modules/wlogout;
+    recursive = true;
+  };
   home.file.".config/swappy/config".text = ''
     [Default]
     save_dir=/home/sumelan/Pictures/Screenshots

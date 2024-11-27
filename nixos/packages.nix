@@ -9,6 +9,7 @@
       hyprlock
       hyprpicker
       rofi-wayland
+      swappy
       swaynotificationcenter
       swww
     # audio
@@ -27,7 +28,6 @@
       pqiv
     # image-mannipulator
       gimp
-      krita
     # video-viewer
       vlc
     # video-editor
@@ -66,8 +66,6 @@
       fzf
       gh
       git
-      grim
-      grimblast
       htop
       inxi
       jq

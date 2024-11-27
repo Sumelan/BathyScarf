@@ -2,7 +2,7 @@
 {
   stylix = {
     enable = true;
-    image = ../../home-manager/wallpaper.png;
+    image = ../../home-manager/wallpapers/wallpaper.png;
     polarity = "dark";
     opacity.terminal = 0.8;
     cursor.package = pkgs.bibata-cursors;
