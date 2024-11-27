@@ -34,7 +34,7 @@
       exec-once = nm-applet --indicator
       exec-once = fcitx5
       exec-once = lxqt-policykit-agent
-      exec-once = sleep 1.5 && swww img /home/sumelan/Pictures/Wallpapers/default.jpg
+      exec-once = sleep 1.5 && swww img /home/sumelan/Pictures/Wallpapers/wallpaper.png
 
       # Monitor
       monitor=,preferred,auto,1
