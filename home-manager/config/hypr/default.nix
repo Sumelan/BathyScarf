@@ -12,7 +12,7 @@
   ];
 
   home.sessionVariables = {
-    LAST_WALLPAPER_PATH = "/home/sumelan/.local/state/lastwallpaper";
+    LAST_WALLPAPER_PATH = /home/sumelan/Pictures/Wallpapers/wallpaper.png;
   };
 
   home.file =

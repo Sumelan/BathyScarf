@@ -205,13 +205,6 @@
       openFirewall = true;
     };
   
-    syncthing = {
-      enable = false;
-      user = "sumelan";
-      dataDir = "/home/sumelan";
-      configDir = "/home/sumelan/.config/syncthing";
-    };
-
     rpcbind.enable = false;
 
     nfs.server.enable = false;

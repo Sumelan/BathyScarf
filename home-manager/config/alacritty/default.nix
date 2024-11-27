@@ -34,19 +34,19 @@ TERM = "xterm-256color"
 size = 11
 
 [font.bold]
-family = "Source Code Pro"
+family = "Fira Code Nerd Font"
 style = "Bold"
 
 [font.bold_italic]
-family = "Source Code Pro"
+family = "Fira Code Nerd Font"
 style = "Bold Italic"
 
 [font.italic]
-family = "Source Code Pro"
+family = "Fira Code Nerd Font"
 style = "Italic"
 
 [font.normal]
-family = "Source Code Pro"
+family = "Fira Code Nerd Font"
 style = "Regular"
 
 [font.offset]

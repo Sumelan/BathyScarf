@@ -37,6 +37,7 @@
     # developping
       meson
       ninja
+      nodejs_23
       pkg-config
       yad
     # tools
@@ -71,6 +72,7 @@
       nh
       pciutils
       playerctl
+      pywal
       ripgrep
       slurp
       socat

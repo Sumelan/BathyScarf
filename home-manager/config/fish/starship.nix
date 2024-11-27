@@ -94,13 +94,13 @@
 
       memory_usage = {
         format = "via $symbol [\${ram}( | \${ram_pct})]($style)";
-        symbol = " ";
+        symbol = " ";
         style = "bold dimmed green";
       };
 
       nodejs = {
         format = "via [$symbol$version]($style) ";
-        symbol = "⬢ ";
+        symbol = " ";
         style = "bold green";
         disabled = false;
         not_capable_style = "bold red";
@@ -123,7 +123,7 @@
       };
 
       package = {
-        symbol = " ";
+        symbol = "󰏗 ";
       };
 
       python = {
