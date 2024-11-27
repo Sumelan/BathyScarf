@@ -11,7 +11,6 @@
       rofi-wayland
       swappy
       swaynotificationcenter
-      swww
     # audio
       pamixer
       pavucontrol
@@ -28,19 +27,13 @@
       pqiv
     # image-mannipulator
       gimp
-    # video-viewer
-      vlc
-    # video-editor
-      kdenlive
-    # video-capture
-      obs-studio
     # text-editor
       neovide
       vim
     # media
       mpv
     # terminal
-      kitty
+      alacritty
     # developping
       meson
       ninja
@@ -112,7 +105,6 @@
 
   # Options
   programs = {
-    firefox.enable = true;
     neovim.enable = true;
     hyprland = {
       enable = true;

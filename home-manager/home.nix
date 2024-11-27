@@ -1,28 +1,23 @@
 { pkgs, ... }:
 {
-  imports = [
-    ./modules/bundle.nix
-  ];
-
 # Home Manager Settings
+  programs.home-manager.enable = true;
   home = {
     username = "sumelan";
     homeDirectory = "/home/sumelan";
     stateVersion = "24.05";
   };
 
-  # Programs
-  programs = {
-    home-manager.enable = true;
-    starship = {
-      enable = true;
-    };
-    git = {
-      enable = true;
-      userName  = "sumelan";
-      userEmail = "bathys@proton.me";
-    };
-  };
+  # Programs Config
+  imports = [
+    ./config/default.nix
+  ];
+
+  wal.enable = true;
+
+  home.sessionPath = [
+    "/home/sumelan/.cargo/bin"
+  ];
 
 # Create XDG Dirs
   xdg = {
@@ -39,40 +34,11 @@
     };
   };
 
-  # Styling Options
-  stylix.targets.waybar.enable = false;
-  stylix.targets.rofi.enable = false;
-  stylix.targets.hyprland.enable = false;
-  stylix.targets.hyprlock.enable = false;
-  stylix.targets.spicetify.enable = false;
-
-  gtk = {
-    iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
-    };
-    gtk3.extraConfig = {
-      gtk-application-prefer-dark-theme = 1;
-    };
-    gtk4.extraConfig = {
-      gtk-application-prefer-dark-theme = 1;
-    };
-  };
-  qt = {
-    enable = true;
-    style.name = "adwaita-dark";
-    platformTheme.name = "gtk3";
-  };
-
   # Place Files Inside Home Directory
   home.file.".face.icon".source = ./face.png;
   home.file.".config/face.png".source = ./face.png;
   home.file."Pictures/Wallpapers" = {
     source = ./wallpapers;
-    recursive = true;
-  };
-  home.file.".config/wlogout/icons" = {
-    source = ./modules/wlogout;
     recursive = true;
   };
   home.file.".config/swappy/config".text = ''

@@ -3,8 +3,12 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
-    stylix.url = "github:danth/stylix";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    xremap-flake.url = "github:xremap/nix-flake";
+    ags.url = "github:Aylur/ags";
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -12,10 +16,6 @@
     fine-cmdline = {
       url = "github:VonHeikemen/fine-cmdline.nvim";
       flake = false;
-    };
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
@@ -38,7 +38,6 @@
           };
           modules = [
             ./nixos/configuration.nix
-            inputs.stylix.nixosModules.stylix
             home-manager.nixosModules.home-manager
               {
               home-manager.extraSpecialArgs = {

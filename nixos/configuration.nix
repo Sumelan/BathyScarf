@@ -1,13 +1,14 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   imports = [
+      inputs.xremap-flake.nixosModules.default
       ./hardware-configuration.nix
       ./btrfs.nix
       ./driver/intel-drivers.nix
       ./packages.nix
       ./fonts/systemFonts.nix
-      ./modules/bundle.nix
+      ./modules/default.nix
   ];
 
   # Define your hostname.
@@ -41,7 +42,7 @@
   };
   
   # Shell
-  programs.zsh.enable = true;
+  programs.fish.enable = true;
   # User
   users = {
     users.sumelan = {
@@ -50,7 +51,7 @@
       extraGroups = [ "networkmanager" "wheel" "libvirtd" "video" ];
     };
     mutableUsers = true;
-    defaultUserShell = pkgs.zsh;
+    defaultUserShell = pkgs.fish;
   };
   # Enable automatic login for the user.
  services.getty.autologinUser = "sumelan";
@@ -90,11 +91,6 @@
       pkgs.xdg-desktop-portal-hyprland
       pkgs.xdg-desktop-portal
     ];
-  };
-
-  # Power management.
-  powerManagement = {
-    enable = true;
   };
 
   # Security / Polkit
@@ -185,37 +181,56 @@
     };
     libinput.enable = true;
     fstrim.enable = true;
+    # Battery status
+    upower.enable = true;
+    # USB
     gvfs.enable = true;
+    udisks2.enable = true;
+    # Flatpak
     flatpak.enable = false;
+    # Printing
     printing = {
       enable = true;
       drivers = [
         # pkgs.hplipWithPlugin
       ];
     };
+    ipp-usb.enable = true;
+    # Keyring
     gnome.gnome-keyring.enable = true;
+
     avahi = {
       enable = true;
       nssmdns4 = true;
       openFirewall = true;
     };
-    ipp-usb.enable = true;
+  
     syncthing = {
       enable = false;
       user = "sumelan";
       dataDir = "/home/sumelan";
       configDir = "/home/sumelan/.config/syncthing";
     };
+
     rpcbind.enable = false;
+
     nfs.server.enable = false;
-  ### Laptop
-    thermald.enable = true;
-    tlp.enable = true;
-    logind.extraConfig = ''
-      # don’t shutdown when power button is short-pressed
-      HandlePowerKey=ignore
-  	'';
+
+    xremap = {
+      withWlroots = true;
+      userName = "sumelan";
+      yamlConfig = ''
+        modmap:
+          - name: CapsLock to RightCtrl/Esc
+            remap:
+              CapsLock:
+                held: Ctrl_R
+                alone: Esc
+                alone_timeout: 500
+      '';
+    };
   };
+
   # Sound
   hardware.pulseaudio.enable = false;
   services.pipewire = {
@@ -280,6 +295,12 @@
 
   # Add ~/.local/bin/ to $PATH
   environment.localBinInPath = false;
+  # Env
+  environment.sessionVariables = {
+    WLR_HARDWARE_CURSORS = "1";
+    NIXOS_OZONE_WL = "1";
+    NIXOS_CONFIG = "/home/sumelan/BathyScarf/";
+  };
 
   # Virtualization / Containers
   virtualisation.libvirtd.enable = true;

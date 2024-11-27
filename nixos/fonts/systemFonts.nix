@@ -2,12 +2,15 @@
 {
   fonts = {
     packages = with pkgs; [
-    noto-fonts-cjk-sans
-    noto-fonts-emoji
-    font-awesome
-    material-icons
+      source-code-pro
+      noto-fonts-cjk-sans
+      twitter-color-emoji
+      font-awesome
+      powerline-fonts
+      (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
     ];
     fontconfig = {
+      hinting.autohint = true;
       defaultFonts = {
          serif = [ "Noto Serif CJK JP" "Noto Color Emoji"  ];
          sansSerif = ["Noto Sans CJK JP" "Noto Color Emoji"];
