@@ -35,10 +35,10 @@
   };
 
   # Place Files Inside Home Directory
-  home.file.".face.icon".source = ./face.png;
-  home.file.".config/face.png".source = ./face.png;
+  # home.file.".face.icon".source = ./face.png;
+  # home.file.".config/face.png".source = ./face.png;
   home.file."Pictures/Wallpapers" = {
-    source = ./wallpapers;
+    source = ../assets/wallpapers;
     recursive = true;
   };
   home.file.".config/swappy/config".text = ''
