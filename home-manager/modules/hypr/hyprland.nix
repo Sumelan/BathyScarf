@@ -7,8 +7,8 @@
     extraConfig = ''
 
       ## variables
-      $mainMod = SUPER
-      $term = kitty
+      $modifier = SUPER
+      $terminal = kitty
       $file = thunar
       $browser = firefox
 
@@ -32,8 +32,9 @@
       exec-once = killall -q waybar;sleep .5 && waybar
       exec-once = killall -q swaync;sleep .5 && swaync
       exec-once = nm-applet --indicator
+      exec-once = fcitx5
       exec-once = lxqt-policykit-agent
-      exec-once = sleep 1.5 && swww img /home/sumelan/Pictures/Wallpapers/beautifulmountainscape.jpg
+      exec-once = sleep 1.5 && swww img /home/sumelan/Pictures/Wallpapers/default.jpg
 
       # Monitor
       monitor=,preferred,auto,1
@@ -94,10 +95,12 @@
       }
       decoration {
         rounding = 10
-        drop_shadow = true
-        shadow_range = 4
-        shadow_render_power = 3
-        col.shadow = rgba(1a1a1aee)
+        shadow {
+          enabled = true
+          range = 4
+          render_power = 3
+          color = rgba(1a1a1aee)
+        }
         blur {
             enabled = true
             size = 5
@@ -116,72 +119,73 @@
       }
 
       # keybindings
-      bind = $mainMod, Return, exec, $term
-      bind = $mainMod, D, exec, pkill rofi || rofi -show drun
-      bind = $mainMod, T, exec, $file
-      bind = $mainMod, W, exec, $browser
-      bind = $mainMod, Y, exec, $term yazi
-      bind = $mainMod SHIFT, Y, exec, $term sudo yazi
-      bind = $mainMod, C, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy
-      bind = $mainMod, S, exec, screenshotmenu
-      bind = $mainMod ALT, W, exec, wallsetter
-      bind = $mainMod ALT, P, exec, powermenu
-
-      bind = $mainMod, Q, killactive
-      bind = $mainMod, F, fullscreen
-      bind = $mainMod SHIFT, F, togglefloating
-      bind = $mainMod SHIFT, C, exit
-      bind = $mainMod, P, pseudo
-      bind = $mainMod SHIFT, I, togglesplit
-
-      bind = $mainMod, left, movefocus, l
-      bind = $mainMod, right, movefocus, r
-      bind = $mainMod, up, movefocus, u
-      bind = $mainMod, down, movefocus, d
-      bind = $mainMod SHIFT, left, movewindow, l
-      bind = $mainMod SHIFT, right, movewindow, r
-      bind = $mainMod SHIFT, up, movewindow, u
-      bind = $mainMod SHIFT, down, movewindow, d
-      bind = $mainMod, h, movefocus, l
-      bind = $mainMod, l, movefocus, r
-      bind = $mainMod, k, movefocus, u
-      bind = $mainMod, j, movefocus, d
-      bind = $mainMod SHIFT, h, movewindow, l
-      bind = $mainMod SHIFT, l, movewindow, r
-      bind = $mainMod SHIFT, k, movewindow, u
-      bind = $mainMod SHIFT, j, movewindow, d
-
-      bind = $mainMod, 1, workspace, 1
-      bind = $mainMod, 2, workspace, 2
-      bind = $mainMod, 3, workspace, 3
-      bind = $mainMod, 4, workspace, 4
-      bind = $mainMod, 5, workspace, 5
-      bind = $mainMod, 6, workspace, 6
-      bind = $mainMod, 7, workspace, 7
-      bind = $mainMod, 8, workspace, 8
-      bind = $mainMod, 9, workspace, 9
-      bind = $mainMod, 0, workspace, 10
-      bind = $mainMod SHIFT, SPACE, movetoworkspace, special
-      bind = $mainMod, SPACE, togglespecialworkspace
-      bind = $mainMod SHIFT, 1, movetoworkspace, 1
-      bind = $mainMod SHIFT, 2, movetoworkspace, 2
-      bind = $mainMod SHIFT, 3, movetoworkspace, 3
-      bind = $mainMod SHIFT, 4, movetoworkspace, 4
-      bind = $mainMod SHIFT, 5, movetoworkspace, 5
-      bind = $mainMod SHIFT, 6, movetoworkspace, 6
-      bind = $mainMod SHIFT, 7, movetoworkspace, 7
-      bind = $mainMod SHIFT, 8, movetoworkspace, 8
-      bind = $mainMod SHIFT, 9, movetoworkspace, 9
-      bind = $mainMod SHIFT, 0, movetoworkspace, 10
-
-      bind = $mainMod, mouse_down, workspace, e+1
-      bind = $mainMod, mouse_up, workspace, e-1
-      bindm = $mainMod, mouse:272, movewindow
-      bindm = $mainMod, mouse:273, resizewindow
-
-      bind = ALT, Tab, cyclenext
-      bind = ALT, Tab, bringactivetotop
-
+      bind = $modifier,Return,exec,$terminal
+      bind = $modifier SHIFT,Return,exec,rofi-launcher
+      bind = $modifier SHIFT,W,exec,web-search
+      bind = $modifier ALT,W,exec,wallsetter
+      bind = $modifier SHIFT,N,exec,swaync-client -rs
+      bind = $modifier,W,exec,$browser
+      bind = $modifier,E,exec,emopicker9000
+      bind = $modifier,S,exec,screenshootin
+      bind = $modifier,D,exec,vesktop
+      bind = $modifier,O,exec,obs
+      bind = $modifier,C,exec,hyprpicker -a
+      bind = $modifier,G,exec,gimp
+      bind = $modifier SHIFT,G,exec,godot4
+      bind = $modifier,T,exec,$file
+      bind = $modifier,M,exec,spotify
+      bind = $modifier,Q,killactive,
+      bind = $modifier,P,pseudo,
+      bind = $modifier SHIFT,I,togglesplit,
+      bind = $modifier,F,fullscreen,
+      bind = $modifier SHIFT,F,togglefloating,
+      bind = $modifier SHIFT,C,exit,
+      bind = $modifier SHIFT,left,movewindow,l
+      bind = $modifier SHIFT,right,movewindow,r
+      bind = $modifier SHIFT,up,movewindow,u
+      bind = $modifier SHIFT,down,movewindow,d
+      bind = $modifier SHIFT,h,movewindow,l
+      bind = $modifier SHIFT,l,movewindow,r
+      bind = $modifier SHIFT,k,movewindow,u
+      bind = $modifier SHIFT,j,movewindow,d
+      bind = $modifier,left,movefocus,l
+      bind = $modifier,right,movefocus,r
+      bind = $modifier,up,movefocus,u
+      bind = $modifier,down,movefocus,d
+      bind = $modifier,h,movefocus,l
+      bind = $modifier,l,movefocus,r
+      bind = $modifier,k,movefocus,u
+      bind = $modifier,j,movefocus,d
+      bind = $modifier,1,workspace,1
+      bind = $modifier,2,workspace,2
+      bind = $modifier,3,workspace,3
+      bind = $modifier,4,workspace,4
+      bind = $modifier,5,workspace,5
+      bind = $modifier,6,workspace,6
+      bind = $modifier,7,workspace,7
+      bind = $modifier,8,workspace,8
+      bind = $modifier,9,workspace,9
+      bind = $modifier,0,workspace,10
+      bind = $modifier SHIFT,SPACE,movetoworkspace,special
+      bind = $modifier,SPACE,togglespecialworkspace
+      bind = $modifier SHIFT,1,movetoworkspace,1
+      bind = $modifier SHIFT,2,movetoworkspace,2
+      bind = $modifier SHIFT,3,movetoworkspace,3
+      bind = $modifier SHIFT,4,movetoworkspace,4
+      bind = $modifier SHIFT,5,movetoworkspace,5
+      bind = $modifier SHIFT,6,movetoworkspace,6
+      bind = $modifier SHIFT,7,movetoworkspace,7
+      bind = $modifier SHIFT,8,movetoworkspace,8
+      bind = $modifier SHIFT,9,movetoworkspace,9
+      bind = $modifier SHIFT,0,movetoworkspace,10
+      bind = $modifier CONTROL,right,workspace,e+1
+      bind = $modifier CONTROL,left,workspace,e-1
+      bind = $modifier,mouse_down,workspace, e+1
+      bind = $modifier,mouse_up,workspace, e-1
+      bindm = $modifier,mouse:272,movewindow
+      bindm = $modifier,mouse:273,resizewindow
+      bind = ALT,Tab,cyclenext
+      bind = ALT,Tab,bringactivetotop
       bind = ,XF86AudioRaiseVolume,exec,wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
       bind = ,XF86AudioLowerVolume,exec,wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
       binde = ,XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
@@ -192,11 +196,9 @@
       bind = ,XF86MonBrightnessDown,exec,brightnessctl set 5%-
       bind = ,XF86MonBrightnessUp,exec,brightnessctl set +5%
 
-/*
-      bind = ,Menu, exec, eww open --toggle dash
-      bind = ,Pause, exec, eww open --toggle control
-      bind = ,Insert, exec, eww open --toggle moment
-*/
+    # bind = ,Menu, exec, eww open --toggle dash
+    # bind = ,Pause, exec, eww open --toggle control
+    # bind = ,Insert, exec, eww open --toggle moment
     '';
   };
 }

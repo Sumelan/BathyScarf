@@ -53,7 +53,6 @@
     ## cli-programs
       bat
       brightnessctl
-      cava
       cmatrix
       cowsay
       curl

@@ -83,8 +83,8 @@ in
         "pulseaudio" = {
           format = "{icon} {volume}% {format_source}";
           format-bluetooth = "{volume}% {icon} {format_source}";
-          format-bluetooth-muted = " {icon} {format_source}";
-          format-muted = " {format_source}";
+          format-bluetooth-muted = "󰂲 {icon} {format_source}";
+          format-muted = "󰖁 {format_source}";
           format-source = " {volume}%";
           format-source-muted = "";
           format-icons = {
@@ -231,7 +231,7 @@ in
           margin: 4px 0px;
           margin-left: 7px;
           padding: 0px 18px;
-          background: #${config.stylix.base16Scheme.yaml.base04};
+          background: #${config.stylix.base16Scheme.base04};
           color: #${config.stylix.base16Scheme.base00};
           border-radius: 24px 10px 24px 10px;
         }
