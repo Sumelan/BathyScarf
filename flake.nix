@@ -7,7 +7,22 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    stylix.url = "github:danth/stylix";
+    nur.url = "github:nix-community/NUR";
+    hypr-contrib.url = "github:hyprwm/contrib";
+    hyprpicker.url = "github:hyprwm/hyprpicker";
+    alejandra.url = "github:kamadorueda/alejandra/3.0.0";
+    hyprland = {
+      type = "git";
+      url = "https://github.com/hyprwm/Hyprland";
+      submodules = true;
+    };
+    hyprmag.url = "github:SIMULATAN/hyprmag";
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
+    zen-browser.url = "github:fufexan/zen-browser-flake";
+    yazi-plugins = {
+      url = "github:yazi-rs/plugins";
+      flake = false;
+    };
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -17,44 +32,34 @@
       flake = false;
     };
   };
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, ... }@inputs:
 
     let
       system = "x86_64-linux";
-
-      # User Variables
-      hostname = "BathyScarf";
       username = "sumelan";
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      };
+      lib = nixpkgs.lib;
     in
     {
       nixosConfigurations = {
-        "${hostname}" = nixpkgs.lib.nixosSystem {
+        Rei = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [ ./hosts/Rei ];
           specialArgs = {
-            inherit system;
-            inherit username;
-            inherit hostname;
-            inherit inputs;
+            host = "Rei";
+            inherit self inputs username;
           };
-          modules = [
-            ./nixos/configuration.nix
-            inputs.stylix.nixosModules.stylix
-            home-manager.nixosModules.home-manager
-              {
-              home-manager.extraSpecialArgs = {
-                inherit username;
-                inherit hostname;
-                inherit inputs;
-              };
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.backupFileExtension = "backup";
-              home-manager.users.${username} = {
-                imports = [
-                  ./home-manager/home.nix
-                ];
-              };
-            }
-          ];
+        };
+        Rin = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [ ./hosts/Rin ];
+          specialArgs = {
+            host = "Rin";
+            inherit self inputs username;
+          };
         };
       };
     };
