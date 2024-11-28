@@ -2,6 +2,7 @@
   pkgs,
   inputs,
   username,
+  host,
   ...
 }:
 {
@@ -13,9 +14,11 @@
       inherit inputs username;
     };
     users.${username} = {
-      imports = [
-        ./../home
-      ];
+      imports =
+        if (host == "Rin") then
+          [ ./../home/default.desktop.nix ]
+        else
+          [ ./../home ];
       home.username = "${username}";
       home.homeDirectory = "/home/${username}";
       home.stateVersion = "24.05";
