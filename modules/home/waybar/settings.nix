@@ -2,7 +2,7 @@
 let
   custom = {
     font = "Maple Mono";
-    font_size = "18px";
+    font_size = "12px";
     font_weight = "bold";
     text_color = "#FBF1C7";
     background_0 = "#1D2021";
@@ -21,7 +21,7 @@ let
 in
 {
   programs.waybar.settings.mainBar = with custom; {
-    position = "bottom";
+    position = "top";
     layer = "top";
     height = 28;
     margin-top = 0;
@@ -52,7 +52,7 @@ in
       format = "  {:%H:%M}";
       tooltip = "true";
       tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-      format-alt = "  {:%d/%m}";
+      format-alt = "  {:%m/%d}";
     };
     "hyprland/workspaces" = {
       active-only = false;

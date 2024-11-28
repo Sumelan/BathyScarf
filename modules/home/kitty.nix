@@ -7,7 +7,7 @@
 
     font = {
       name = "Maple Mono";
-      size = if (host == "Rei") then 15 else 16;
+      size = if (host == "Rei") then 14 else 16;
     };
 
     extraConfig = ''
