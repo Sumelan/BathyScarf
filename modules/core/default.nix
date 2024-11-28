@@ -12,7 +12,6 @@
     ./bootloader.nix
     ./btrfs.nix
     ./flatpak.nix
-    ./font.nix
     ./hardware.nix
     ./network.nix
     ./nh.nix
