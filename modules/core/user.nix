@@ -11,12 +11,12 @@
     useUserPackages = true;
     useGlobalPkgs = true;
     extraSpecialArgs = {
-      inherit inputs username;
+      inherit inputs username host;
     };
     users.${username} = {
       imports =
         if (host == "Rin") then
-          [ ./../home/default.desktop.nix ]
+          [ ./../home/default.Rin.nix ]
         else
           [ ./../home ];
       home.username = "${username}";
@@ -33,7 +33,6 @@
       "networkmanager"
       "wheel"
     ];
-    mutableUsers = true;
     shell = pkgs.zsh;
   };
   # Enable automatic login for the user.

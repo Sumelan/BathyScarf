@@ -46,7 +46,7 @@
     in
     {
       nixosConfigurations = {
-        "Rei" = nixpkgs.lib.nixosSystem {
+        Rei = nixpkgs.lib.nixosSystem {
           inherit system;
           modules = [ ./hosts/Rei ];
           specialArgs = {
@@ -54,7 +54,7 @@
             inherit self inputs username;
           };
         };
-        "Rin" = nixpkgs.lib.nixosSystem {
+        Rin = nixpkgs.lib.nixosSystem {
           inherit system;
           modules = [ ./hosts/Rin ];
           specialArgs = {
