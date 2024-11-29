@@ -8,7 +8,7 @@
   imports = [
     ./default.nix
 
-    ./audiobookshelf.nix                     # C# JetBrain editor
+    ./audiobookshelf.nix
     ./borgbackup.nix
     ./nextcloud.nix
   ];
