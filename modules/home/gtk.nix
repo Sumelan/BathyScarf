@@ -20,7 +20,7 @@
   gtk = {
     enable = true;
     font = {
-      name = "Maple Mono";
+      name = "JetBrainsMono";
       size = 12;
     };
     theme = {
