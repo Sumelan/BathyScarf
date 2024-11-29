@@ -2,7 +2,7 @@
   imports = [
     ./audacious.nix                   # music player
     ./bat.nix                         # better cat command
-    ./browser.nix                     # firefox based browser
+    ./browser.nix                     # firefox
     ./btop.nix                        # resouces monitor 
     ./cava.nix                        # audio visualizer
     ./discord/discord.nix             # discord with gruvbox

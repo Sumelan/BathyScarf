@@ -2,7 +2,7 @@
 let
   custom = {
     font = "Maple Mono";
-    font_size = "14px";
+    font_size = "18px";
     font_weight = "bold";
     text_color = "#FBF1C7";
     background_0 = "#1D2021";
@@ -83,18 +83,18 @@ in
     #pulseaudio, #network, #cpu, #memory, #disk, #battery, #custom-notification {
       padding-left: 5px;
       padding-right: 5px;
-      margin-right: 5px;
+      margin-right: 10px;
       color: ${text_color};
     }
 
     #pulseaudio {
-      margin-left: 14px;
+      margin-left: 15px;
     }
 
     #custom-notification {
       margin-left: 15px;
       padding-right: 2px;
-      margin-right: 4px;
+      margin-right: 5px;
     }
 
     #custom-launcher {
