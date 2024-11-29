@@ -63,7 +63,6 @@
     audacity
     bleachbit                         # cache cleaner
     gimp
-    libreoffice
     nix-prefetch-github
     obs-studio
     pavucontrol                       # pulseaudio volume controle (GUI)

@@ -1,19 +1,4 @@
+{ pkgs, ...}:
 {
-  inputs,
-  pkgs,
-  host,
-  ...
-}:
-{
-  home.packages = (
-    with pkgs;
-    [
-      (
-        if (host == "Rei") then
-          inputs.zen-browser.packages."${system}".generic
-        else
-          inputs.zen-browser.packages."${system}".specific
-      )
-    ]
-  );
+  home.packages =(with pkgs; [ firefox ]);
 }

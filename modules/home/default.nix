@@ -1,6 +1,5 @@
 {inputs, username, host, ...}: {
   imports = [
-    ./aseprite/aseprite.nix           # pixel art editor
     ./audacious.nix                   # music player
     ./bat.nix                         # better cat command
     ./browser.nix                     # firefox based browser
@@ -17,7 +16,6 @@
     ./kitty.nix                       # terminal
     ./swayosd.nix                     # brightness / volume wiget
     ./swaync/swaync.nix               # notification deamon
-    ./micro.nix                       # nano replacement
     ./nemo.nix                        # file manager
     ./neovim.nix                        # neovim editor
     ./obsidian.nix

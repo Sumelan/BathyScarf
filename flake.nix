@@ -19,7 +19,6 @@
     };
     hyprmag.url = "github:SIMULATAN/hyprmag";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
-    zen-browser.url = "github:fufexan/zen-browser-flake";
     yazi-plugins = {
       url = "github:yazi-rs/plugins";
       flake = false;
