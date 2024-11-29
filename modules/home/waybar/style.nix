@@ -2,7 +2,7 @@
 let
   custom = {
     font = "JetBrainsMono";
-    font_size = "18px";
+    font_size = "16px";
     font_weight = "bold";
     text_color = "#FBF1C7";
     background_0 = "#1D2021";
@@ -35,7 +35,6 @@ in
 
     window#waybar {
       background: #282828;
-      border-top: 1px solid #928374;
     }
 
     tooltip {

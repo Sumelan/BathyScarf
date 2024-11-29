@@ -2,7 +2,7 @@
 let
   custom = {
     font = "JetBrainsMono";
-    font_size = "12px";
+    font_size = "14px";
     font_weight = "bold";
     text_color = "#FBF1C7";
     background_0 = "#1D2021";
@@ -99,7 +99,7 @@ in
       on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] kitty --override font_size=14 --title float_kitty btop'";
     };
     network = {
-      format-wifi = "<span foreground='${magenta}'> </span> {signalStrength}%";
+      format-wifi = "<span foreground='${magenta}'>  </span> {signalStrength}%";
       format-ethernet = "<span foreground='${magenta}'>󰀂 </span>";
       tooltip-format = "Connected to {essid} {ifname} via {gwaddr}";
       format-linked = "{ifname} (No IP)";
@@ -107,13 +107,13 @@ in
     };
     tray = {
       icon-size = 20;
-      spacing = 8;
+      spacing = 10;
     };
     pulseaudio = {
       format = "{icon} {volume}%";
-      format-muted = "<span foreground='${blue}'> </span> {volume}%";
+      format-muted = "<span foreground='${blue}'>  </span> {volume}%";
       format-icons = {
-        default = [ "<span foreground='${blue}'> </span>" ];
+        default = [ "<span foreground='${blue}'>  </span>" ];
       };
       scroll-step = 2;
       on-click = "pamixer -t";
@@ -121,11 +121,11 @@ in
     battery = {
       format = "<span foreground='${yellow}'>{icon}</span> {capacity}%";
       format-icons = [
-        " "
-        " "
-        " "
-        " "
-        " "
+        "  "
+        "  "
+        "  "
+        "  "
+        "  "
       ];
       format-charging = "<span foreground='${yellow}'> </span>{capacity}%";
       format-full = "<span foreground='${yellow}'> </span>{capacity}%";
@@ -149,7 +149,7 @@ in
       tooltip = false;
       format = "{icon} ";
       format-icons = {
-        notification = "<span foreground='red'><sup></sup></span>  <span foreground='${red}'></span>";
+        notification = " <span foreground='red'><sup></sup></span>  <span foreground='${red}'></span>";
         none = "  <span foreground='${red}'></span>";
         dnd-notification = "<span foreground='red'><sup></sup></span>  <span foreground='${red}'></span>";
         dnd-none = "  <span foreground='${red}'></span>";
