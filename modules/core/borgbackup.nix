@@ -3,6 +3,7 @@
   services.borgbackup.jobs."Rin" = {
     paths = [
       "/var/lib/nextcloud"
+      "/var/lib/audiobookshelf"
     ];
     exclude = [
     ];
