@@ -6,7 +6,7 @@
     ];
     exclude = [
     ];
-    repo = "tn864p7j@tn864p7j.repo.borgbase.com:repo";
+    repo = "rhq681sk@rhq681sk.repo.borgbase.com:repo";
     encryption = {
       mode = "repokey-blake2";
       passCommand = "cat /root/borgbackup/passphrase";
