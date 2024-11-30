@@ -45,7 +45,7 @@
     config = {
       dbtype = "pgsql";
       adminuser = "${username}";
-      adminpassFile = "/etc/nextcloud-admin-pass";
+      adminpassFile = "/etc/nextcloud";
     };
     phpOptions = {
       "opcache.interned_strings_buffer" = "16";
