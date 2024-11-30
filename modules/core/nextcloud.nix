@@ -1,10 +1,10 @@
-{ self, config, lib, pkgs, username, ... }:
+{ self, config, lib, pkgs, ... }:
 {
   services.nextcloud = {
     enable = true;
     hostName = "nextcloud.sakurairo.ddnsfree.com";
   ## Need to manually increment with every major upgrade.
-    package = pkgs.nextcloud29;
+    package = pkgs.nextcloud30;
   # Let NixOS install and configure the database automatically.
     database.createLocally = true;
   # Let NixOS install and configure Redis caching automatically.
@@ -20,6 +20,7 @@
       inherit calendar contacts mail notes tasks;
     };
     settings = {
+      maintenance_window_start = "1";
       log_type = "file";
       default_phone_region = "JP";
       enabledPreviewProviders = [
@@ -44,7 +45,7 @@
     };
     config = {
       dbtype = "pgsql";
-      adminuser = "${username}";
+      adminuser = "sumelan";
       adminpassFile = "/etc/nextcloud";
     };
     phpOptions = {
@@ -53,7 +54,7 @@
   };
 
   services.nginx.virtualHosts = {
-    ${config.services.nextcloud.hostName} = {
+    "nextcloud.sakurairo.ddnsfree.com" = {
       forceSSL = true;
       enableACME = true;
     };
@@ -61,7 +62,7 @@
 
   security.acme = {
     acceptTerms = true;
-    certs.${config.services.nextcloud.hostName} = {
+    certs."nextcloud.sakurairo.ddnsfree.com" = {
       email = "bathys@proton.me";
     };
   };

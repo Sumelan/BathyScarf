@@ -3,7 +3,7 @@
   imports = [
     ./hardware-configuration.nix
     ./intel.nix
-    ./../../modules/core
+    ./../../modules/cor/default.nix
   ];
 
   environment.systemPackages = with pkgs; [

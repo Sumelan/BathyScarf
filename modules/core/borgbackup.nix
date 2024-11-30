@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  services.borgbackup.jobs."borgbase" = {
+  services.borgbackup.jobs."Rin" = {
     paths = [
       "/var/lib/nextcloud"
     ];
