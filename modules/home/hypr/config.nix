@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, host, ... }:
 {
   wayland.windowManager.hyprland = {
     settings = {
@@ -308,13 +308,12 @@
         "opacity 1.0 override 1.0 override, class:(firefox)"
         "opacity 1.0 override 1.0 override, class:(evince)"
         "workspace 1, class:^(firefox)$"
-        "workspace 3, class:^(evince)$"
+        "workspace 3, class:^(discord)$"
+        "workspace 3, class:^(Webcord)$"
         "workspace 4, class:^(Gimp-2.10)$"
         "workspace 5, class:^(Audacious)$"
         "workspace 5, class:^(Spotify)$"
         "workspace 8, class:^(com.obsproject.Studio)$"
-        "workspace 10, class:^(discord)$"
-        "workspace 10, class:^(WebCord)$"
         "idleinhibit focus, class:^(mpv)$"
         "idleinhibit fullscreen, class:^(firefox)$"
         "float,class:^(waypaper)$"
@@ -366,15 +365,21 @@
         "w[t1], gapsout:0, gapsin:0"
         "w[tg1], gapsout:0, gapsin:0"
         "f[1], gapsout:0, gapsin:0"
+        (if (host == "Rin") then "10,monitor:desc:CYS ASM-101QH 0x01010101, default:true" else "")
       ];
     };
 
-    extraConfig = "
-      monitor=,preferred,auto,1
-
+    extraConfig = (if (host == "Rin") then "
+      monitor=desc:LG Electronics LG HDR 4K 0x000382AB, 2560x1440, 0x0, 1
+      monitor=desc:CYS ASM-101QH 0x01010101, 2560x1600, -2560x0, 1
       xwayland {
         force_zero_scaling = true
       }
-    ";
+      " else "
+      monitor=,preferred,auto,auto
+      xwayland {
+        force_zero_scaling = true
+      }
+    ");
   };
 }
