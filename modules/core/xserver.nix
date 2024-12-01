@@ -1,7 +1,4 @@
-{ pkgs, ... }:
-let
-  username = "sumelan";
-in
+{ pkgs, username, ... }:
 {
   services = {
     xserver = {

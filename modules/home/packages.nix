@@ -72,8 +72,6 @@
     soundwireserver
     thunderbird
     vlc
-    winetricks
-    wineWowPackages.wayland
     zenity
 
     # C / C++

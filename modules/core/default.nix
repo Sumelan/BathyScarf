@@ -19,7 +19,6 @@
     ./program.nix
     ./security.nix
     ./services.nix
-    ./steam.nix
     ./system.nix
     ./user.nix
     ./virtualization.nix

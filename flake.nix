@@ -11,7 +11,6 @@
     hypr-contrib.url = "github:hyprwm/contrib";
     hyprpicker.url = "github:hyprwm/hyprpicker";
     alejandra.url = "github:kamadorueda/alejandra/3.0.0";
-    nix-gaming.url = "github:fufexan/nix-gaming";
     hyprland = {
       type = "git";
       url = "https://github.com/hyprwm/Hyprland";

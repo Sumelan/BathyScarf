@@ -1,11 +1,9 @@
 {
   config,
   pkgs,
+  username,
   ...
 }:
-let
-  username = "sumelan";
-in
 {
   # Add user to libvirtd group
   users.users.${username}.extraGroups = [ "libvirtd" ];
