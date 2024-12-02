@@ -3,6 +3,7 @@
   home.packages = with pkgs; [
     swww
     inputs.hypr-contrib.packages.${pkgs.system}.grimblast
+    hypridle
     hyprpicker
     inputs.hyprmag.packages.${pkgs.system}.hyprmag
     grim
