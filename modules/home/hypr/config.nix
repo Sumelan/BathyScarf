@@ -17,6 +17,7 @@
         "hyprctl setcursor Bibata-Modern-Ice 24 &"
         "swww-daemon &"
         "fcitx5"
+        "kdeconnect-indicator"
 
         "hyprlock"
 

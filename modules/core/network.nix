@@ -21,6 +21,9 @@
         59010
         59011
       ];
+  # For KDE Connect.
+      allowedTCPPortRanges = [ { from = 1714; to = 1764; } ];
+      allowedUDPPortRanges = [ { from = 1714; to = 1764; } ];
     };
   };
 
