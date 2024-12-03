@@ -12,12 +12,13 @@
         "poweralertd &"
         "wl-clip-persist --clipboard both &"
         "wl-paste --watch cliphist store &"
+        "hyprctl setcursor Bibata-Modern-Ice 24 &"
+        "systemctl start --user hypridle &"
+        "swww-daemon &"
         "waybar &"
         "swaync &"
-        "hyprctl setcursor Bibata-Modern-Ice 24 &"
-        "swww-daemon &"
-        "fcitx5"
-        "kdeconnect-indicator"
+        "fcitx5 &"
+        "kdeconnect-indicator &"
 
         "hyprlock"
 

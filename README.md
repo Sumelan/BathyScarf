@@ -1,5 +1,4 @@
 # BathyScarf / 罰襟巻
-Configuration files for my Acer Laptop.
 Everything WIP.
 
 ## Details
@@ -7,3 +6,5 @@ Everything WIP.
 ## Screenshot
 
 ## Credit
+Other dotfiles that I learned / copy from:
+

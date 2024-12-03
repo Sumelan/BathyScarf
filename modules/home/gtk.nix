@@ -13,8 +13,8 @@
     twemoji-color-font
     noto-fonts-emoji
     noto-fonts-cjk-sans
+    noto-fonts-cjk-serif
     fantasque-sans-mono
-    maple-mono
   ];
 
   gtk = {
