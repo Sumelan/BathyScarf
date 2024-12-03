@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, host, ... }:
 {
   programs.btop = {
     enable = true;
@@ -10,5 +10,7 @@
     };
   };
 
-  home.packages = (with pkgs; [ nvtopPackages.intel ]);
+  home.packages = (with pkgs; [
+    (if (host == "Rin")then nvtopPackages.amd else nvtopPackages.intel)
+  ]);
 }

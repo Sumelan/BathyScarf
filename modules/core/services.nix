@@ -1,6 +1,10 @@
 { ... }:
 {
   services = {
+    smartd = {
+      enable = false;
+      autodetect = true;
+    };
     gvfs.enable = true;
     gnome.gnome-keyring.enable = true;
     dbus.enable = true;

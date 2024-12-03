@@ -24,7 +24,7 @@
       # }
         {
           timeout = 480;                         # 8 min.
-          on-timeout = "swaylock";  # lock screen when timeout has passed.
+          on-timeout = "hyprlock";  # lock screen when timeout has passed.
         }
         {
            timeout = 600;                             #10 min.
