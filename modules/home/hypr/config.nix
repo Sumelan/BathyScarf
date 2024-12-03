@@ -6,20 +6,19 @@
       exec-once = [
         "systemctl --user import-environment &"
         "hash dbus-update-activation-environment 2>/dev/null &"
-        "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &"
+        "dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &"
 
-        "nm-applet &"
-        "poweralertd &"
-        "wl-clip-persist --clipboard both &"
-        "wl-paste --watch cliphist store &"
         "hyprctl setcursor Bibata-Modern-Ice 24 &"
         "systemctl start --user hypridle &"
-        "swww-daemon &"
-        "waybar &"
-        "swaync &"
+        "killall -q swww;sleep .5 && swww-daemon &"
+        "killall -q waybar;sleep .5 && waybar &"
+        "killall -q swaync;sleep .5 && swaync &"
+        "nm-applet --indicator &"
+        "poweralertd &"
         "fcitx5 &"
         "kdeconnect-indicator &"
-
+        "wl-clip-persist --clipboard both &"
+        "wl-paste --watch cliphist store &"
         "hyprlock"
 
         ## App auto start

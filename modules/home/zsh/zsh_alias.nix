@@ -31,7 +31,7 @@
       tree = "eza --icons --tree --group-directories-first";
 
       # Nixos
-      cdbs = "cd ~/BathyScarf && codium ~/BathyScarf";
+      cdbs = "cd ~/BathyScarf";
       ns = "nom-shell --run zsh";
       nix-switch = "nh os switch";
       nix-update = "nh os switch --update";
