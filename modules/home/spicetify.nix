@@ -16,13 +16,12 @@ in
   programs.spicetify = {
     enable = true;
     enabledExtensions = with spicePkgs.extensions; [
-      fullAppDisplay
       goToSong
       hidePodcasts
       keyboardShortcut
       shuffle # shuffle+ (special characters are sanitized out of extension names)
     ];
-    theme = spicePkgs.themes.dribbblish;
-    colorScheme = "gruvbox-material-dark";
+    theme = spicePkgs.themes.comfy;
+    colorScheme = "Everforest";
   };
 }
