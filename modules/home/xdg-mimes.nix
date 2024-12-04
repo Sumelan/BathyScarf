@@ -76,6 +76,10 @@ let
     );
 in
 {
+  xdg.userDirs = {
+      enable = true;
+      createDirectories = true;
+  };
   xdg.configFile."mimeapps.list".force = true;
   xdg.mimeApps.enable = true;
   xdg.mimeApps.associations.added = associations;
