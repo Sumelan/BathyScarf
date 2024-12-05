@@ -1,4 +1,7 @@
-{ lib, pkgs, ... }:
+{ pkgs, config, ... }:
+let 
+  theme = config.colorScheme.palette;
+in
 {
   home.packages = with pkgs; [ swayosd ];
 
@@ -42,7 +45,7 @@
     }
 
     image, label {
-        color: #FBF1C7;
+        color: #${theme.base0D};
     }
 
     progressbar:disabled,
@@ -66,7 +69,7 @@
         min-height: inherit;
         border-radius: inherit;
         border: none;
-        background: #FBF1C7;
+        background: #${theme.base00};
     }
   '';
 }

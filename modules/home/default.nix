@@ -13,10 +13,11 @@
     ./gtk.nix                    # gtk theme
     ./hypr                       # window manager
     ./kitty.nix                  # terminal
+    ./swaync.nix                 # notification deamon
     ./swayosd.nix                # brightness / volume wiget
-    ./swaync/swaync.nix          # notification deamon
     ./nemo.nix                   # file manager
     ./neovim.nix                 # neovim editor
+    ./nix-colors.nix
     ./obsidian.nix
     ./p10k/p10k.nix
     ./packages.nix               # other packages

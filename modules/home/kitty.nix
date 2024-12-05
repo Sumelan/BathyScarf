@@ -3,7 +3,7 @@
   programs.kitty = {
     enable = true;
 
-    themeFile = "gruvbox-dark-hard";
+    themeFile = "everforest_dark_hard";
 
     font = {
       name = "JetBrainsMono";

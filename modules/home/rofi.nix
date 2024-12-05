@@ -1,17 +1,20 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
+let
+  theme = config.colorScheme.palette;
+in
 {
   home.packages = (with pkgs; [ rofi-wayland ]);
 
   xdg.configFile."rofi/theme.rasi".text = ''
     * {
-      bg-col: #1D2021;
-      bg-col-light: #282828;
-      border-col: #A89984;
-      selected-col: #3C3836;
-      green: #98971A;
-      fg-col: #FBF1C7;
-      fg-col2: #EBDBB2;
-      grey: #BDAE93;
+      bg-col: #${theme.base00};
+      bg-col-light: #${theme.base01};
+      border-col: #${theme.base0D};
+      selected-col: #${theme.base02};
+      green: #${theme.base0D};
+      fg-col: #${theme.base05};
+      fg-col2: #${theme.base06};
+      grey: #${theme.base03};
       highlight: @green;
     }
   '';

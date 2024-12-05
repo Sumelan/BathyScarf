@@ -1,4 +1,7 @@
-{ pkgs, host, ... }:
+{ pkgs, config, host, ... }:
+let
+  theme = config.colorScheme.palette;
+in
 {
   wayland.windowManager.hyprland = {
     settings = {
@@ -41,8 +44,8 @@
         gaps_in = 5;
         gaps_out = 10;
         border_size = 2;
-        "col.active_border" = "rgb(A89984)";
-        "col.inactive_border" = "0x00000000";
+        "col.active_border" = "rgba(${theme.base0C}ff) rgba(${theme.base0D}ff) rgba(${theme.base0B}ff) rgba(${theme.base0E}ff) 45deg";
+        "col.inactive_border" = "rgba(${theme.base00}cc) rgba(${theme.base01}cc) 45deg";
         border_part_of_window = false;
         no_border_on_floating = false;
       };

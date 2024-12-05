@@ -12,13 +12,15 @@
     useGlobalPkgs = true;
     extraSpecialArgs = {
       inherit inputs username host;
+      inherit (inputs.nix-colors.lib.contrib { inherit pkgs; }) gtkThemeFromScheme;
+
     };
     users.${username} = {
       imports =
         if (host == "Rin") then
           [ ./../home/default.Rin.nix ]
         else
-          [ ./../home ];
+          [ ./../home/default.nix ];
       home.username = "${username}";
       home.homeDirectory = "/home/${username}";
       home.stateVersion = "24.05";

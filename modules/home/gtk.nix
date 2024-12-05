@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, config, gtkThemeFromScheme, ... }:
 {
   fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
@@ -16,7 +16,6 @@
     noto-fonts-cjk-serif
     fantasque-sans-mono
   ];
-
   gtk = {
     enable = true;
     font = {
@@ -24,12 +23,8 @@
       size = 12;
     };
     theme = {
-      name = "Gruvbox-Green-Dark";
-      package = pkgs.gruvbox-gtk-theme.override {
-        colorVariants = [ "dark" ];
-        themeVariants = [ "green" ];
-        tweakVariants = [ "macos" ];
-      };
+      name = "${config.colorScheme.slug}";
+      package = gtkThemeFromScheme { scheme = config.colorScheme; };
     };
     iconTheme = {
       name = "Papirus-Dark";
