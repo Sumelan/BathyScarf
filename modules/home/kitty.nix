@@ -3,7 +3,7 @@
   programs.kitty = {
     enable = true;
 
-    themeFile = "everforest_dark_hard";
+    themeFile = "Nord";
 
     font = {
       name = "JetBrainsMono";

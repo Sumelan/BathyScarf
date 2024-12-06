@@ -7,5 +7,5 @@
     # })
     webcord-vencord
   ];
-  xdg.configFile."Vencord/themes/everforest.theme.css".source = ./everforest.css;
+  xdg.configFile."Vencord/themes/nordic.theme.css".source = ./nordic.css;
 }

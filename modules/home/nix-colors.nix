@@ -1,6 +1,6 @@
 { pkgs, inputs, ... }:
 let
-  userTheme = "everforest-dark-hard";
+  userTheme = "nord";
 in
 {
   imports = [ inputs.nix-colors.homeManagerModules.default ];

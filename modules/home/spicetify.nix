@@ -22,6 +22,6 @@ in
       shuffle # shuffle+ (special characters are sanitized out of extension names)
     ];
     theme = spicePkgs.themes.comfy;
-    colorScheme = "Everforest";
+    colorScheme = "Nord";
   };
 }
