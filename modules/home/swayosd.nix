@@ -45,7 +45,7 @@ in
     }
 
     image, label {
-        color: #${theme.base0D};
+        color: #${theme.base05};
     }
 
     progressbar:disabled,
@@ -69,7 +69,7 @@ in
         min-height: inherit;
         border-radius: inherit;
         border: none;
-        background: #${theme.base00};
+        background: #${theme.base0A};
     }
   '';
 }

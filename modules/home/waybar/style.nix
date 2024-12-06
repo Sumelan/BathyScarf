@@ -5,18 +5,17 @@ let
     font = "JetBrainsMono";
     font_size = "16px";
     font_weight = "bold";
-    text_color = "#${theme.base03}";
+    text_color = "#${theme.base05}";
     background_0 = "#${theme.base00}";
     background_1 = "#${theme.base01}";
     border_color = "#${theme.base0F}";
-    red = "#${theme.base0E}";
-    green = "#${theme.base0D}";
-    yellow = "#${theme.base0A}";
-    blue = "#${theme.base08}";
-    magenta = "#${theme.base09}";
-    cyan = "#${theme.base0B}";
-    orange = "#${theme.base0C}";
-    orange_bright = "#FE8019";
+    love = "#${theme.base08}";
+    pine = "#${theme.base0B}";
+    gold = "#${theme.base0E}";
+    blue = "#${theme.base0C}";
+    iris = "#${theme.base0D}";
+    form = "#${theme.base0C}";
+    rose = "#${theme.base0A}";
     opacity = "1";
     indicator_height = "2px";
   };
@@ -51,7 +50,7 @@ in
       padding-left: 15px;
     }
     #workspaces button {
-      color: ${yellow};
+      color: ${gold};
       padding-left:  5px;
       padding-right: 5px;
       margin-right: 10px;
@@ -60,7 +59,7 @@ in
       color: ${text_color};
     }
     #workspaces button.active {
-      color: ${orange_bright};
+      color: ${rose};
     }
 
     #clock {

@@ -8,14 +8,13 @@ in
   xdg.configFile."rofi/theme.rasi".text = ''
     * {
       bg-col: #${theme.base00};
-      bg-col-light: #${theme.base01};
-      border-col: #${theme.base0D};
-      selected-col: #${theme.base02};
-      green: #${theme.base0D};
+      bg-col-light: #${theme.base02};
+      border-col: #${theme.base08};
+      selected-col: #${theme.base04};
+      rose: #${theme.base0A};
       fg-col: #${theme.base05};
-      fg-col2: #${theme.base06};
-      grey: #${theme.base03};
-      highlight: @green;
+      fg-col2: #${theme.base07};
+      highlight: @rose;
     }
   '';
 
@@ -67,9 +66,9 @@ in
     }
 
     prompt {
-      background-color: @green;
+      background-color: @rose;
       padding: 4px;
-      text-color: @bg-col-light;
+      text-color: @bg-col;
       border-radius: 3px;
       margin: 10px 0px 10px 10px;
     }
@@ -120,14 +119,14 @@ in
     button {
       padding: 10px;
       background-color: @bg-col-light;
-      text-color: @grey;
+      text-color: @fg-col;
       vertical-align: 0.5; 
       horizontal-align: 0.5;
     }
 
     button selected {
       background-color: @bg-col;
-      text-color: @green;
+      text-color: @rose;
     }
   '';
 }

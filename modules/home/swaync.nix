@@ -11,15 +11,15 @@ in
     @define-color mantle #${theme.base02};
     @define-color crust #${theme.base01};
 
-    @define-color text #${theme.base04};
-    @define-color subtext0 #${theme.base03};
+    @define-color text #${theme.base05};
+    @define-color subtext0 #${theme.base04};
     @define-color subtext1 #${theme.base07};
 
-    @define-color surface0 #${theme.base05};
-    @define-color surface1 #${theme.base06};
-    @define-color surface2 #${theme.base02};
+    @define-color surface0 #${theme.base02};
+    @define-color surface1 #${theme.base03};
+    @define-color surface2 #${theme.base01};
 
-    @define-color green #${theme.base0D};
+    @define-color green #${theme.base0B};
 
     * {
     font-family: "NotoSansMono Nerd Font";

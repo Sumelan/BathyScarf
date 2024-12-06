@@ -44,7 +44,7 @@ in
         gaps_in = 5;
         gaps_out = 10;
         border_size = 2;
-        "col.active_border" = "rgba(${theme.base0C}ff) rgba(${theme.base0D}ff) rgba(${theme.base0B}ff) rgba(${theme.base0E}ff) 45deg";
+        "col.active_border" = "rgba(${theme.base08}ff) rgba(${theme.base0A}ff) rgba(${theme.base0D}ff) rgba(${theme.base0E}ff) 45deg";
         "col.inactive_border" = "rgba(${theme.base00}cc) rgba(${theme.base01}cc) 45deg";
         border_part_of_window = false;
         no_border_on_floating = false;
