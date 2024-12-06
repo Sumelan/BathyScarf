@@ -2,13 +2,7 @@
 {
   programs.kitty = {
     enable = true;
-
-    themeFile = "Nord";
-
-    font = {
-      name = "JetBrainsMono";
-      size = if (host == "Rei") then 14 else 16;
-    };
+    package = pkgs.kitty;
 
     extraConfig = ''
       font_features JetBrainsMono-Regular +ss01 +ss02 +ss04
@@ -19,7 +13,6 @@
 
     settings = {
       confirm_os_window_close = 0;
-      background_opacity = "0.66";
       scrollback_lines = 10000;
       enable_audio_bell = false;
       mouse_hide_wait = 60;

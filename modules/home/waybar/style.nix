@@ -1,20 +1,21 @@
 { config, ... }:
 let
+  theme = config.stylix.base16Scheme;
   custom = {
     font = "JetBrainsMono";
     font_size = "16px";
     font_weight = "bold";
-    text_color = "#${config.colorScheme.palette.base03}";
-    background_0 = "#${config.colorScheme.palette.base00}";
-    background_1 = "#${config.colorScheme.palette.base01}";
-    border_color = "#${config.colorScheme.palette.base0F}";
-    red = "#${config.colorScheme.palette.base0E}";
-    green = "#${config.colorScheme.palette.base0D}";
-    yellow = "#${config.colorScheme.palette.base0A}";
-    blue = "#${config.colorScheme.palette.base08}";
-    magenta = "#${config.colorScheme.palette.base09}";
-    cyan = "#${config.colorScheme.palette.base0B}";
-    orange = "#${config.colorScheme.palette.base0C}";
+    text_color = "#${theme.base03}";
+    background_0 = "#${theme.base00}";
+    background_1 = "#${theme.base01}";
+    border_color = "#${theme.base0F}";
+    red = "#${theme.base0E}";
+    green = "#${theme.base0D}";
+    yellow = "#${theme.base0A}";
+    blue = "#${theme.base08}";
+    magenta = "#${theme.base09}";
+    cyan = "#${theme.base0B}";
+    orange = "#${theme.base0C}";
     orange_bright = "#FE8019";
     opacity = "1";
     indicator_height = "2px";

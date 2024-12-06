@@ -12,8 +12,6 @@
     useGlobalPkgs = true;
     extraSpecialArgs = {
       inherit inputs username host;
-      inherit (inputs.nix-colors.lib.contrib { inherit pkgs; }) gtkThemeFromScheme;
-
     };
     users.${username} = {
       imports =

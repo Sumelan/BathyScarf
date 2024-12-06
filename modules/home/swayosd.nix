@@ -1,6 +1,6 @@
 { pkgs, config, ... }:
 let 
-  theme = config.colorScheme.palette;
+  theme = config.stylix.base16Scheme;
 in
 {
   home.packages = with pkgs; [ swayosd ];

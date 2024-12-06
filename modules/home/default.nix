@@ -5,7 +5,6 @@
     ./browser.nix                # firefox
     ./btop.nix                   # resouces monitor 
     ./cava.nix                   # audio visualizer
-    ./discord/discord.nix        # discord with gruvbox
     ./fastfetch.nix              # fetch tool
     ./fzf.nix                    # fuzzy finder
     ./git.nix                    # version control
@@ -17,7 +16,6 @@
     ./swayosd.nix                # brightness / volume wiget
     ./nemo.nix                   # file manager
     ./neovim.nix                 # neovim editor
-    ./nix-colors.nix
     ./obsidian.nix
     ./p10k/p10k.nix
     ./packages.nix               # other packages
@@ -25,6 +23,8 @@
     ./scripts/scripts.nix        # personal scripts
     ./spicetify.nix              # spotify client
     ./starship.nix               # shell prompt
+    ./stylix.nix
+    ./vesktop.nix
     ./viewnior.nix               # image viewer
     ./waybar                     # status bar
     ./waypaper.nix               # GUI wallpaper picker

@@ -19,6 +19,7 @@
     ./program.nix
     ./security.nix
     ./services.nix
+    ./stylix.nix
     ./system.nix
     ./user.nix
     ./virtualization.nix
