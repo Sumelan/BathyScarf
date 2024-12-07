@@ -17,7 +17,6 @@ in
         "wl-paste --watch cliphist store &"
         "waybar &"
         "swaync &"
-        "hyprctl setcursor Bibata-Modern-Ice 24 &"
         "swww-daemon &"
 
         ## App auto start
