@@ -69,6 +69,7 @@
     resources                         # GUI resources monitor
     soundwireserver
     thunderbird
+    vesktop
     vlc
     zenity
 

@@ -4,14 +4,14 @@ let
   defaultApps = {
     browser = [ "firefox.desktop" ];
     text = [ "org.gnome.TextEditor.desktop" ];
-    image = [ "viewnior.desktop" ];
+    image = [ "pqiv.desktop" ];
     audio = [ "mpv.desktop" ];
     video = [ "mpv.desktop" ];
     directory = [ "nemo.desktop" ];
     pdf = [ "org.gnome.Evince.desktop" ];
     terminal = [ "kitty.desktop" ];
-    archive = [ "org.gnome.FileRoller.desktop" ];
-    discord = [ "webcord.desktop" ];
+    archive = [ "unar.desktop" ];
+    discord = [ "vesktop.desktop" ];
   };
 
   mimeMap = {

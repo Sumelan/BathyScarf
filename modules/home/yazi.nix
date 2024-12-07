@@ -1,8 +1,15 @@
 { inputs, pkgs, ... }:
+let
+  # [option]
+  thumb-size = "300";
+  option = "-s ${thumb-size} -x -i -T --all";
+in
 {
   home.packages = with pkgs; [ 
     unar
     xdragon
+    exiftool
+    mediainfo
   ];
 
   programs.yazi = {
@@ -32,61 +39,27 @@
         macro_workers = 10;
         bizarre_retry = 5;
       };
-      open = {
-        rules = [
-          { use = "edit"; mime = "text/*"; }
-          { use = "open"; mime = "image/*"; }
-          { use = ["play" "reveal"]; mime = "video/*"; }
-          { use = ["play" "reveal"]; mime = "audio/*"; }
-        ];
-      };
-      opener = {
-        edit = [
-          { run = "$EDITOR \"$@\""; block = true; }
-        ];
-        open = [
-          { run = "pqiv \"$@\""; desc = "Open"; }
-        ];
-        play = [
-          { run = "mpv \"$@\""; orphan = true; }
-        ];
-        archive = [
+      opener.extract = [
           { run = "unar \"$@\""; desc = "Extract here"; }
         ];
-        reveal = [
-          {
-            run = "''${pkgs.exiftool}/bin/exiftool \"$1\"; echo \"Press enter to exit\"; read _''";
-            block = true;
-            desc = "Show EXIF";
-          }
-          {
-            run = "''${pkgs.mediainfo}/bin/mediainfo \"$1\"; echo \"Press enter to exit\"; read _''";
-            block = true;
-            desc = "Show media info";
-          }
-        ];
-      };
     };
-
     keymap = {
+      # Custom keymap
       manager.append_keymap = [
-        # Custom command
         {
-          run = "shell 'dragon -x -i -T \"$@\"' --confirm";
-          desc = "Create a window for drag-and-drop";
+          run = "shell 'dragon ${option} \"$@\"' --confirm";
+          desc = "Create a windows to be dragged";
           on = ["<A-d>"];
         }
       ];
     };
-
     theme = {
-      icon = {
-        append_exts = [
-          { name = "*.jsx"; text = ""; }
-          { name = "*.lua"; text = ""; }
-          { name = "*.nix"; text = ""; }
-        ];
-      };
+      # Custom icon
+      icon.append_exts = [
+        { name = "*.jsx"; text = ""; }
+        { name = "*.lua"; text = ""; }
+        { name = "*.nix"; text = ""; }
+      ];
       filetype = {
         rules = [
           # Images
@@ -103,11 +76,11 @@
         ];
       };
     };
-
     plugins = {
       full-border = "${inputs.yazi-plugins}/full-border.yazi";
     };
   };
+
   xdg.configFile."yazi/init.lua".text = ''
     require("full-border"):setup()
   '';

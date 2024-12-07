@@ -24,7 +24,6 @@
     ./spicetify.nix              # spotify client
     ./starship.nix               # shell prompt
     ./stylix.nix
-    ./vesktop.nix
     ./waybar                     # status bar
     ./waypaper.nix               # GUI wallpaper picker
     ./xdg-mimes.nix              # xdg config

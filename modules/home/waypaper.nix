@@ -7,7 +7,7 @@
     language = en
     folder = ~/Pictures/wallpapers
     monitors = All
-    wallpaper = ~/Pictures/wallpapers/nixos.png
+    wallpaper = ~/Pictures/wallpapers/wallpaper.png
     backend = swww
     fill = fill
     sort = name
