@@ -1,20 +1,21 @@
-{ host, ... }:
+{ config, host, ... }:
 let
+  theme = config.stylix.base16Scheme;
   custom = {
     font = "JetBrainsMono";
     font_size = "14px";
     font_weight = "bold";
-    text_color = "#FBF1C7";
-    background_0 = "#1D2021";
-    background_1 = "#282828";
-    border_color = "#928374";
-    red = "#CC241D";
-    green = "#98971A";
-    yellow = "#FABD2F";
-    blue = "#458588";
-    magenta = "#B16286";
-    cyan = "#689D6A";
-    orange = "#D65D0E";
+    text_color = "#${theme.base05}";
+    background_0 = "#${theme.base00}";
+    background_1 = "#${theme.base01}";
+    border_color = "#${theme.base0F}";
+    red = "#${theme.base08}";
+    green = "#${theme.base0B}";
+    yellow = "#${theme.base0E}";
+    blue = "#${theme.base0C}";
+    magenta = "#${theme.base0D}";
+    cyan = "#${theme.base0C}";
+    orange = "#${theme.base0A}";
     opacity = "1";
     indicator_height = "2px";
   };
@@ -100,7 +101,7 @@ in
     };
     network = {
       format-wifi = "<span foreground='${magenta}'>  </span> {signalStrength}%";
-      format-ethernet = "<span foreground='${magenta}'>󰀂 </span>";
+      format-ethernet = "<span foreground='${magenta}'>󰈀 </span>";
       tooltip-format = "Connected to {essid} {ifname} via {gwaddr}";
       format-linked = "{ifname} (No IP)";
       format-disconnected = "<span foreground='${magenta}'>󰖪 </span>";
@@ -139,7 +140,7 @@ in
       tooltip-format = "{time}";
     };
     "custom/launcher" = {
-      format = "";
+      format = "<span foreground='${blue}'></span>";
       on-click = "random-wallpaper";
       on-click-right = "rofi -show drun";
       tooltip = "true";

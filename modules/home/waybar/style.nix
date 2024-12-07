@@ -9,13 +9,13 @@ let
     background_0 = "#${theme.base00}";
     background_1 = "#${theme.base01}";
     border_color = "#${theme.base0F}";
-    love = "#${theme.base08}";
-    pine = "#${theme.base0B}";
-    gold = "#${theme.base0E}";
+    red = "#${theme.base08}";
+    green = "#${theme.base0B}";
+    yellow = "#${theme.base0E}";
     blue = "#${theme.base0C}";
-    iris = "#${theme.base0D}";
-    form = "#${theme.base0C}";
-    rose = "#${theme.base0A}";
+    magenta = "#${theme.base0D}";
+    cyan = "#${theme.base0C}";
+    orange = "#${theme.base0A}";
     opacity = "1";
     indicator_height = "2px";
   };
@@ -50,7 +50,7 @@ in
       padding-left: 15px;
     }
     #workspaces button {
-      color: ${gold};
+      color: ${yellow};
       padding-left:  5px;
       padding-right: 5px;
       margin-right: 10px;
@@ -59,7 +59,7 @@ in
       color: ${text_color};
     }
     #workspaces button.active {
-      color: ${rose};
+      color: ${orange};
     }
 
     #clock {
