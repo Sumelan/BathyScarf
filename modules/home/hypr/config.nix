@@ -34,9 +34,10 @@ in
         sensitivity = 0;
         touchpad = {
           natural_scroll = true;
+          disable_while_typing = true;
+          scroll_factor = 0.8;
         };
       };
-
       general = {
         "$mainMod" = "SUPER";
         layout = "dwindle";
@@ -48,7 +49,10 @@ in
         border_part_of_window = false;
         no_border_on_floating = false;
       };
-
+      gestures = {
+        workspace_swipe = true;
+        workspace_swipe_fingers = 3;
+      };
       misc = {
         disable_autoreload = true;
         disable_hyprland_logo = true;
@@ -60,7 +64,6 @@ in
         new_window_takes_over_fullscreen = 2;
         middle_click_paste = false;
       };
-
       dwindle = {
         # no_gaps_when_only = false;
         force_split = 0;
@@ -70,19 +73,16 @@ in
         pseudotile = "yes";
         preserve_split = "yes";
       };
-
       master = {
         new_status = "master";
         special_scale_factor = 1;
         # no_gaps_when_only = false;
       };
-
       decoration = {
         rounding = 0;
         # active_opacity = 0.90;
         # inactive_opacity = 0.90;
         # fullscreen_opacity = 1.0;
-
         blur = {
           enabled = true;
           size = 3;
@@ -94,10 +94,8 @@ in
           new_optimizations = true;
           xray = true;
         };
-
         shadow = {
           enabled = true;
-
           ignore_window = true;
           offset = "0 2";
           range = 20;
@@ -105,17 +103,14 @@ in
           color = "rgba(00000055)";
         };
       };
-
       animations = {
         enabled = true;
-
         bezier = [
           "fluent_decel, 0, 0.2, 0.4, 1"
           "easeOutCirc, 0, 0.55, 0.45, 1"
           "easeOutCubic, 0.33, 1, 0.68, 1"
           "fade_curve, 0, 0.55, 0.45, 1"
         ];
-
         animation = [
           # name, enable, speed, curve, style
 
@@ -123,7 +118,6 @@ in
           "windowsIn,   0, 4, easeOutCubic,  popin 20%" # window open
           "windowsOut,  0, 4, fluent_decel,  popin 80%" # window close.
           "windowsMove, 1, 2, fluent_decel, slide" # everything in between, moving, dragging, resizing.
-
           # Fade
           "fadeIn,      1, 3,   fade_curve" # fade in (open) -> layers and windows
           "fadeOut,     1, 3,   fade_curve" # fade out (close) -> layers and windows
@@ -135,7 +129,6 @@ in
           "workspaces,  1, 4,   easeOutCubic, fade" # styles: slide, slidevert, fade, slidefade, slidefadevert
         ];
       };
-
       bind = [
         # show keybinds list
         "$mainMod, F1, exec, show-keybinds"
