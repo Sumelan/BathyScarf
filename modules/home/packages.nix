@@ -34,7 +34,7 @@
     pamixer                           # pulseaudio command line mixer
     playerctl                         # controller for media players
     poweralertd
-    programmer-calculator
+    pqiv
     ripgrep                           # grep replacement
     shfmt                             # bash formatter
     swappy                            # snapshot editing tool
@@ -48,7 +48,7 @@
     valgrind                          # c memory analyzer
     wl-clipboard                      # clipboard utils for wayland (wl-copy, wl-paste)
     wget
-    yt-dlp-light
+    yt-dlp
     xdg-utils
     xxd
 
@@ -61,13 +61,11 @@
 
     ## GUI Apps
     audacity
-    bleachbit                         # cache cleaner
     gimp
     nix-prefetch-github
     obs-studio
     pavucontrol                       # pulseaudio volume controle (GUI)
     pitivi                            # video editing
-    qalculate-gtk                     # calculator
     resources                         # GUI resources monitor
     soundwireserver
     thunderbird
@@ -82,5 +80,8 @@
     # Python
     python3
     python312Packages.ipython
+
+    # vm
+    appimage-run
   ]);
 }

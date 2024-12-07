@@ -25,7 +25,6 @@
     ./starship.nix               # shell prompt
     ./stylix.nix
     ./vesktop.nix
-    ./viewnior.nix               # image viewer
     ./waybar                     # status bar
     ./waypaper.nix               # GUI wallpaper picker
     ./xdg-mimes.nix              # xdg config
