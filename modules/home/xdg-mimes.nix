@@ -4,10 +4,10 @@ let
   defaultApps = {
     browser = [ "firefox.desktop" ];
     text = [ "org.gnome.TextEditor.desktop" ];
-    image = [ "pqiv.desktop" ];
+    image = [ "imv.desktop" ];
     audio = [ "mpv.desktop" ];
     video = [ "mpv.desktop" ];
-    directory = [ "nemo.desktop" ];
+    directory = [ "thunar.desktop" ];
     pdf = [ "org.gnome.Evince.desktop" ];
     terminal = [ "kitty.desktop" ];
     archive = [ "unar.desktop" ];

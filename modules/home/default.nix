@@ -14,7 +14,6 @@
     ./kitty.nix                  # terminal
     ./swaync.nix                 # notification deamon
     ./swayosd.nix                # brightness / volume wiget
-    ./nemo.nix                   # file manager
     ./neovim.nix                 # neovim editor
     ./obsidian.nix
     ./p10k/p10k.nix

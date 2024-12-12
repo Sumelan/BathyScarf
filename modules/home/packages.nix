@@ -34,7 +34,6 @@
     pamixer                           # pulseaudio command line mixer
     playerctl                         # controller for media players
     poweralertd
-    pqiv
     ripgrep                           # grep replacement
     shfmt                             # bash formatter
     swappy                            # snapshot editing tool
