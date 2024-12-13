@@ -3,14 +3,12 @@ with lib;
 let
   defaultApps = {
     browser = [ "firefox.desktop" ];
-    text = [ "org.gnome.TextEditor.desktop" ];
+    text = [ "helix.desktop" ];
     image = [ "imv.desktop" ];
     audio = [ "mpv.desktop" ];
     video = [ "mpv.desktop" ];
     directory = [ "thunar.desktop" ];
-    pdf = [ "org.gnome.Evince.desktop" ];
     terminal = [ "kitty.desktop" ];
-    archive = [ "unar.desktop" ];
     discord = [ "vesktop.desktop" ];
   };
 
@@ -54,14 +52,7 @@ let
       "x-scheme-handler/https"
       "x-scheme-handler/unknown"
     ];
-    pdf = [ "application/pdf" ];
     terminal = [ "terminal" ];
-    archive = [
-      "application/zip"
-      "application/rar"
-      "application/7z"
-      "application/*tar"
-    ];
     discord = [ "x-scheme-handler/discord" ];
   };
 

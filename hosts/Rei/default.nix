@@ -15,7 +15,7 @@
 
   services = {
     power-profiles-daemon.enable = true;
-
+    cpupower-gui.enable = true;
     upower = {
       enable = true;
       percentageLow = 20;
