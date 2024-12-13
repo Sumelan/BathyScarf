@@ -61,6 +61,7 @@
     ## GUI Apps
     audacity
     gimp
+    joplin-desktop
     nix-prefetch-github
     obs-studio
     pavucontrol                       # pulseaudio volume controle (GUI)

@@ -15,7 +15,6 @@
     ./swaync.nix                 # notification deamon
     ./swayosd.nix                # brightness / volume wiget
     ./neovim.nix                 # neovim editor
-    ./obsidian.nix
     ./p10k/p10k.nix
     ./packages.nix               # other packages
     ./rofi.nix                   # launcher
