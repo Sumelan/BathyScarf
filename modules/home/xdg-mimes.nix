@@ -8,6 +8,7 @@ let
     audio = [ "mpv.desktop" ];
     video = [ "mpv.desktop" ];
     directory = [ "thunar.desktop" ];
+    archive = [ "unar.desktop" ];
     terminal = [ "kitty.desktop" ];
     discord = [ "vesktop.desktop" ];
   };
@@ -53,6 +54,12 @@ let
       "x-scheme-handler/unknown"
     ];
     terminal = [ "terminal" ];
+    archive = [
+      "application/zip"
+      "application/rar"
+      "application/7z"
+      "application/*tar"
+    ];
     discord = [ "x-scheme-handler/discord" ];
   };
 

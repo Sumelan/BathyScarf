@@ -13,5 +13,6 @@
     ./audiobookshelf.nix
     ./borgbackup.nix
     ./nextcloud.nix
+    ./udev.nix
   ];
 }
