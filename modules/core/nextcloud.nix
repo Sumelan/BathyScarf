@@ -46,24 +46,10 @@
     config = {
       dbtype = "pgsql";
       adminuser = "sumelan";
-      adminpassFile = "/etc/nextcloud";
+      adminpassFile = config.age.secrets.nextcloud.path;
     };
     phpOptions = {
       "opcache.interned_strings_buffer" = "16";
-    };
-  };
-
-  services.nginx.virtualHosts = {
-    "nextcloud.sakurairo.ddnsfree.com" = {
-      forceSSL = true;
-      enableACME = true;
-    };
-  };
-
-  security.acme = {
-    acceptTerms = true;
-    certs."nextcloud.sakurairo.ddnsfree.com" = {
-      email = "bathys@proton.me";
     };
   };
 }
