@@ -24,12 +24,12 @@
           on-timeout = "hyprctl dispatch dpms off";  #screen off when timeout has passed.
           on-resume = "hyprctl dispatch dpms on";    #screen on when activity is detected after timeout has fired.
         }
-        (if (host == "Rei") then ''
+        (if (host == "Rei") then 
           {
             timeout = 1200;                          # 20 min.
             on-timeout = "systemctl suspend";        # suspend pc.
           }
-        '' else {})
+         else {})
       ];
     };
   };
