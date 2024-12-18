@@ -35,6 +35,7 @@
     ripgrep                           # grep replacement
     shfmt                             # bash formatter
     swappy                            # snapshot editing tool
+    swayimg
     tdf                               # cli pdf viewer
     treefmt2                          # project formatter
     tldr

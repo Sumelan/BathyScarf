@@ -1,6 +1,6 @@
 { inputs, pkgs, ... }:
 let
-  # [option]
+  # dragon [option]
   thumb-size = "300";
   option = "-s ${thumb-size} -x -i -T --all";
 in
