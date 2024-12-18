@@ -41,6 +41,10 @@
         package = pkgs.montserrat;
         name = "Montserrat";
       };
+      emoji = {
+        package = pkgs.noto-fonts-emoji;
+        name = "Noto Color Emoji";
+      };
       sizes = {
         applications = 12;
         terminal = 15;

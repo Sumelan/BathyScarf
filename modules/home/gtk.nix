@@ -3,8 +3,6 @@
   fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
     font-awesome
-    twemoji-color-font
-    noto-fonts-emoji
     noto-fonts-cjk-sans
     noto-fonts-cjk-serif
     material-icons
