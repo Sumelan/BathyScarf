@@ -17,6 +17,7 @@
     ./kitty.nix                  # terminal
     ./neovim.nix                 # neovim editor
     ./packages.nix               # other packages
+    ./pqiv.nix                   # image viewer
     ./rofi.nix                   # launcher
     ./spicetify.nix              # spotify client
     ./starship.nix               # shell prompt

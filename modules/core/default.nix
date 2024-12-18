@@ -8,6 +8,7 @@
 }:
 {
   imports = [
+    ./agenix.nix
     ./bluetooth.nix
     ./bootloader.nix
     ./btrfs.nix

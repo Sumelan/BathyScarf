@@ -30,7 +30,7 @@
       flake = false;
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak";
-    agenix.url = "github:ryantm/agenix";
+    agenix.url = "github:yaxitech/ragenix";
   };
   outputs = { self, nixpkgs, ... }@inputs:
 

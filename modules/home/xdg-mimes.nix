@@ -4,7 +4,7 @@ let
   defaultApps = {
     browser = [ "firefox.desktop" ];
     text = [ "helix.desktop" ];
-    image = [ "imv.desktop" ];
+    image = [ "pqiv.desktop" ];
     audio = [ "mpv.desktop" ];
     video = [ "mpv.desktop" ];
     directory = [ "thunar.desktop" ];

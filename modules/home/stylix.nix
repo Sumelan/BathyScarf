@@ -1,10 +1,10 @@
 { pkgs, inputs, ... }:
 {
   stylix.targets = {
-    waybar.enable = false;
-    rofi.enable = false;
     hyprland.enable = false;
-    swaync.enable = false;
+    rofi.enable = false;
     spicetify.enable = false;
+    swaync.enable = false;
+    waybar.enable = false;
   };
 }
