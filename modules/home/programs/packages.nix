@@ -68,6 +68,7 @@
     pitivi                            # video editing
     resources                         # GUI resources monitor
     soundwireserver
+    typora
     thunderbird
     vesktop
     vlc

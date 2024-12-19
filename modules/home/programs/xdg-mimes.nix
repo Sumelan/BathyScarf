@@ -3,7 +3,7 @@ with lib;
 let
   defaultApps = {
     browser = [ "firefox.desktop" ];
-    text = [ "helix.desktop" ];
+    text = [ "typora.desktop" ];
     image = [ "swayimg.desktop" ];
     audio = [ "mpv.desktop" ];
     video = [ "mpv.desktop" ];
