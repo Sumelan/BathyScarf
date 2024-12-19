@@ -6,7 +6,6 @@ let
 in
 {
   home.packages = with pkgs; [ 
-    unar
     xdragon
     exiftool
     mediainfo

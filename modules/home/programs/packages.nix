@@ -42,6 +42,7 @@
     todo                              # cli todo list
     toipe                             # typing test in the terminal
     ttyper                            # cli typing test
+    unar
     unzip
     valgrind                          # c memory analyzer
     wl-clipboard                      # clipboard utils for wayland (wl-copy, wl-paste)

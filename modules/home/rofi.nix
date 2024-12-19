@@ -11,10 +11,10 @@ in
       bg-col-light: #${theme.base02};
       border-col: #${theme.base08};
       selected-col: #${theme.base04};
-      rose: #${theme.base0A};
+      beige: #${theme.base0A};
       fg-col: #${theme.base05};
       fg-col2: #${theme.base07};
-      highlight: @rose;
+      highlight: @beige;
     }
   '';
 
@@ -66,7 +66,7 @@ in
     }
 
     prompt {
-      background-color: @rose;
+      background-color: @beige;
       padding: 4px;
       text-color: @bg-col;
       border-radius: 3px;
@@ -126,7 +126,7 @@ in
 
     button selected {
       background-color: @bg-col;
-      text-color: @rose;
+      text-color: @beige;
     }
   '';
 }

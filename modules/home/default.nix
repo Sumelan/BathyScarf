@@ -1,10 +1,11 @@
 {inputs, username, host, ...}: {
   imports = [
-    ./hypr                       # window manager
-    ./p10k/p10k.nix
-    ./scripts/scripts.nix        # personal scripts
-    ./waybar                     # status bar
-    ./zsh                        # shell
+    ./hypr
+    ./p10k
+    ./programs
+    ./scripts
+    ./waybar
+    ./zsh
     ./audacious.nix              # music player
     ./bat.nix                    # better cat command
     ./btop.nix                   # resouces monitor 
@@ -16,16 +17,13 @@
     ./helix.nix
     ./kitty.nix                  # terminal
     ./neovim.nix                 # neovim editor
-    ./packages.nix               # other packages
     ./rofi.nix                   # launcher
     ./spicetify.nix              # spotify client
-    ./starship.nix               # shell prompt
     ./stylix.nix
     ./swaync.nix                 # notification deamon
     ./swayosd.nix                # brightness / volume wiget
     ./textfox.nix
     ./waypaper.nix               # GUI wallpaper picker
-    ./xdg-mimes.nix              # xdg config
     ./yazi.nix                   # terminal file manager
   ];
 }

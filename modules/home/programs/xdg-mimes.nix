@@ -84,5 +84,4 @@ in
   xdg.mimeApps.defaultApplications = associations;
 
   home.packages = with pkgs; [ junction ];
-
 }
