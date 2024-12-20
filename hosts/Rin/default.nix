@@ -3,7 +3,7 @@
   imports = [
     ./hardware-configuration.nix
     ./amd.nix
-    ./../../modules/core/default.Rin.nix
+    ./../../modules/system/default.Rin.nix
   ];
   
   # Extra Module Options

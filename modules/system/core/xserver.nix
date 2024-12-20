@@ -19,7 +19,6 @@
         };
       };
     };
-
     libinput = {
       enable = true;
       # mouse = {

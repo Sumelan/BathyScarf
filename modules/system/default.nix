@@ -1,0 +1,21 @@
+{
+  inputs,
+  nixpkgs,
+  self,
+  username,
+  host,
+  ...
+}:
+{
+  imports = [
+    ./core
+    ./hardware/hardware.nix
+    ./style/stylix.nix
+    ./flatpak.nix
+    ./network.nix
+    ./nh.nix
+    ./program.nix
+    ./user.nix
+    ./virtualization.nix
+  ];
+}

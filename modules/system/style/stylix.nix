@@ -3,7 +3,7 @@
   imports = [ inputs.stylix.nixosModules.stylix ];
   stylix = {
     enable = true;
-    image = ../../wallpapers/wallpaper.png;
+    image = ../../../wallpapers/wallpaper.png;
     base16Scheme = {
     # rose-pine-moon.yaml
       base00 = "232136";  # Base

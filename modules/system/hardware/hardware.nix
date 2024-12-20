@@ -1,5 +1,10 @@
 { pkgs, ... }:
 {
+  imports = [
+    ./bluetooth.nix
+    ./pipewire.nix
+  ];
+
   hardware = {
     graphics = {
       enable = true;
