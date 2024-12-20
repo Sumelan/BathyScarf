@@ -3,7 +3,6 @@
     ./CLI
     ./GUI
     ./hypr
-    ./p10k
     ./scripts
     ./style
     ./sway
