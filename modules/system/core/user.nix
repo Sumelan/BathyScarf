@@ -27,7 +27,7 @@
       "networkmanager"
       "wheel"
     ];
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
   };
   # Enable automatic login for the user.
   services.getty.autologinUser = "${username}";

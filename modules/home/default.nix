@@ -8,6 +8,5 @@
     ./sway
     ./waybar
     ./xdg
-    ./zsh
   ];
 }
