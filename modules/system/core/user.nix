@@ -10,9 +10,9 @@
     users.${username} = {
       imports =
         if (host == "Rin") then
-          [ ./../home/default.Rin.nix ]
+          [ ./../../home/default.Rin.nix ]
         else
-          [ ./../home/default.nix ];
+          [ ./../../home/default.nix ];
       home.username = "${username}";
       home.homeDirectory = "/home/${username}";
       home.stateVersion = "24.05";

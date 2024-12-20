@@ -9,13 +9,9 @@
 {
   imports = [
     ./core
+    ./virtualization
     ./hardware/hardware.nix
+    ./programs/program.nix
     ./style/stylix.nix
-    ./flatpak.nix
-    ./network.nix
-    ./nh.nix
-    ./program.nix
-    ./user.nix
-    ./virtualization.nix
   ];
 }
