@@ -1,7 +1,7 @@
-{ inputs, ... }:
+{ pkgs, inputs, ... }:
 {
   home.packages = [
-    inputs.pyprland.packages."x86_64-linux".pyprland
+    inputs.pyprland.packages."${pkgs.system}".pyprland
   ];
 
   home.file.".config/hypr/pyprland.toml".text =
