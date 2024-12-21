@@ -26,6 +26,8 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "input"
+      "wireshark"
     ];
     shell = pkgs.fish;
   };

@@ -1,36 +1,26 @@
+{ pkgs, ... }:
 {
-  config,
-  pkgs,
-  username,
-  ...
-}:
-{
-  # Add user to libvirtd group
-  users.users.${username}.extraGroups = [ "libvirtd" ];
-
-  # Install necessary packages
-  environment.systemPackages = with pkgs; [
-    virt-manager
-    virt-viewer
-    spice
-    spice-gtk
-    spice-protocol
-    win-virtio
-    win-spice
-    adwaita-icon-theme
-  ];
-
-  # Manage the virtualisation services
   virtualisation = {
     libvirtd = {
-      enable = true;
-      qemu = {
-        swtpm.enable = true;
-        ovmf.enable = true;
-        ovmf.packages = [ pkgs.OVMFFull.fd ];
-      };
+      allowedBridges = [
+        "nm-bridge"
+        "virbr0"
+      ];
+      enable = false;
+      qemu.runAsRoot = false;
     };
     spiceUSBRedirection.enable = true;
   };
-  services.spice-vdagentd.enable = true;
+
+  services = {
+    spice-vdagentd.enable = true;
+    spice-webdavd.enable = true;
+  };
+
+  programs.virt-manager.enable = true;
+
+  environment.systemPackages = with pkgs; [
+    gnome-connections
+    gnome-boxes
+  ];
 }

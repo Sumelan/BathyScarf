@@ -8,6 +8,6 @@
   
   # Extra Module Options
   drivers.amdgpu.enable = true;
-
+  services.power-profiles-daemon.enable = true;
   powerManagement.cpuFreqGovernor = "performance";
 }

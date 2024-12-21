@@ -1,12 +1,11 @@
-{inputs, username, host, ...}: {
+{ inputs, ... }:
+{
   imports = [
-    ./CLI
-    ./GUI
-    ./hypr
-    ./scripts
+    ./editors/helix
+    ./editors/neovim
+    ./programs
+    ./services
     ./style
-    ./sway
-    ./waybar
-    ./xdg
+    ./terminal
   ];
 }

@@ -1,16 +1,22 @@
 { pkgs, lib, ... }:
 {
   imports = [
+    ./hyprland.nix
     ./flatpak.nix
+    ./uwsm.nix
+    ./wireshark.nix
+    ./xdg.nix
   ];
 
-  programs.dconf.enable = true;
-  programs.fish.enable = true;
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
+  programs = {
+    dconf.enable = true;
+    fish.enable = true;
+    gnupg.agent = {
+      enable = true;
+      enableSSHSupport = true;
     # pinentryFlavor = "";
+    };
+    seahorse.enable = true;
+    kdeconnect.enable = true;
   };
-  programs.nix-ld.enable = true;
-  programs.nix-ld.libraries = with pkgs; [ ];
 }
