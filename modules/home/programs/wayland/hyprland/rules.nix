@@ -37,6 +37,10 @@
       "float, class:^(udiskie)$"
       "center, class:^(udiskie)$"
 
+      #Krita
+      "fullscreen, class:^(krita)$"
+      "monitor DP-1, class:^(krita)$"
+
       # make Firefox PiP window floating and sticky
       "float, title:^(Picture-in-Picture)$"
       "pin, title:^(Picture-in-Picture)$"
@@ -100,6 +104,9 @@
 
       "special:discord, on-created-empty:uwsm app -- vesktop"
       "special:discord, gapsout:75"
+
+      # Monitor - Huion
+      "10, monitor:DP-1, default:true"
     ]; 
     monitor = (if (host == "Rin") then [
       "DP-1,2560x1440,0x0,1"
