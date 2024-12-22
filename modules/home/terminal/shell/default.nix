@@ -2,6 +2,7 @@
 {
   imports = [
     ./fish
+    ./bash.nix
     ./starship.nix
     ./zoxide.nix
   ];

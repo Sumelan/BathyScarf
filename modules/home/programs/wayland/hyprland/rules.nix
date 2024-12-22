@@ -100,7 +100,12 @@
 
       "special:discord, on-created-empty:uwsm app -- vesktop"
       "special:discord, gapsout:75"
-    ];
-    monitor = (if (host == "Rin") then ",preferred,auto,1.5" else ",preferred,auto,1");
+    ]; 
+    monitor = (if (host == "Rin") then [
+      "DP-1,2560x1440,0x0,1"
+      "HDMI-A-1,2560x1440,0x-1440,1"
+    ] else [
+      ",preferred,auto,1"
+    ]);
   };
 }
