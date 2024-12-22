@@ -251,7 +251,7 @@
           interval = 1;
           critical-format = "󰸁 {temperatureC}°C";
           critical-threshold = 90;
-          hwmon-path = if (host == "Rin") then "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon1/temp1_input" else "";  
+          hwmon-path = if (host == "Rin") then "/sys/class/hwmon/hwmon2/temp1_input" else "/sys/class/thermal/thermal_zone3/temp";
         };
 
         memory = {
