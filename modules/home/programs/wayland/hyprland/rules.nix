@@ -37,8 +37,7 @@
       "float, class:^(udiskie)$"
       "center, class:^(udiskie)$"
 
-      #Krita
-      "fullscreen, class:^(krita)$"
+      # Krita
       "monitor DP-1, class:^(krita)$"
 
       # make Firefox PiP window floating and sticky

@@ -17,6 +17,8 @@
       toggleScript = cmd: script: "pkill ${cmd} || uwsm app -- ${script}";
       runOnce = cmd: "pgrep ${cmd} || uwsm app -- ${cmd}";
       hyprcast = "uwsm app -- ~/.config/hypr/scripts/hyprcast.fish";
+      hyprcast_LG = "uwsm app -- ~/.config/hypr/scripts/hyprcast_LG.fish";
+      hyprcast_Huion = "uwsm app -- ~/.config/hypr/scripts/hyprcast_Huion.fish";
     in
       [
         # Vesktop
@@ -29,7 +31,6 @@
         "$mainMod SHIFT, O, Open Obsidian, exec, uwsm app -- obsidian"
         "$mainMod, E, Open terminal terminal file manager, exec, uwsm app -- foot --app-id yazi yazi"
         "$mainMod SHIFT, E, Open file manager, exec, uwsm app -- thunar"
-        ", XF86Calculator, Open calculator, exec, ${runOnce "gnome-calculator"}"
 
         # Launcher
         "$mainMod, D, Open application launcher, exec, ${toggle "fuzzel"}"
@@ -70,6 +71,9 @@
 
         # Screencast
         "$mainMod, R, Start/stop screencast, exec, ${hyprcast}"
+        # Rin only
+        "$mainMod SHIFT, R, Start/stop screencast on LG, exec, ${hyprcast_LG}"
+        "$mainMod ALT, R, Start/stop screencast on Huion, exec, ${hyprcast_Huion}"
 
         # Move window focus
         "$mainMod, H, Focus window to the left, movefocus, l"
