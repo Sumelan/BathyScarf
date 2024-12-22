@@ -1,4 +1,4 @@
-{ pkgs, inputs, username, ... }:
+{ pkgs, inputs, host, ... }:
 let
   colorTheme = "gruvbox-material-dark-medium";
 in
@@ -35,7 +35,7 @@ in
         applications = 12;
         terminal = 13;
         desktop = 12;
-        popups = 10;
+        popups = (if (host == "Rin") then 12 else 10);
       };
     };
   };
