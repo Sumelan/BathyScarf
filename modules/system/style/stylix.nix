@@ -20,12 +20,12 @@ in
         name = "JetBrainsMono Nerd Font Mono";
       };
       sansSerif = {
-        package = pkgs.montserrat;
-        name = "Montserrat";
+        package = pkgs.nerd-fonts.ubuntu;
+        name = "Ubuntu Nerd Font";
       };
       serif = {
-        package = pkgs.montserrat;
-        name = "Montserrat";
+        package = pkgs.nerd-fonts.ubuntu;
+        name = "Ubuntu Nerd Font";
       };
       emoji = {
         package = pkgs.noto-fonts-emoji;
@@ -35,7 +35,7 @@ in
         applications = 12;
         terminal = 13;
         desktop = 12;
-        popups = (if (host == "Rin") then 12 else 10);
+        popups = (if (host == "Rin") then 12 else 8);
       };
     };
   };
