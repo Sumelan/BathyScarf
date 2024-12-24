@@ -13,7 +13,7 @@ in
     opacity.terminal = 0.8;
     cursor.package = pkgs.bibata-cursors;
     cursor.name = "Bibata-Modern-Classic";
-    cursor.size = 22;
+    cursor.size = 24;
     fonts = {
       monospace = {
         package = pkgs.nerd-fonts.jetbrains-mono;

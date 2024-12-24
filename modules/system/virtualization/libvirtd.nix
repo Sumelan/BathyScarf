@@ -6,7 +6,7 @@
         "nm-bridge"
         "virbr0"
       ];
-      enable = false;
+      enable = true;
       qemu.runAsRoot = false;
     };
     spiceUSBRedirection.enable = true;

@@ -4,7 +4,6 @@
     ./hyprland.nix
     ./flatpak.nix
     ./uwsm.nix
-    ./wireshark.nix
     ./xdg.nix
   ];
 

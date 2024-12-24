@@ -6,7 +6,6 @@
     ./bat.nix
     ./btop.nix
     ./cli.nix
-    ./direnv.nix
     ./eza.nix
     ./fd.nix
     ./fzf.nix

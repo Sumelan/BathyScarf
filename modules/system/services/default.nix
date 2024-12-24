@@ -1,11 +1,8 @@
 { ... }:
 {
   imports = [
-    ./fprintd.nix
     ./gnome-services.nix
-    ./gns3.nix
     ./greetd.nix
-    ./location.nix
     ./pipewire.nix
     ./printing.nix
   ];
