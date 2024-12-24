@@ -37,8 +37,13 @@
       "float, class:^(udiskie)$"
       "center, class:^(udiskie)$"
 
-      # Krita
+      # Krita 
       "monitor DP-1, class:^(krita)$"
+      "noblur, floating:1, class^(krita)$"
+      "noborder, floating:1, class:^(krita)$"
+      "nodim, floating:1, class^(krita)$"
+      "norounding, floating:1, class:^(krita)$"
+      "noshadow, floating:1, class:^(krita)$"
 
       # make Firefox PiP window floating and sticky
       "float, title:^(Picture-in-Picture)$"
