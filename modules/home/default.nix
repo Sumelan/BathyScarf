@@ -1,8 +1,7 @@
 { inputs, ... }:
 {
   imports = [
-    ./editors/helix
-    ./editors/neovim
+    ./editors
     ./programs
     ./services
     ./style
