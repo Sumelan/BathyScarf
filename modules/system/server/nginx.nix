@@ -14,6 +14,10 @@
       };
     };
   };
+  # Prevent 413 Request Entity Too Large error
+  # by increasing the maximum allowed size of the client request body
+  # For example, set it to 10 GiB
+  services.nginx.clientMaxBodySize = "1024M";
   users.users.nginx.extraGroups = [ "acme" ];
 
   security.acme = {
