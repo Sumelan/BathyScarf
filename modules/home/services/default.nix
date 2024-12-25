@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
-    ./media/playerctl.nix
+    ./media
     ./system
     ./wayland
   ];

@@ -1,6 +1,5 @@
 {pkgs, ...}: {
   imports = [
-    ./easyeffects.nix
     ./ffmpeg.nix
     ./spicetify.nix
   ];
