@@ -10,6 +10,7 @@
     acpi
     brightnessctl
     cpupower-gui
+    glib # for cpupower-gui.desktop to work.
     powertop
   ];
 
