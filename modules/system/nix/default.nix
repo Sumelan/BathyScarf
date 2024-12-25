@@ -4,6 +4,12 @@
     ./nh.nix
   ];
 
+  environment.systemPackages = with pkgs; [
+    wget
+    neovim
+    git
+  ];
+
   nix = {
     settings = {
       auto-optimise-store = true;
@@ -25,12 +31,10 @@
       ];
     };
   };
-
-  environment.systemPackages = with pkgs; [
-    wget
-    neovim
-    git
-  ];
+  nixpkgs.config = {
+    allowUnfree = true;
+    overlays = [];
+  };
 
   time.timeZone = "Asia/Tokyo";
   i18n = {
@@ -56,8 +60,6 @@
       fcitx5.waylandFrontend = true;
     };
   };
-
-  nixpkgs.config.allowUnfree = true;
 
   system.stateVersion = "24.05";
 }

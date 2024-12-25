@@ -4,6 +4,6 @@
     ./bootloader.nix
     ./btrfs.nix
     ./user.nix
-    ./zram.nix
+    ./zramswap.nix
   ];
 }

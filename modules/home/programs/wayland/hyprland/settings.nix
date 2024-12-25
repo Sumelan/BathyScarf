@@ -18,7 +18,7 @@
       "uwsm app -- swww-daemon"
       "uwsm app -- fcitx5"
       "uwsm app -- kdeconnect-indicator"
-
+      "sleep 5"
       "uwsm app --  hyprlock"
     ];
 
