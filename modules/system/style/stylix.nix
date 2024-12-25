@@ -10,10 +10,20 @@ in
     image = ../../../wallpapers/wallpaper.png;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/${colorTheme}.yaml";
     polarity = "dark";
-    opacity.terminal = 0.8;
-    cursor.package = pkgs.bibata-cursors;
-    cursor.name = "Bibata-Modern-Classic";
-    cursor.size = 24;
+
+    cursor = {
+      package = pkgs.bibata-cursors;
+      name = "Bibata-Modern-Classic";
+      size = 24;
+    };
+
+    opacity = {
+      applications = 0.95;
+      terminal = 0.95;
+      desktop = 0.95;
+      popups = 0.75;
+    };
+
     fonts = {
       monospace = {
         package = pkgs.nerd-fonts.jetbrains-mono;
@@ -38,5 +48,7 @@ in
         popups = (if (host == "Rin") then 12 else 8);
       };
     };
+
+    targets.fish.enable = false;
   };
 }
