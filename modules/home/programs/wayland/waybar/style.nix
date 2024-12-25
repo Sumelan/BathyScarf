@@ -74,7 +74,7 @@
         }
 
         #custom-actions {
-          color: @base0B;
+          color: @base0D;
           font-size: 1.3em;
         }
 
