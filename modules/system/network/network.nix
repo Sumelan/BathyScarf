@@ -1,6 +1,6 @@
 { pkgs, config, host, ... }:
 {
-  environment.systemPackages = with pkgs; [ 
+  environment.systemPackages = with pkgs; [
     networkmanagerapplet
   ];
 
@@ -8,8 +8,6 @@
     hostName = "${host}";
     networkmanager = {
       enable = true;
-      dns = "systemd-resolved";
-      # wifi.powersave = true;
     };
     nameservers = [
       "8.8.8.8"
@@ -39,21 +37,6 @@
       settings = {
         PermitRootLogin = "no";
         PasswordAuthentication = true;
-      };
-    };
-    # DNS resolver
-    resolved = {
-      enable = true;
-      dnsovertls = "true";
-    };
-    # network discovery, mDNS
-    avahi = {
-      enable = true;
-      nssmdns4 = true;
-      publish = {
-        enable = true;
-        domain = true;
-        userServices = true;
       };
     };
   };

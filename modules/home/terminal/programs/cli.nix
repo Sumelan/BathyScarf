@@ -13,6 +13,5 @@
     devenv
     glow
     speedtest-cli
-    wget
   ];
 }
