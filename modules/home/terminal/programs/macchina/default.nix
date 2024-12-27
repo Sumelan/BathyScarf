@@ -11,7 +11,7 @@
   home.file.".config/macchina/macchina.toml".text =
     # toml
     ''
-      interface = "wlp2s0"
+      interface = "lo"
       long_uptime = true
       long_shell = false
       long_kernel = false
