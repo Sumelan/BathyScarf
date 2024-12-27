@@ -27,23 +27,18 @@
       gaps_in = 5;
       gaps_out = 10;
       layout = "dwindle";
-
       # Set to true enable resizing windows by clicking and dragging on borders and gaps
       resize_on_border = false;
-
       # Please see https://wiki.hyprland.org/Configuring/Tearing/ before you turn this on
       allow_tearing = true;
     };
 
     decoration = {
       rounding = 7;
-
       # active_opacity = config.stylix.opacity.applications;
       # inactive_opacity = 0.75;
       fullscreen_opacity = 1;
-
       shadow.range = 30;
-
       blur = {
         enabled = true;
         size = 4;
@@ -53,14 +48,9 @@
 
     input = {
       kb_layout = "us";
-      # kb_options = "eurosign:e";
-
       sensitivity = 0; # -1.0 - 1.0, 0 means no modification.
-
       follow_mouse = 1;
-
       scroll_method = "2fg";
-
       touchpad = {
         disable_while_typing = false;
         natural_scroll = true;
@@ -103,7 +93,6 @@
           text_color = rgb base00;
           font_size = config.stylix.fonts.sizes.desktop;
           height = builtins.floor (config.stylix.fonts.sizes.desktop * 1.5);
-
           "col.active" = cfg.group."col.border_active";
           "col.inactive" = cfg.group."col.border_inactive";
           "col.locked_active" = cfg.group."col.border_locked_active";
@@ -127,14 +116,11 @@
       hyprbars = {
         bar_height = config.stylix.fonts.sizes.desktop * 2;
         bar_button_padding = config.stylix.fonts.sizes.desktop / 2;
-
         bar_part_of_window = true;
         bar_precedence_over_border = true;
-
         bar_text_size = config.stylix.fonts.sizes.desktop;
         bar_color = rgb config.lib.stylix.colors.base00;
         "col.text" = rgb config.lib.stylix.colors.base05;
-
         hyprbars-button = let
           buttonSize = builtins.toString (config.stylix.fonts.sizes.desktop * 1.5);
         in [

@@ -37,8 +37,10 @@
       "float, class:^(udiskie)$"
       "center, class:^(udiskie)$"
 
-      # Krita 
-      "monitor DP-1, class:^(krita)$"
+      # Krita
+      (if (host == "Rin") then
+        "monitor DP-1, class:^(krita)$"
+      else "")
       "noblur, floating:1, class^(krita)$"
       "noborder, floating:1, class:^(krita)$"
       "nodim, floating:1, class^(krita)$"
