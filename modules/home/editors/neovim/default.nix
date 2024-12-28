@@ -57,6 +57,7 @@ in
         todo-comments-nvim
         nvim-tree-lua
         telescope-fzf-native-nvim
+        vim-just
         vim-tmux-navigator
       ];
       extraConfig = ''
