@@ -2,7 +2,7 @@
 with lib;
 let
   defaultApps = {
-    browser = [ "firefox.desktop" ];
+    browser = [ "zen.desktop" ];
     text = [ "Helix.desktop" ];
     image = [ "swayimg.desktop" ];
     audio = [ "mpv.desktop" ];

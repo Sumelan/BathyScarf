@@ -45,7 +45,7 @@
       "norounding, floating:1, class:^(krita)$"
       "noshadow, floating:1, class:^(krita)$"
 
-      # make Firefox PiP window floating and sticky
+      # make Zen PiP window floating and sticky
       "float, title:^(Picture-in-Picture)$"
       "pin, title:^(Picture-in-Picture)$"
 

@@ -54,11 +54,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     stylix.url = "github:danth/stylix";
-    textfox.url = "github:adriankarlen/textfox";
     yazi-plugins = {
       url = "github:yazi-rs/plugins";
       flake = false;
     };
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     agenix.url = "github:yaxitech/ragenix";
   };

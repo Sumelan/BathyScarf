@@ -1,8 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   imports = [
+    ./browser/zen.nix
     ./media
-    ./mozilla
+    ./mozilla/thunderbird.nix
     ./wayland
     ./vesktop.nix
   ];

@@ -19,7 +19,6 @@
         };
       }))
       brightnessctl
-      networkmanagerapplet
       nwg-displays
       satty
       wl-clipboard

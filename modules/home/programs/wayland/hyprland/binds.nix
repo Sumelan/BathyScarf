@@ -27,7 +27,7 @@
 
         # Open applications
         "$mainMod, RETURN, Open terminal, exec, uwsm app -- foot"
-        "$mainMod, B, Open browser, exec, uwsm app -- firefox"
+        "$mainMod, B, Open browser, exec, uwsm app -- zen"
         "$mainMod SHIFT, O, Open Typora, exec, uwsm app -- typora"
         "$mainMod, E, Open terminal terminal file manager, exec, uwsm app -- foot --app-id yazi yazi"
         "$mainMod SHIFT, E, Open file manager, exec, uwsm app -- thunar"
