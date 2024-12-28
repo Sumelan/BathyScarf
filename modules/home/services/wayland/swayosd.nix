@@ -2,6 +2,6 @@
 {
   services.swayosd = {
     enable = true;
-    topMargin = 0.8;
+    topMargin = 1.0;
   };
 }
