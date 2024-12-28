@@ -19,7 +19,7 @@
       displayNavButtons = true;
       newtabLogo = "   __            __  ____          \A   / /____  _  __/ /_/ __/___  _  __\A  / __/ _ \\| |/_/ __/ /_/ __ \\| |/_/\A / /_/  __/>  </ /_/ __/ /_/ />  <  \A \\__/\\___/_/|_|\\__/_/  \\____/_/|_|  ";
       font = { 
-        family = "JetBrainsMono Nerd Font";
+        family = "FiraCode Nerd Font";
         size = "15px";
         accent = "${base05}";
       };
