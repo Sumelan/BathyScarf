@@ -50,7 +50,7 @@ My flake: BathyScarf repository!  Everything wip.
 # 👥 Credits
 
 - [JaKooLit / Arch-Hyprland](https://github.com/JaKooLit/Arch-Hyprland) <br>
- I was previously arch user and started understainding hyprland stuff from his scripts.
+I was previously arch user and started understainding hyprland stuff from his scripts.
   
 - [Tyler Kelly / ZaneyOS](https://gitlab.com/Zaney/zaneyos) <br>
 I learned about NixOS from his config.  Plus he has a nice community on discord!
