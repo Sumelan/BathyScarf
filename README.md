@@ -49,18 +49,14 @@ My flake: BathyScarf repository!  Everything wip.
 
 # 👥 Credits
 
-- [JaKooLit / Arch-Hyprland](https://github.com/JaKooLit/Arch-Hyprland)
- 
-    I was previously arch user and started understainding hyprland stuff from his scripts.
+- [JaKooLit / Arch-Hyprland](https://github.com/JaKooLit/Arch-Hyprland) <br>
+ I was previously arch user and started understainding hyprland stuff from his scripts.
   
-- [Tyler Kelly / ZaneyOS](https://gitlab.com/Zaney/zaneyos)
-
-    I learned about NixOS from his config.  Plus he has a nice community on discord!
+- [Tyler Kelly / ZaneyOS](https://gitlab.com/Zaney/zaneyos) <br>
+I learned about NixOS from his config.  Plus he has a nice community on discord!
   
-- [MrSom3body / dotfiles](https://github.com/MrSom3body/dotfiles/tree/main)
-
-    Main config is copied from this repo found on r/unixporn.
+- [MrSom3body / dotfiles](https://github.com/MrSom3body/dotfiles/tree/main) <br>
+Main config is copied from this repo found on r/unixporn.
   
-- [Frost-Phoenix / nixos-config](https://github.com/Frost-Phoenix/nixos-config)
-
-    README.md from this repo.
+- [Frost-Phoenix / nixos-config](https://github.com/Frost-Phoenix/nixos-config) <br>
+README.md from this repo.
