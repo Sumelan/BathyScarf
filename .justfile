@@ -13,7 +13,7 @@ switch:
 # Update flake inputs before building specified configuration.
 [group('nh')]
 update:
-  swich --update
+  nh os swich --update
 
 # Cleans root profiles and calls a store gc.
 [group('nh')]
