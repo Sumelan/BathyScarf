@@ -1,21 +1,26 @@
-# BathyScarf / 罰襟巻
+<h1 align="center">
+<img src="./.github/assets/logo/nixos-logo.png" width="100px" />
+<br>
+  BathyScarf / 罰襟巻
+<br>
+<img src="./.github/assets/pallet/pallet1.png" width="600px" height="10px" />
+</h1>
 
-<img src="./.github/assets/logo/nixos-logo.png" style="zoom:33%;" />
-
-<img src="./.github/assets/pallet/pallet1.png" style="zoom:150%;" />
+## screenshots
 
 # 🗃️ Overview
 ## 📚 Layout
 
-- [flake.nix](https://github.com/Sumelan/BathyScarf/blob/main/flake.nix) base of the configuration.
-- [hosts](https://github.com/Sumelan/BathyScarf/tree/main/hosts) 🌳 per-host configurations that contain machine specific configurations.
-  - [Rei / 鈴](https://github.com/Sumelan/BathyScarf/tree/main/hosts/Rei) 💻 Acer Intel Laptop.
-  - [Rin / 零](https://github.com/Sumelan/BathyScarf/tree/main/hosts/Rin) 🖥️ Minisforum AMD Desktop.
-- [modules](https://github.com/Sumelan/BathyScarf/tree/main/modules) 🍱 modularized NixOS configurations.
-  - [system](https://github.com/Sumelan/BathyScarf/tree/main/modules/system) ⚙️ Nixos system config.
-  - [home](https://github.com/Sumelan/BathyScarf/tree/main/modules/home) 🏠 Home-manager config.
-- [overlay](https://github.com/Sumelan/BathyScarf/tree/main/overlays) 📦 Nixpkgs with overlays.
-- [secrets](https://github.com/Sumelan/BathyScarf/tree/main/secrets) 🔐 Encrypted secrets using [agenix](https://github.com/ryantm/agenix)
+- [flake.nix](flake.nix) base of the configuration.
+- [hosts](hosts/) 🌳 per-host configurations that contain machine specific configurations.
+  - [Rei / 零](hosts/Rei/) 💻 Acer Intel Laptop.
+  - [Rin / 鈴](hosts/Rin/) 🖥️ Minisforum AMD Desktop.
+- [modules](modules/) 🍱 modularized NixOS configurations.
+  - [system](modules/system/) ⚙️ Nixos system config.
+  - [home](modules/home/) 🏠 Home-manager config.
+- [overlay](overlays/) 📦 Nixpkgs with overlays.
+- [secrets](secrets/) 🔐 Encrypted secrets using [agenix](https://github.com/ryantm/agenix).
+- [wallpapers](wallpapers/) 🌄 Default wallpaper.
 
 ## 📓 Components
 
