@@ -1,18 +1,27 @@
 <h1 align="center">
-<img src="./.github/assets/logo/nixos-logo.png" width="100px" />
-<br>
-  BathyScarf / 罰襟巻
-<br>
-<img src="./.github/assets/pallet/pallet1.png" width="600px" height="10px" />
+  <img src="./.github/assets/logo/nixos-logo.png" width="100px" />
+  <br>
+    BathyScarf / 罰襟巻
+  <br>
+  <img src="./.github/assets/pallet/pallet1.png" width="600px" height="10px" />
 </h1>
 
-## screenshots
+My flake: BathyScarf repository!  Everything wip.
+- NixOS: My favorite distro.
+- Hyprland: Dynamic tiling Wayland compositor.
+
+## 🖼️ Showcase
+<p align="center">
+  <img src="./.github/assets/screenshots/screenshot1.png" /> <br>
+  <img src="./.github/assets/screenshots/screenshot2.png" /> <br>
+  <img src="./.github/assets/screenshots/screenshot3.png" /> <br>
+</p>
 
 # 🗃️ Overview
 ## 📚 Layout
 
-- [flake.nix](flake.nix) base of the configuration.
-- [hosts](hosts/) 🌳 per-host configurations that contain machine specific configurations.
+- [flake.nix](flake.nix) Base of the configuration.
+- [hosts](hosts/) 🌳 Per-host configurations that contain machine specific configurations.
   - [Rei / 零](hosts/Rei/) 💻 Acer Intel Laptop.
   - [Rin / 鈴](hosts/Rin/) 🖥️ Minisforum AMD Desktop.
 - [modules](modules/) 🍱 modularized NixOS configurations.
@@ -36,11 +45,22 @@
 |     **Color Scheme**     |       **Gruvbox Material Dark Medium**        |
 |        **Cursor**        |           **Bibata-Modern-Classic**           |
 |        **Icons**         |               **Papirus-Dark**                |
+|        **Browser**       |               **Zen Browser**                 |
 
 # 👥 Credits
 
-Other dotfiles that I learned / copy from:
+- [JaKooLit / Arch-Hyprland](https://github.com/JaKooLit/Arch-Hyprland)
+ 
+    I was previously arch user and started understainding hyprland stuff from his scripts.
+  
 - [Tyler Kelly / ZaneyOS](https://gitlab.com/Zaney/zaneyos)
-    You should start learniig NixOS from this repo.  Plus, he has a nice community on Discord.
+
+    I learned about NixOS from his config.  Plus he has a nice community on discord!
+  
+- [MrSom3body / dotfiles](https://github.com/MrSom3body/dotfiles/tree/main)
+
+    Main config is copied from this repo found on /unixporn.
+  
 - [Frost-Phoenix / nixos-config](https://github.com/Frost-Phoenix/nixos-config)
-    Main config and file structures from this repo.
+
+    README.md from this repo.
