@@ -3,10 +3,6 @@
   imports = [
     ./helix
     ./neovim
-  ];
-
-  home.packages = with pkgs; [
-    typora
-    joplin-desktop
+    ./joplin.nix
   ];
 }

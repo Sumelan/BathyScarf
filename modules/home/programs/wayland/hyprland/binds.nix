@@ -28,7 +28,6 @@
         # Open applications
         "$mainMod, RETURN, Open terminal, exec, uwsm app -- foot"
         "$mainMod, B, Open browser, exec, uwsm app -- zen"
-        "$mainMod SHIFT, O, Open Typora, exec, uwsm app -- typora"
         "$mainMod, E, Open terminal terminal file manager, exec, uwsm app -- foot --app-id yazi yazi"
         "$mainMod SHIFT, E, Open file manager, exec, uwsm app -- thunar"
 
@@ -103,8 +102,8 @@
         "$mainMod SHIFT, M, Move focused window to Monitor workspace, movetoworkspace, special:monitor"
         "$mainMod, X, Toggle Discord workspace, togglespecialworkspace, discord"
         "$mainMod SHIFT, X, Move focused window to Discord workspace, movetoworkspace, special:discord"
-        "$mainMod, T, Toggle Lunatask workspace, togglespecialworkspace, lunatask"
-        "$mainMod SHIFT, T, Move focused window to Lunatask workspace, movetoworkspace, special:lunatask"
+        "$mainMod, T, Toggle Joplin workspace, togglespecialworkspace, joplin"
+        "$mainMod SHIFT, T, Move focused window to Joplin workspace, movetoworkspace, special:joplin"
 
         # Switch workspaces
         "$mainMod, Prior, Switch to next workspace, workspace, r-1"

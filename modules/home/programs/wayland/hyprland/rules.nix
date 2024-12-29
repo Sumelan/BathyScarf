@@ -51,7 +51,7 @@
 
       # Move apps to workspaces
       "workspace special:discord, class:^(vesktop)$"
-      "workspace special:, class:^(Lunatask)$"
+      "workspace special:, class:^(joplin-desktop)$"
 
       # Dim some programs
       "dimaround, class:^(xdg-desktop-portal-gtk)$"
@@ -98,8 +98,6 @@
 
       "special:special, gapsout:75"
 
-      "special:typora, on-created-empty:uwsm app -- typora"
-
       "special:spotify, on-created-empty:uwsm app -- spotify"
       "special:spotify, gapsout:75"
 
@@ -109,8 +107,8 @@
       "special:discord, on-created-empty:uwsm app -- vesktop"
       "special:discord, gapsout:75"
 
-      "special:lunatask, on-created-empty:uwsm app -- lunatask"
-      "special:lunatask, gapsout:75"
+      "special:joplin, on-created-empty:uwsm app -- joplin-desktop"
+      "special:joplin, gapsout:75"
 
       # Monitor - Huion
       "10, monitor:DP-1, default:true"
