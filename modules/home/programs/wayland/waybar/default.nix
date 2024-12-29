@@ -51,7 +51,7 @@
             "discord" = "";
             "lunatask" = "";
             "monitor" = "󰍹";
-            "obsidian" = "";
+            "typora" = "";
             "spotify" = "";
 
             "active" = "";

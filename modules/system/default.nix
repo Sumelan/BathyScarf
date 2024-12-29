@@ -10,6 +10,7 @@
   imports = [
     ./core
     ./hardware
+    ./home-manager
     ./nix
     ./services
     ./virtualization
