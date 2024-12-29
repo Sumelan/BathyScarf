@@ -59,7 +59,7 @@ My flake: BathyScarf repository!  Everything wip.
   
 - [MrSom3body / dotfiles](https://github.com/MrSom3body/dotfiles/tree/main)
 
-    Main config is copied from this repo found on /unixporn.
+    Main config is copied from this repo found on r/unixporn.
   
 - [Frost-Phoenix / nixos-config](https://github.com/Frost-Phoenix/nixos-config)
 
