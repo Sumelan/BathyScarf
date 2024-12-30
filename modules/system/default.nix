@@ -12,6 +12,7 @@
     ./hardware
     ./home-manager
     ./nix
+    ./rustdesk
     ./services
     ./virtualization
     ./network/network.nix
