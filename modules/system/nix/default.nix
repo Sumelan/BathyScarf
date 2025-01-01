@@ -33,7 +33,7 @@
   };
   nixpkgs.config = {
     allowUnfree = true;
-    # overlays = [ (import ../../../overlays/calibre.nix) ];
+    overlays = [];
   };
 
   time.timeZone = "Asia/Tokyo";
