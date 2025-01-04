@@ -2,7 +2,6 @@
 {
   services.hypridle = {
     enable = true;
-    package = inputs.hypridle.packages.${pkgs.system}.hypridle;
     settings = {
       general = let
         beforeSleep = l: lib.concatStringsSep "; " l;

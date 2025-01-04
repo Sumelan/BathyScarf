@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.11";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -10,39 +11,9 @@
     pre-commit-hooks.url = "github:cachix/git-hooks.nix";
     helix.url = "github:helix-editor/helix";
     hyprland.url = "github:hyprwm/hyprland";    
-    hypridle = {
-      url = "github:hyprwm/hypridle";
-      inputs = {
-        hyprlang.follows = "hyprland/hyprlang";
-        hyprutils.follows = "hyprland/hyprutils";
-        nixpkgs.follows = "hyprland/nixpkgs";
-        systems.follows = "hyprland/systems";
-      };
-    };
-    hyprland-contrib = {
-      url = "github:hyprwm/contrib";
-      inputs.nixpkgs.follows = "hyprland/nixpkgs";
-    };
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
-    };
-    hyprlock = {
-      url = "github:hyprwm/hyprlock";
-      inputs = {
-        hyprlang.follows = "hyprland/hyprlang";
-        hyprutils.follows = "hyprland/hyprutils";
-        nixpkgs.follows = "hyprland/nixpkgs";
-        systems.follows = "hyprland/systems";
-      };
-    };
-    hyprpicker = {
-      url = "github:hyprwm/hyprpicker";
-      inputs = {
-        hyprutils.follows = "hyprland/hyprutils";
-        nixpkgs.follows = "hyprland/nixpkgs";
-        systems.follows = "hyprland/systems";
-      };
     };
     pyprland.url = "github:hyprland-community/pyprland";
     fine-cmdline = {
@@ -62,7 +33,7 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     agenix.url = "github:yaxitech/ragenix";
   };
-  outputs = { self, nixpkgs, ... }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-stable, ... }@inputs:
 
     let
       system = "x86_64-linux";
@@ -70,7 +41,7 @@
     in
     {
       nixosConfigurations = {
-        Rei = nixpkgs.lib.nixosSystem {
+        Rei = nixpkgs-stable.lib.nixosSystem {
           inherit system;
           modules = [ ./hosts/Rei ];
           specialArgs = {
@@ -78,7 +49,7 @@
             inherit self inputs username;
           };
         };
-        Rin = nixpkgs.lib.nixosSystem {
+        Rin = nixpkgs-stable.lib.nixosSystem {
           inherit system;
           modules = [ ./hosts/Rin ];
           specialArgs = {

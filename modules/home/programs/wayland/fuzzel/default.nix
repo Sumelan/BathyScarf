@@ -39,10 +39,6 @@
       source = ./scripts/fuzzel-files.fish;
       executable = true;
     };
-    "bin/fuzzel-icons" = {
-      source = ./scripts/fuzzel-icons.fish;
-      executable = true;
-    };
     "bin/fuzzel-windows" = {
       source = ./scripts/fuzzel-windows.fish;
       executable = true;
