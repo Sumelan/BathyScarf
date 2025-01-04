@@ -33,7 +33,7 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     agenix.url = "github:yaxitech/ragenix";
   };
-  outputs = { self, nixpkgs, nixpkgs-stable, ... }@inputs:
+  outputs = { self, nixpkgs, ... }@inputs:
 
     let
       system = "x86_64-linux";
@@ -41,7 +41,7 @@
     in
     {
       nixosConfigurations = {
-        Rei = nixpkgs-stable.lib.nixosSystem {
+        Rei = nixpkgs.lib.nixosSystem {
           inherit system;
           modules = [ ./hosts/Rei ];
           specialArgs = {
@@ -49,7 +49,7 @@
             inherit self inputs username;
           };
         };
-        Rin = nixpkgs-stable.lib.nixosSystem {
+        Rin = nixpkgs.lib.nixosSystem {
           inherit system;
           modules = [ ./hosts/Rin ];
           specialArgs = {
