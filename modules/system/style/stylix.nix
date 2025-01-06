@@ -7,7 +7,7 @@ in
 
   stylix = {
     enable = true;
-    image = ../../../wallpapers/wallpaper.png;
+    image = ../../../walls/wallpaper.png;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/${colorTheme}.yaml";
     polarity = "dark";
 

@@ -1,4 +1,4 @@
-{ pkgs, config, inputs, ... }:
+{ config, username, ... }:
 {
   programs.hyprlock = {
     enable = true;
@@ -7,14 +7,11 @@
         hide_cursor = true;
         grace = 0;
       };
-
-      auth.fingerprint.enabled = true;
-
       background = {
+        path = "screenshot";
         blur_size = 4;
         blur_passes = 2;
       };
-
       input-field = {
         size = "300, 50";
         outline_thickness = 3;
@@ -30,22 +27,18 @@
         fail_text = "<i>$FAIL <b>($ATTEMPTS)</b></i>";
         fail_transition = 300;
         capslock_color = "rgb(${config.lib.stylix.colors.base0A})";
-
         position = "0, -70";
         halign = "center";
         valign = "center";
       };
-
       image = {
-        path = "~/.face";
+        path = "/home/${username}/.face.icon";
         size = 150;
         border_color = "rgb(${config.lib.stylix.colors.base0D})";
-
         position = "0, 75";
         halign = "center";
         valign = "center";
       };
-
       label = [
         {
           text = "$TIME";
@@ -86,4 +79,6 @@
       ];
     };
   };
+  home.file.".face.icon".source = ../../../../icon/face.png;
+  home.file.".config/face.png".source = ../../../../icon/face.png;
 }
