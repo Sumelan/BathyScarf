@@ -37,6 +37,10 @@
       "float, class:^(udiskie)$"
       "center, class:^(udiskie)$"
 
+      # Waypaper
+      "float, class:^(waypaper)$"
+      "center, class:^(waypaper)$"
+
       # Krita
       "monitor DP-1, class:^(krita)$"
       "noblur, floating:1, class^(krita)$"
