@@ -48,12 +48,7 @@ add:
 # Incorporates changes from a remote repository into the current branch.
 [group('github')]
 pull:
-  git pull
-
-# Clones a repository into a newly created directory.
-[group('github')]
-clone:
-  git clone
+  git pull origin main
 
 # Edit flake.nix.
 [group('flake')]
