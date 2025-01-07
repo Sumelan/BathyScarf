@@ -107,7 +107,7 @@
         }
 
         #workspaces button.special {
-          color: @base0C;
+          color: @base06;
         }
 
         #workspaces button:hover {

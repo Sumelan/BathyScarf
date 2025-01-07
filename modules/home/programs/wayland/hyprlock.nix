@@ -8,7 +8,6 @@
         grace = 0;
       };
       background = {
-        path = "screenshot";
         blur_size = 4;
         blur_passes = 2;
       };

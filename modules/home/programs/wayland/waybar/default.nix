@@ -44,25 +44,22 @@
 
         "hyprland/workspaces" = {
           show-special = true;
-          special-visible-only = true;
+          special-visible-only = false;
           format = "{icon}";
-
           format-icons = {
             "discord" = "";
-            "lunatask" = "";
-            "monitor" = "󰍹";
-            "typora" = "";
+            "joplin" = "";
             "spotify" = "";
+
+            "6" = "󱋆";
 
             "active" = "";
             "default" = "";
             "empty" = "";
-            "persistent" = "";
-            "urgent" = "";
           };
-
           persistent-workspaces = {
-            "*" = 5;
+            "*" = 6;
+            "DP-1" = [ 6 ];
           };
         };
 
@@ -223,7 +220,7 @@
           };
 
           modules = [
-            "custom/monitor"
+            "custom/btop"
             "disk"
             "cpu"
             "temperature"
@@ -231,10 +228,10 @@
           ];
         };
 
-        "custom/monitor" = {
+        "custom/btop" = {
           format = "";
           tooltip = false;
-          on-click = "hyprctl dispatch workspace special:monitor";
+          on-click = "hyprctl dispatch workspace special:btop";
         };
 
         disk = {

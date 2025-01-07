@@ -1,4 +1,4 @@
-{ config, host, ... }:
+{ host, ... }:
 {
   wayland.windowManager.hyprland.settings = {
     "$floatingSize" = "600 400";
@@ -55,7 +55,7 @@
 
       # Move apps to workspaces
       "workspace special:discord, class:^(vesktop)$"
-      "workspace special:, class:^(joplin-desktop)$"
+      "workspace special:joplin, class:^(joplin-desktop)$"
 
       # Dim some programs
       "dimaround, class:^(xdg-desktop-portal-gtk)$"
@@ -105,8 +105,8 @@
       "special:spotify, on-created-empty:uwsm app -- spotify"
       "special:spotify, gapsout:75"
 
-      "special:monitor, on-created-empty:uwsm app -- foot --title btop --app-id btop -- btop"
-      "special:monitor, gapsout:50"
+      "special:btop, on-created-empty:uwsm app -- foot --title btop --app-id btop -- btop"
+      "special:btop, gapsout:50"
 
       "special:discord, on-created-empty:uwsm app -- vesktop"
       "special:discord, gapsout:75"
@@ -115,7 +115,7 @@
       "special:joplin, gapsout:75"
 
       # Monitor - Huion
-      "10, monitor:DP-1, default:true"
+      "6, monitor:DP-1, default:true"
     ]; 
     monitor = (if (host == "Rin") then [
       "DP-1,2560x1440,0x0,1"
