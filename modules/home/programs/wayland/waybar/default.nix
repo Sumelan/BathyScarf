@@ -91,14 +91,6 @@
               today = "<span color='${base0B}'><b><u>{}</u></b></span>";
             };
           };
-
-          on-click = "gnome-clocks";
-
-          actions = {
-            on-click-right = "mode";
-            on-scroll-up = "shift_up";
-            on-scroll-down = "shift_down";
-          };
         };
 
         mpris = {

@@ -8,7 +8,7 @@ alias gp := pull
 # Build and activate the new configuration, and make it the boot default.
 [group('nh')]
 switch:
-  nh os switch -a
+  nh os switch
 
 # Update flake inputs before building specified configuration.
 [group('nh')]
