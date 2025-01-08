@@ -1,6 +1,11 @@
-{ pkgs, lib, config, host, ... }:
 {
-  imports = [ ./style.nix ];
+  pkgs,
+  lib,
+  config,
+  host,
+  ...
+}: {
+  imports = [./style.nix];
 
   programs.waybar = {
     enable = true;
@@ -59,7 +64,7 @@
           };
           persistent-workspaces = {
             "*" = 6;
-            "DP-1" = [ 6 ];
+            "DP-1" = [6];
           };
         };
 
@@ -76,7 +81,7 @@
 
         clock = {
           format = "  {:%H:%M}";
-          tooltip-format = "  {:%a, %d %b}";
+          tooltip-format = "  {:%B %d, %A}";
           # tooltip-format="<tt><small>{calendar}</small></tt>";
 
           calendar = {
@@ -240,7 +245,10 @@
           interval = 1;
           critical-format = "󰸁 {temperatureC}°C";
           critical-threshold = 90;
-          hwmon-path = if (host == "Rin") then "/sys/class/hwmon/hwmon2/temp1_input" else "/sys/class/thermal/thermal_zone3/temp";
+          hwmon-path =
+            if (host == "Rin")
+            then "/sys/class/hwmon/hwmon2/temp1_input"
+            else "/sys/class/thermal/thermal_zone3/temp";
         };
 
         memory = {

@@ -1,5 +1,4 @@
-{ pkgs, config, ... }:
-{
+{pkgs, ...}: {
   fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
     font-awesome
@@ -11,7 +10,7 @@
     enable = true;
     iconTheme = {
       name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme.override { color = "black"; };
+      package = pkgs.papirus-icon-theme.override {color = "black";};
     };
   };
 }

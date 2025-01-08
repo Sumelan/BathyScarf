@@ -1,5 +1,8 @@
-{ config, username, ... }:
 {
+  config,
+  username,
+  ...
+}: {
   programs.hyprlock = {
     enable = true;
     settings = {
@@ -49,7 +52,7 @@
           valign = "top";
         }
         {
-          text = "cmd[update:43200000] echo \"$(date +\"%A, %d %B %Y\")\"";
+          text = "cmd[update:43200000] echo \"$(date +\"%B %d, %A\")\"";
           color = "rgb(${config.lib.stylix.colors.base05})";
           font_size = 25;
           font_family = config.stylix.fonts.sansSerif.name;
