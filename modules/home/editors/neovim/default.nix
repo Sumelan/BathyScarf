@@ -57,8 +57,10 @@ in
         todo-comments-nvim
         nvim-tree-lua
         telescope-fzf-native-nvim
-        vim-just
         vim-tmux-navigator
+
+        lazygit-nvim
+        vim-just
       ];
       extraConfig = ''
         set noemoji

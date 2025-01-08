@@ -45,7 +45,7 @@ in
         applications = 12;
         terminal = 13;
         desktop = 12;
-        popups = (if (host == "Rin") then 12 else 8);
+        popups = (if (host == "Rin") then 12 else 10);
       };
     };
 
