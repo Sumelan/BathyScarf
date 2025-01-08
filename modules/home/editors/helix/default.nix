@@ -1,12 +1,16 @@
-{ inputs, pkgs, ... }:
 {
+  inputs,
+  pkgs,
+  ...
+}: {
   imports = [
     ./languages.nix
   ];
 
   programs.helix = {
     enable = true;
-    package = inputs.helix.packages.${pkgs.system}.default;
+    package = pkgs.helix;
+    defaultEditor = true;
     settings = {
       editor = {
         line-number = "relative";
