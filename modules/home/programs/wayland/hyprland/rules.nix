@@ -1,5 +1,4 @@
-{ host, ... }:
-{
+{host, ...}: {
   wayland.windowManager.hyprland.settings = {
     "$floatingSize" = "600 400";
     "$pwvucontrol" = "com.saivert.pwvucontrol";
@@ -33,6 +32,10 @@
       "size $floatingSize, class:^($pwvucontrol)$"
       "center, class:^($pwvucontrol)$"
 
+      # Thunar
+      "float, class:^(thunar)$"
+      "center, class:^(thunar)$"
+
       # Udiskie
       "float, class:^(udiskie)$"
       "center, class:^(udiskie)$"
@@ -63,7 +66,6 @@
 
       # don't render hyprbars on tiling windows
       "plugin:hyprbars:nobar, floating:0"
-
     ];
 
     layerrule = [
@@ -116,12 +118,15 @@
 
       # Monitor - Huion
       "6, monitor:DP-1, default:true"
-    ]; 
-    monitor = (if (host == "Rin") then [
-      "DP-1,2560x1440,0x0,1"
-      "HDMI-A-1,2560x1440,0x-1440,1"
-    ] else [
-      ",preferred,auto,1"
-    ]);
+    ];
+    monitor =
+      if (host == "Rin")
+      then [
+        "DP-1,2560x1440,0x0,1"
+        "HDMI-A-1,2560x1440,0x-1440,1"
+      ]
+      else [
+        ",preferred,auto,1"
+      ];
   };
 }
