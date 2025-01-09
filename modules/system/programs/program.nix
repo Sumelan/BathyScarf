@@ -1,5 +1,4 @@
-{ pkgs, lib, ... }:
-{
+{...}: {
   imports = [
     ./hyprland.nix
     ./flatpak.nix
@@ -13,7 +12,7 @@
     gnupg.agent = {
       enable = true;
       enableSSHSupport = true;
-    # pinentryFlavor = "";
+      # pinentryFlavor = "";
     };
     seahorse.enable = true;
     kdeconnect.enable = true;

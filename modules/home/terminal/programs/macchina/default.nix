@@ -1,5 +1,4 @@
-{pkgs, host, ...}:
-{
+{pkgs, ...}: {
   home.packages = with pkgs; [
     macchina
   ];

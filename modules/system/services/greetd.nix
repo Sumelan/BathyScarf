@@ -1,5 +1,9 @@
-{ pkgs, lib, config, username, ... }:
 {
+  lib,
+  config,
+  username,
+  ...
+}: {
   services = {
     greetd = {
       enable = true;

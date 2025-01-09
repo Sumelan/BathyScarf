@@ -1,5 +1,4 @@
-{ self, inputs, pkgs, host, ... }:
-{
+{pkgs, ...}: {
   imports = [
     ./binds.nix
     ./pyprland.nix

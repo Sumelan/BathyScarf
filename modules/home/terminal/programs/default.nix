@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{...}: {
   imports = [
     ./macchina
     ./xdg

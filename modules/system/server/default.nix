@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{...}: {
   imports = [
     ./agenix.nix
     ./audiobookshelf.nix

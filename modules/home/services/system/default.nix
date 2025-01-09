@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{...}: {
   imports = [
     ./gpg-agent.nix
     ./kdeconnect.nix

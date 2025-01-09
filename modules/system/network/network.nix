@@ -1,5 +1,8 @@
-{ pkgs, config, host, ... }:
 {
+  pkgs,
+  host,
+  ...
+}: {
   environment.systemPackages = with pkgs; [
     networkmanagerapplet
   ];
@@ -33,7 +36,7 @@
   services = {
     openssh = {
       enable = true;
-    # authorizedKeys.keys = [ ];
+      # authorizedKeys.keys = [ ];
       settings = {
         PermitRootLogin = "no";
         PasswordAuthentication = true;

@@ -1,12 +1,4 @@
-{
-  inputs,
-  nixpkgs,
-  self,
-  username,
-  host,
-  ...
-}:
-{
+{...}: {
   imports = [
     ./core
     ./hardware
@@ -14,7 +6,7 @@
     ./nix
     ./rustdesk
     ./services
-    ./virtualization
+    ./virtualization/podman.nix
     ./network/network.nix
     ./programs/program.nix
     ./security/security.nix

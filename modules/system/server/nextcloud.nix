@@ -1,15 +1,18 @@
-{ self, config, lib, pkgs, ... }:
 {
+  config,
+  pkgs,
+  ...
+}: {
   services.nextcloud = {
     enable = true;
     hostName = "nextcloud.sakurairo.ddnsfree.com";
-  ## Need to manually increment with every major upgrade.
+    ## Need to manually increment with every major upgrade.
     package = pkgs.nextcloud30;
-  # Let NixOS install and configure the database automatically.
+    # Let NixOS install and configure the database automatically.
     database.createLocally = true;
-  # Let NixOS install and configure Redis caching automatically.
+    # Let NixOS install and configure Redis caching automatically.
     configureRedis = true;
-  # Increase the maximum file upload size to avoid problems uploading vidoes.
+    # Increase the maximum file upload size to avoid problems uploading vidoes.
     maxUploadSize = "16G";
     https = true;
     autoUpdateApps.enable = true;

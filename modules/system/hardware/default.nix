@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{...}: {
   imports = [
     ./bluetooth.nix
     ./fwupd.nix

@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{...}: {
   imports = [
     ./fnott
     ./cliphist.nix

@@ -1,5 +1,4 @@
-{ pkgs, inputs, ... }:
-{
+{...}: {
   imports = [
     ./browser/zen.nix
     ./media

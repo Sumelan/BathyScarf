@@ -1,5 +1,4 @@
-{ pkgs, config, inputs, ... }:
-{
+{config, ...}: {
   services.nginx.virtualHosts = {
     "nextcloud.sakurairo.ddnsfree.com" = {
       useACMEHost = "sakurairo.ddnsfree.com";
@@ -18,14 +17,14 @@
   # by increasing the maximum allowed size of the client request body
   # For example, set it to 10 GiB
   services.nginx.clientMaxBodySize = "1024M";
-  users.users.nginx.extraGroups = [ "acme" ];
+  users.users.nginx.extraGroups = ["acme"];
 
   security.acme = {
     acceptTerms = true;
     defaults.email = "bathys@proton.me";
     certs."sakurairo.ddnsfree.com" = {
       domain = "sakurairo.ddnsfree.com";
-      extraDomainNames = [ 
+      extraDomainNames = [
         "nextcloud.sakurairo.ddnsfree.com"
         "audiobookshelf.sakurairo.ddnsfree.com"
       ];

@@ -54,7 +54,6 @@ in {
           else 9;
       };
     };
-
     targets.fish.enable = false;
   };
 }
