@@ -4,6 +4,6 @@
     ./media
     ./mozilla/thunderbird.nix
     ./wayland
-    ./vesktop.nix
+    ./discord/vesktop.nix
   ];
 }

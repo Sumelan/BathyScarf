@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./ffmpeg.nix
-    ./spicetify.nix
+    ./spotube.nix
   ];
 
   home.packages = with pkgs; [

@@ -99,7 +99,7 @@
         };
 
         mpris = {
-          player = "spotify";
+          player = "spotube";
           format = "{player_icon} {status_icon} <b>{title}</b> by <i>{artist}</i>";
           tooltip-format = "Album: {album}";
           artist-len = 12;
