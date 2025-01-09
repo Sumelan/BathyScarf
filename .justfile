@@ -2,8 +2,6 @@ default:
   @$EDITOR .justfile
 
 alias lg := lazy
-alias ga := add
-alias gp := pull
 
 # Build and activate the new configuration, and make it the boot default.
 [group('nh')]

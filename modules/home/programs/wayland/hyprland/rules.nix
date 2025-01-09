@@ -1,6 +1,6 @@
 {host, ...}: {
   wayland.windowManager.hyprland.settings = {
-    "$floatingSize" = "600 400";
+    "$floatingSize" = "800 600";
     "$pwvucontrol" = "com.saivert.pwvucontrol";
 
     windowrulev2 = [
@@ -34,6 +34,7 @@
 
       # Thunar
       "float, class:^(thunar)$"
+      "size $floatingSize, class:^(thunar)$"
       "center, class:^(thunar)$"
 
       # Udiskie
