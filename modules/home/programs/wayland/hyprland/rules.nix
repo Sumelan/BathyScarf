@@ -58,7 +58,7 @@
       "pin, title:^(Picture-in-Picture)$"
 
       # Move apps to workspaces
-      "workspace special:discord, class:^(vesktop)$"
+      "workspace special:discord, class:^(discordcanary)$"
       "workspace special:joplin, class:^(joplin-desktop)$"
 
       # Dim some programs
@@ -111,7 +111,7 @@
       "special:btop, on-created-empty:uwsm app -- foot --title btop --app-id btop -- btop"
       "special:btop, gapsout:50"
 
-      "special:discord, on-created-empty:uwsm app -- vesktop"
+      "special:discord, on-created-empty:uwsm app -- discordcanary"
       "special:discord, gapsout:75"
 
       "special:joplin, on-created-empty:uwsm app -- joplin-desktop"
