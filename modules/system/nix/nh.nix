@@ -1,10 +1,13 @@
-{ pkgs, username, ... }:
 {
+  pkgs,
+  username,
+  ...
+}: {
   programs.nh = {
     enable = true;
     clean = {
       enable = true;
-      extraArgs = "--keep-since 1w --keep 3";
+      extraArgs = "--keep-since 1w --keep 5";
     };
     flake = "/home/${username}/BathyScarf";
   };

@@ -16,7 +16,7 @@ update:
 # Cleans root profiles and calls a store gc.
 [group('nh')]
 clean:
-  nh clean all --keep 5
+  nh clean all --keep-since 1w --keep 5
 
 # Build and activate the new configuration.
 [group('nh')]
