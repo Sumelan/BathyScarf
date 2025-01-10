@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./ffmpeg.nix
-    ./spotube.nix
+    ./spotify/spot.nix
   ];
 
   home.packages = with pkgs; [

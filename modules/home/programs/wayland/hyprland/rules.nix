@@ -105,7 +105,7 @@
 
       "special:special, gapsout:75"
 
-      "special:spotify, on-created-empty:uwsm app -- spotube"
+      "special:spotify, on-created-empty:uwsm app -- spot"
       "special:spotify, gapsout:75"
 
       "special:btop, on-created-empty:uwsm app -- foot --title btop --app-id btop -- btop"
